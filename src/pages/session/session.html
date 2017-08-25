@@ -2,16 +2,43 @@
   <ion-navbar>
     <ion-title>Tu sesión</ion-title>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Una sesión a tu  medida</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-item>
+    <ion-label>Soy</ion-label>
+    <ion-select [(ngModel)]="session.data.gender">
+      <ion-option *ngFor="let gend of session.dataItems.genders" [value]="gend.name">{{ gend.name }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Entreno hace</ion-label>
+    <ion-select [(ngModel)]="session.data.time">
+      <ion-option value=1>0 - 5 meses</ion-option>
+      <ion-option value=2>6 - 11 Meses</ion-option>
+      <ion-option value=3>12 o más</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mi objetivo</ion-label>
+    <ion-select [(ngModel)]="session.data.target">
+      <ion-option value=1>Aumentar masa</ion-option>
+      <ion-option value=2>Tonificar</ion-option>
+      <ion-option value=3>Bajar peso</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Entreno en</ion-label>
+    <ion-select [(ngModel)]="session.data.place">
+      <ion-option value="home">Casa</ion-option>
+      <ion-option value="gym">Gimnasio</ion-option>
+    </ion-select>
+  </ion-item>
+  <br />
+  <div class="button-container">
+    <button class="session-button" ion-button>Generar sesión</button>
+  </div>
 </ion-content>
