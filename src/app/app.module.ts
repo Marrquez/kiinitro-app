@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { SessionComponent } from './components/session/session.component';
 import { SessionsComponent } from './components/sessions/sessions.component';
+import { SessionItemComponent } from './components/session-item/session-item.component';
 
 /**
  * Services
@@ -29,7 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomeComponent,
     TabsComponent,
     SessionComponent,
-    SessionsComponent
+    SessionsComponent,
+    SessionItemComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsComponent,
     SessionComponent,
     SessionsComponent,
+    SessionItemComponent
   ],
   providers: [
     StatusBar,
