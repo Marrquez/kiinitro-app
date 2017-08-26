@@ -1,4 +1,4 @@
-page-session {
+home {
   ion-toolbar {
     .toolbar-background {
       background: url('../../assets/images/header-profile-skin-1.png');
@@ -10,12 +10,5 @@ page-session {
   }
 
   ion-content {
-    .button-container {
-      text-align: center;
-
-      button.session-button {
-        background-color: #1784C7 !important;
-      }
-    }
   }
 }

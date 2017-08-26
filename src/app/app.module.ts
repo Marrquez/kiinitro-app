@@ -7,11 +7,12 @@ import { HttpModule } from '@angular/http';
 /**
  * Components
  * */
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
-import { SessionPage } from '../pages/session/session';
+import { AboutComponent } from '../pages/about/about.component';
+import { ContactComponent } from '../pages/contact/contact.component';
+import { HomeComponent } from '../pages/home/home.component';
+import { TabsComponent } from '../pages/tabs/tabs.component';
+import { SessionComponent } from '../pages/session/session.component';
+import { SessionsComponent } from '../pages/sessions/sessions.component';
 
 /**
  * Services
@@ -23,11 +24,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    SessionPage
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    TabsComponent,
+    SessionComponent,
+    SessionsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,11 +39,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    SessionPage
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    TabsComponent,
+    SessionComponent,
+    SessionsComponent,
   ],
   providers: [
     StatusBar,
