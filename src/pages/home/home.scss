@@ -1,3 +1,14 @@
 page-home {
+  ion-toolbar {
+    .toolbar-background {
+      background: url('../../assets/images/header-profile-skin-1.png');
+    }
 
+    .toolbar-title {
+      color: #fff;
+    }
+  }
+
+  ion-content {
+  }
 }
