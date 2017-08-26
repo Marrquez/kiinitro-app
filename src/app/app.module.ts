@@ -7,17 +7,17 @@ import { HttpModule } from '@angular/http';
 /**
  * Components
  * */
-import { AboutComponent } from '../pages/about/about.component';
-import { ContactComponent } from '../pages/contact/contact.component';
-import { HomeComponent } from '../pages/home/home.component';
-import { TabsComponent } from '../pages/tabs/tabs.component';
-import { SessionComponent } from '../pages/session/session.component';
-import { SessionsComponent } from '../pages/sessions/sessions.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { SessionComponent } from './components/session/session.component';
+import { SessionsComponent } from './components/sessions/sessions.component';
 
 /**
  * Services
  * */
-import { SessionService } from '../services/session.service';
+import { SessionService } from './services/session.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
