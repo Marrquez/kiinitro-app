@@ -29,10 +29,10 @@ export class SessionService {
   };
 
   public data = {
-    gender: 'Seleccionar',
-    time: 'Seleccionar',
-    target: 'Seleccionar',
-    place: 'Seleccionar'
+    gender: '',
+    time: '',
+    target: '',
+    place: ''
   };
 
   constructor(private http: Http) { };
