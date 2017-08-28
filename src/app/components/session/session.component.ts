@@ -28,4 +28,18 @@ export class SessionComponent {
       this.navCtrl.push(SessionsComponent);
     }
   };
+
+  updateMuscles(){
+    if(this.session.data.gender === 'Hombre'){
+      if(this.session.data.time === '12 o más'){
+        this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[1]));
+      }else if(this.session.data.time === "0 - 5 meses" || this.session.data.time == '6 - 11 meses') {
+        this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[0]));
+      }else {
+        this.session.dataItems.muscles = [];
+      }
+    }else {
+      this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[2]));
+    }
+  }
 }

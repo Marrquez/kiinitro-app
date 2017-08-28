@@ -1,3 +1,15 @@
 about {
+  ion-toolbar {
+    .toolbar-background {
+      background: url('../../../assets/images/header-profile-skin-1.png');
+    }
 
+    ion-title {
+      padding: 0 50px !important;
+
+      .toolbar-title {
+        color: #fff;
+      }
+    }
+  }
 }

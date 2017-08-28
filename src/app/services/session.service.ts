@@ -25,20 +25,44 @@ export class SessionService {
     places: [
       {name: 'Casa', id: 0},
       {name: 'Gimnasio', id: 1}
-    ]
+    ],
+    muscles: []
   };
+
+  public muscles = [
+    [
+      {name: 'Pecho-bíceps-abdomen', id: 0},
+      {name: 'Espalda-triceps-abdomen', id: 1},
+      {name: 'Muslos-abdomen', id: 2},
+      {name: 'Pantorilla-abdomen', id: 3},
+      {name: 'Hombro-trapecio-abdomen', id: 4}
+    ],
+    [
+      {name: 'Pecho-abdomen', id: 0},
+      {name: 'Espalda-abdomen', id: 1},
+      {name: 'Biceps-triceps-abdomen', id: 2},
+      {name: 'Hombro-trapecio-abdomen', id: 3},
+      {name: 'Muslo-pantorrilla-abdomen', id: 4}
+    ],
+    [
+      {name: 'Muslos-pantorrilla-abdomen', id: 0},
+      {name: 'Pecho-tríceps-bíceps-abdomen', id: 0},
+      {name: 'Espalda-hombro-abdomen', id: 0}
+    ]
+  ];
 
   public data = {
     gender: '',
     time: '',
     target: '',
-    place: ''
+    place: '',
+    muscle: ''
   };
 
   constructor(private http: Http) { };
 
-  private getUser(id: string) {
-    let url = this.baseUrl + '/getUser';
+  public getEjercicio(id: string) {
+    let url = this.baseUrl + '/getEjercicio';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('id', id);
