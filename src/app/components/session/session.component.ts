@@ -17,7 +17,7 @@ export class SessionComponent {
   ) { }
 
   goToSession() {
-    if(!this.session.data.gender || !this.session.data.time || !this.session.data.target || !this.session.data.place){
+    if(!this.session.data.gender || !this.session.data.time || !this.session.data.target || !this.session.data.place || !this.session.data.muscle){
       let toast = this.toastCtrl.create({
         message: 'Todas las opciones deben estar seleccionadas',
         duration: 3000,
