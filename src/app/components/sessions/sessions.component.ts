@@ -24,30 +24,10 @@ export class SessionsComponent implements OnInit {
   };
 
   getTasks(){
-
-    this.session.getEjercicio("1").then(response => {
+    let muscles = JSON.stringify(this.session.data.muscle.split('-'));
+    this.session.getEjercicesByMuscle(muscles).then(response => {
       console.log(response);
-    }).catch(() => {
-
     });
-  };
-
-  validateRules(){
-    if(this.session.data.gender === 'Hombre'){
-      var a = 1;
-    }else {
-      this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[2]));
-    }
-  };
-
-  validateTime(){
-    if(this.session.data.time === '0 - 5 meses'){
-      return 0;
-    }else if(this.session.data.time === '6 - 11 meses'){
-      return 1;
-    }else{
-      return 2;
-    }
   };
 
   presentModal() {

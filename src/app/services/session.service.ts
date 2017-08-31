@@ -31,23 +31,23 @@ export class SessionService {
 
   public muscles = [
     [
-      {name: 'Pecho-bíceps-abdomen', id: 0},
-      {name: 'Espalda-triceps-abdomen', id: 1},
-      {name: 'Muslos-abdomen', id: 2},
-      {name: 'Pantorilla-abdomen', id: 3},
-      {name: 'Hombro-trapecio-abdomen', id: 4}
+      {name: 'Pecho-Bíceps-Abdomen', id: 0},
+      {name: 'Espalda-Tríceps-Abdomen', id: 1},
+      {name: 'Muslos-Abdomen', id: 2},
+      {name: 'Pantorilla-Abdomen', id: 3},
+      {name: 'Hombro-Trapecio-Abdomen', id: 4}
     ],
     [
-      {name: 'Pecho-abdomen', id: 0},
-      {name: 'Espalda-abdomen', id: 1},
-      {name: 'Biceps-triceps-abdomen', id: 2},
-      {name: 'Hombro-trapecio-abdomen', id: 3},
-      {name: 'Muslo-pantorrilla-abdomen', id: 4}
+      {name: 'Pecho-Abdomen', id: 0},
+      {name: 'Espalda-Abdomen', id: 1},
+      {name: 'Biceps-Tríceps-Abdomen', id: 2},
+      {name: 'Hombro-Trapecio-Abdomen', id: 3},
+      {name: 'Muslo-Pantorrilla-Abdomen', id: 4}
     ],
     [
-      {name: 'Muslos-pantorrilla-abdomen', id: 0},
-      {name: 'Pecho-tríceps-bíceps-abdomen', id: 0},
-      {name: 'Espalda-hombro-abdomen', id: 0}
+      {name: 'Muslos-Pantorrilla-Abdomen', id: 0},
+      {name: 'Pecho-Tríceps-Bíceps-Abdomen', id: 0},
+      {name: 'Espalda-Hombro-Abdomen', id: 0}
     ]
   ];
 
@@ -66,6 +66,18 @@ export class SessionService {
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('id', id);
+
+    return this.http.get(url, { params: params })
+      .toPromise()
+      .then(this.extractData)
+      .then(response => response);
+  };
+
+  public getEjercicesByMuscle(muscles: string) {
+    let url = this.baseUrl + '/getEjercicesByMuscle';
+    let params: URLSearchParams = new URLSearchParams();
+
+    params.set('muscles', muscles);
 
     return this.http.get(url, { params: params })
       .toPromise()
