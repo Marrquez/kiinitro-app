@@ -4,6 +4,7 @@ import { ModalController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { SessionItemComponent } from '../session-item/session-item.component';
+import { RutineComponent } from '../rutine/rutine.component';
 import { SessionService } from '../../services/session.service';
 
 @Component({
@@ -193,11 +194,14 @@ export class SessionsComponent implements OnInit {
   presentModal(id: string) {
     var self = this;
     let modal = self.modalCtrl.create(SessionItemComponent);
-    console.log(id);
 
     self.session.getEjercicio(id).then(response => {
       self.session.exercise = response.data;
       modal.present();
     });
+  };
+
+  startRutine(){
+    this.navCtrl.push(RutineComponent);
   };
 }

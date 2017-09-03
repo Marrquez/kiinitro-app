@@ -29,6 +29,8 @@ export class SessionService {
   public abdomen = [];
   public list = [];
   public exercise = {gif: '', imagen: ''};
+  public current = {id: ''};
+  public currentIndex = 0;
 
   constructor(private http: Http) { };
 

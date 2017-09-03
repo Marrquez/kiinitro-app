@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ this.session.current.nombre }}</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <br />
+  <div class="button-container">
+    <button *ngIf="lastItem != session.current.id" (click)="goNext()" class="session-button" ion-button>Siguiente</button>
+    <button *ngIf="lastItem == session.current.id" (click)="finish()" class="session-button" ion-button>Finalizar</button>
+  </div>
+</ion-content>
