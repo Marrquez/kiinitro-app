@@ -33,7 +33,6 @@ export class SessionsComponent implements OnInit {
       self.session.fullData = response.data;
       self.updateArrays();
       self.selectExercises();
-      console.log(this.session.list);
     });
   };
 
@@ -129,7 +128,7 @@ export class SessionsComponent implements OnInit {
     this.clearArrays();
 
     for(let i = 0; i < this.session.fullData.length; i++) {
-      let exercise =  this.session.fullData[i];
+      let exercise =  JSON.parse(JSON.stringify(this.session.fullData[i]));
 
       switch(exercise.musculo) {
         case 'Pecho':

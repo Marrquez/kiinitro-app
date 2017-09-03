@@ -8,71 +8,35 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card (click)="presentModal();">
-    <img src="../../../assets/images/bienestar.jpg"/>
+  <ion-card *ngFor="let e of session.list" (click)="presentModal(e.id);">
+    <img [src]="e.imagen"/>
     <ion-card-content>
       <ion-card-title>
-        Press inclinado
+        {{ e.nombre }}
       </ion-card-title>
-      <p>Mancuerna</p>
+      <p>{{ e.descripcion }}</p>
     </ion-card-content>
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="more"></ion-icon>
-          <div>4 series</div>
+          <div>
+            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+              {{ e.repeticiones[5] }}
+            </ng-container>
+            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+              {{ e.repeticiones[11] }}
+            </ng-container>
+            series
+          </div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="refresh"></ion-icon>
-          <div>12 rep.</div>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-  <ion-card (click)="presentModal();">
-    <img src="../../../assets/images/motivacion.png"/>
-    <ion-card-content>
-      <ion-card-title>
-        Press plano
-      </ion-card-title>
-      <p>Barra</p>
-    </ion-card-content>
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="more"></ion-icon>
-          <div>4 series</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="refresh"></ion-icon>
-          <div>20 rep.</div>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-  <ion-card (click)="presentModal();">
-    <img src="../../../assets/images/inspiracion.jpg"/>
-    <ion-card-content>
-      <ion-card-title>
-        Pull over
-      </ion-card-title>
-      <p>Mancuerna</p>
-    </ion-card-content>
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="more"></ion-icon>
-          <div>4 series</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear small>
-          <ion-icon name="refresh"></ion-icon>
-          <div>12 rep.</div>
+          <div>
+            rep.
+          </div>
         </button>
       </ion-col>
     </ion-row>
