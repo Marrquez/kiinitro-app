@@ -190,8 +190,14 @@ export class SessionsComponent implements OnInit {
     }
   };
 
-  presentModal() {
-    let modal = this.modalCtrl.create(SessionItemComponent);
-    modal.present();
+  presentModal(id: string) {
+    var self = this;
+    let modal = self.modalCtrl.create(SessionItemComponent);
+    console.log(id);
+
+    self.session.getEjercicio(id).then(response => {
+      self.session.exercise = response.data;
+      modal.present();
+    });
   };
 }

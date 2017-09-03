@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      {{ session.exercise.nombre }}
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -13,13 +13,55 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-card>
     <ion-item>
       <ion-avatar item-start>
-        <img src="../../../assets/images/bienestar.jpg"/>
+        <img [src]="session.exercise.imagen">
       </ion-avatar>
-      <h2>Press inclinado</h2>
-      <p>Mancuerna</p>
+      <h2>{{ session.exercise.musculo }}</h2>
+      <p><ng-container *ngFor="let eq of session.exercise.equipamiento">{{ eq }}. </ng-container></p>
     </ion-item>
-  </ion-list>
+    <p class="respiracion">Respiración: {{ session.exercise.respiracion }}</p>
+
+    <img [src]="session.exercise.gif">
+
+    <ion-card-content>
+      <h2>Pasos</h2>
+      <ol>
+        <li *ngFor="let paso of session.exercise.pasos">{{ paso }}</li>
+      </ol>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="more"></ion-icon>
+          <div>
+            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+              {{ session.exercise.series[5] }}
+            </ng-container>
+            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+              {{ session.exercise.series[11] }}
+            </ng-container>
+            series
+          </div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="refresh"></ion-icon>
+          <div>
+            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+              {{ session.exercise.repeticiones[5] }}
+            </ng-container>
+            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+              {{ session.exercise.repeticiones[11] }}
+            </ng-container>
+            rep.
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
 </ion-content>

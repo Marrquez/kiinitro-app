@@ -22,10 +22,10 @@
           <ion-icon name="more"></ion-icon>
           <div>
             <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ e.repeticiones[5] }}
+              {{ e.series[5] }}
             </ng-container>
             <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ e.repeticiones[11] }}
+              {{ e.series[11] }}
             </ng-container>
             series
           </div>
@@ -35,6 +35,12 @@
         <button ion-button icon-left clear small>
           <ion-icon name="refresh"></ion-icon>
           <div>
+            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+              {{ e.repeticiones[5] }}
+            </ng-container>
+            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+              {{ e.repeticiones[11] }}
+            </ng-container>
             rep.
           </div>
         </button>

@@ -28,6 +28,7 @@ export class SessionService {
   public trapecio = [];
   public abdomen = [];
   public list = [];
+  public exercise = {gif: '', imagen: ''};
 
   constructor(private http: Http) { };
 
