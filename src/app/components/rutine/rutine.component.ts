@@ -11,6 +11,7 @@ import { SessionService } from '../../services/session.service';
 export class RutineComponent implements OnInit {
   public total = this.session.list.length;
   public lastItem = this.session.list[this.total - 1].id;
+  public isFinished = false;
   constructor(
     public navCtrl: NavController,
     public session: SessionService,
@@ -28,6 +29,16 @@ export class RutineComponent implements OnInit {
 
   finish(){
     this.session.currentIndex = 0;
+    this.isFinished = true;
+  };
+
+  rate(){
+    console.log('i like it!');
+    this.navCtrl.pop();
+    this.navCtrl.pop();
+  };
+
+  goBack(){
     this.navCtrl.pop();
   };
 }

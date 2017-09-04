@@ -1,16 +1,45 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ this.session.current.nombre }}</ion-title>
+    <ion-title *ngIf="!isFinished">{{ session.current.nombre }}</ion-title>
+    <ion-title *ngIf="isFinished">¡Felicitaciones!</ion-title>
   </ion-navbar>
-  <ion-toolbar>
-    <ion-title>Bienvenido</ion-title>
+  <ion-toolbar *ngIf="!isFinished">
+    <ion-title>{{ session.current.musculo }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content *ngIf="!isFinished" padding>
+  <ion-card>
+    <ion-card-content>
+      <p class="respiracion">Respiración: {{ session.current.respiracion }}</p>
+      <img [src]="session.current.gif">
+      <h2>Tips</h2>
+      <ol>
+        <li *ngFor="let tip of session.current.tips">{{ tip }}</li>
+      </ol>
+    </ion-card-content>
+  </ion-card>
+
   <br />
   <div class="button-container">
     <button *ngIf="lastItem != session.current.id" (click)="goNext()" class="session-button" ion-button>Siguiente</button>
     <button *ngIf="lastItem == session.current.id" (click)="finish()" class="session-button" ion-button>Finalizar</button>
+  </div>
+</ion-content>
+
+<ion-content class="final-screen" *ngIf="isFinished" padding>
+  <ion-card>
+    <ion-card-content>
+      <p>¡Has finalizado tu entrenamiento!</p>
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+      <h2 class="powered">Powered by kiinitro</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <br />
+  <div class="button-container">
+    <button (click)="rate()" class="session-button" ion-button>Quiero más sesiones</button>
+    <br />
+    <button (click)="goBack()" class="session-button-2">Terminar</button>
   </div>
 </ion-content>

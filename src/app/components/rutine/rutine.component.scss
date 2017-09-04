@@ -1,4 +1,4 @@
-session {
+rutine {
   ion-toolbar {
     .toolbar-background {
       background: url('../../../assets/images/header-profile-skin-1.png');
@@ -15,6 +15,28 @@ session {
 
       button.session-button {
         background-color: #1784C7 !important;
+      }
+
+      button.session-button-2 {
+        background-color: #CCC !important;
+        border-radius: 3px;
+        height: 30px;
+      }
+    }
+  }
+
+  .final-screen {
+    ion-card {
+      margin-top: 80px !important;
+      text-align: center;
+
+      ion-icon {
+        color: #59CF65;
+        font-size: 40px;
+      }
+
+      .powered {
+        font-size: 10px;
       }
     }
   }
