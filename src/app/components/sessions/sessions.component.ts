@@ -80,8 +80,8 @@ export class SessionsComponent implements OnInit {
           this.addElements(quantity, this.session.muslo);
           break;
 
-        case 'Pantorrilla':
-          var quantity = this.session.index.indexOf('Pantorrilla');
+        case 'Pantorrillas':
+          var quantity = this.session.index.indexOf('Pantorrillas');
           this.addElements(quantity, this.session.pantorrilla);
           break;
 
@@ -144,7 +144,7 @@ export class SessionsComponent implements OnInit {
           this.session.muslo.push(exercise);
           break;
 
-        case 'Pantorrilla':
+        case 'Pantorrillas':
           this.session.pantorrilla.push(exercise);
           break;
 
