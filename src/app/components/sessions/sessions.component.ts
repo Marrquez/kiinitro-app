@@ -107,6 +107,7 @@ export class SessionsComponent implements OnInit {
 
         case 'Abdomen':
           var quantity = this.session.index.indexOf('Abdomen');
+          quantity = this.session.data.gender === 'Mujer' ? quantity-1 : quantity;
           this.addElements(quantity, this.session.abdomen);
           break;
       }
