@@ -20,7 +20,7 @@ export class SessionsComponent implements OnInit {
   ) { };
 
   ngOnInit() {
-    //this.splash.show();
+    this.splash.show();
     this.getTasks();
   };
 
@@ -34,6 +34,7 @@ export class SessionsComponent implements OnInit {
       self.session.fullData = response.data;
       self.updateArrays();
       self.selectExercises();
+      self.splash.hide();
     });
   };
 
@@ -195,9 +196,11 @@ export class SessionsComponent implements OnInit {
   presentModal(id: string) {
     var self = this;
     let modal = self.modalCtrl.create(SessionItemComponent);
+    self.splash.show();
 
     self.session.getEjercicio(id).then(response => {
       self.session.exercise = response.data;
+      self.splash.hide();
       modal.present();
     });
   };

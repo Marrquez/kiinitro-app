@@ -52,13 +52,13 @@ rutine {
       margin-top: 80px !important;
       text-align: center;
 
-      ion-icon {
-        color: #59CF65;
-        font-size: 40px;
+      .card-title {
+        color: #757575;
       }
 
-      .powered {
-        font-size: 10px;
+      .card-subtitle {
+        color: #757575;
+        text-decoration: underline;
       }
     }
   }
