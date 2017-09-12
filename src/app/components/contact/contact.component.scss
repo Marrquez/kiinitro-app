@@ -18,4 +18,12 @@ contact {
       font-weight: normal;
     }
   }
+
+  ion-content {
+    ion-item {
+      ion-label {
+        color: #757575;
+      }
+    }
+  }
 }
