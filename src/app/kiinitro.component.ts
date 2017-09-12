@@ -6,9 +6,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsComponent } from './components/tabs/tabs.component';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'kiinitro.component.html'
 })
-export class MyApp {
+export class Kiinitro {
   rootPage:any = TabsComponent;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

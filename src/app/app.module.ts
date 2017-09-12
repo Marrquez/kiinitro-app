@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
+import { Kiinitro } from './kiinitro.component';
 import { HttpModule } from '@angular/http';
 
 /**
@@ -25,7 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
+    Kiinitro,
     AboutComponent,
     ContactComponent,
     HomeComponent,
@@ -38,11 +38,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(Kiinitro)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    Kiinitro,
     AboutComponent,
     ContactComponent,
     HomeComponent,
