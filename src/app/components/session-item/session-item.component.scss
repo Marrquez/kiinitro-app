@@ -28,6 +28,12 @@ session-item {
       }
     }
 
+    ion-card {
+      border: none !important;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+
     ion-col {
       .series {
         color: #00BCD4;

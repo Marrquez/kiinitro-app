@@ -32,6 +32,13 @@ sessions {
       }
     }
 
+    ion-card {
+      border: 1px solid #DDD !important;
+      border-radius: 4px !important;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
+
     .button-container {
       text-align: center;
 

@@ -39,6 +39,12 @@ rutine {
         height: 30px;
       }
     }
+
+    ion-card {
+      border: none !important;
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+    }
   }
 
   .final-screen {
