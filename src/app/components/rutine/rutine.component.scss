@@ -1,11 +1,21 @@
 rutine {
+  ion-navbar {
+    .toolbar-title {
+      color: #00BCD4;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+  }
+
   ion-toolbar {
     .toolbar-background {
-      background: url('../../../assets/images/header-profile-skin-1.png');
+      background-color: #00BCD4;
     }
 
     .toolbar-title {
       color: #fff;
+      font-size: 1.3rem;
+      font-weight: normal;
     }
   }
 

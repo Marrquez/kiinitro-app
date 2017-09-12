@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/home.component';
 import { SessionComponent } from '../session/session.component';
 
 @Component({
+  selector: 'tabs',
   templateUrl: 'tabs.component.html'
 })
 export class TabsComponent {
