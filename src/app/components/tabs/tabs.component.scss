@@ -1,3 +1,10 @@
 tabs {
+  .tabs-ios .tab-button:hover:not(.disable-hover),
+  .tabs-ios .tab-button[aria-selected=true] {
+    color: #00BCD4;
 
+    .tab-button-icon {
+      color: #00BCD4;
+    }
+  }
 }

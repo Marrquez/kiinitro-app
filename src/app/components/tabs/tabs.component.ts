@@ -15,7 +15,5 @@ export class TabsComponent {
   tab3Root = ContactComponent;
   tab4Root = SessionComponent;
 
-  constructor() {
-
-  }
+  constructor() { }
 }
