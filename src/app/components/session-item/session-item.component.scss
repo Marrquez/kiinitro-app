@@ -1,12 +1,4 @@
 session-item {
-  ion-navbar {
-    .toolbar-title {
-      color: #00BCD4;
-      font-size: 1.6rem;
-      font-weight: normal;
-    }
-  }
-
   ion-toolbar {
     .toolbar-background {
       background-color: #00BCD4;
@@ -17,6 +9,14 @@ session-item {
       font-size: 1.3rem;
       font-weight: normal;
     }
+
+    ion-buttons {
+      button {
+        span {
+          color: #fff;
+        }
+      }
+    }
   }
 
   ion-content {
@@ -25,6 +25,12 @@ session-item {
 
       button.session-button {
         background-color: #00BCD4 !important;
+      }
+    }
+
+    ion-col {
+      .series {
+        color: #00BCD4;
       }
     }
 

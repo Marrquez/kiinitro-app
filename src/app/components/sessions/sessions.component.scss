@@ -26,6 +26,12 @@ sessions {
   }
 
   ion-content {
+    ion-col {
+      .series {
+        color: #00BCD4;
+      }
+    }
+
     .button-container {
       text-align: center;
 
