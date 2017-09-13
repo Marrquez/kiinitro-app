@@ -13,7 +13,7 @@ import { ExtrasComponent } from '../extras/extras.component';
   selector: 'about',
   templateUrl: 'about.component.html'
 })
-export class AboutComponent implements OnInit{
+export class AboutComponent implements OnInit {
   @ViewChild(Slides) slides: Slides;
   constructor(
     public navCtrl: NavController,

@@ -3,5 +3,31 @@ team {
   }
 
   ion-content {
+    ion-list {
+      ion-item.item {
+        background-color: #2E8F4C;
+        color: #fff;
+
+        .item-inner {
+          border: none !important;
+        }
+
+        ion-avatar {
+
+        }
+      }
+
+      ion-item.monica {
+        background-color: #5AB04B;
+      }
+
+      ion-item.nestor {
+        background-color: #70BB66;
+      }
+
+      ion-item.warrdnez {
+        background-color: #288040;
+      }
+    }
   }
 }

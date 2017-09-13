@@ -25,8 +25,16 @@ contact {
       padding: 15px 10px;
       text-align: center;
 
+      ion-label {
+        color: #757575;
+      }
+
       .card-title {
         font-size: 17px;
+      }
+
+      ion-label.card-subtitle {
+        color: #757575;
       }
 
       .card-subtitle {
@@ -40,6 +48,8 @@ contact {
 
     .twitter {
       background-color: #41A2F6;
+      float: left;
+      width: 42%;
     }
 
     .facebook {
@@ -48,14 +58,21 @@ contact {
 
     .instagram {
       background-color: #3E3C47;
+      float: left;
+      margin-top: 12px;
+      width: 42%;
     }
 
     .whatsapp {
       background-color: #359D00;
+      float: left;
+      width: 42%;
     }
 
     .mail {
       background-color: #D54635;
+      float: left;
+      width: 42%;
     }
 
     .info {
