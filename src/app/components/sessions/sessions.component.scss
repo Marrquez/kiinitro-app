@@ -29,6 +29,12 @@ sessions {
         text-align: center;
         width: 50px;
       }
+
+      button.start-button {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+      }
     }
 
     .toolbar-title {
