@@ -20,8 +20,103 @@ about {
   }
 
   ion-content {
-    ion-label {
-      color: #757575;
+    .scroll-content {
+      padding: 0 !important;
+    }
+
+    .slides-container {
+      height: 50%;
+      width: 100%;
+
+      button.swiper-pagination-bullet-active {
+        background-color: #8DDEEB !important;
+      }
+
+      ion-slide {
+        position: relative;
+
+        .slide-zoom {
+          height: 100%;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+
+        div {
+          bottom: 0;
+          color: #757575;
+          font-size: 20px;
+          height: 40px;
+          left: 0;
+          line-height: 40px;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          text-align: center;
+          top: 0;
+          width: 150px;
+        }
+      }
+    }
+
+    .container-view {
+      height: 50%;
+      width: 100%;
+
+      div {
+        display: inline-block;
+      }
+
+      .team {
+        background: #298390;
+        color: #fff;
+      }
+
+      .services {
+        background: #64D0E2;
+        color: #fff;
+      }
+
+      .benefits {
+        background: #39ACC2;
+        color: #fff;
+      }
+
+      .favorites {
+        background: #3197A8;
+        color: #fff;
+      }
+
+      .team, .services, .benefits, .favorites {
+        float: left;
+        height: 50%;
+        position: relative;
+        width: 50%;
+
+        ion-icon {
+          bottom: 0;
+          font-size: 35px;
+          height: 50px;
+          left: 0;
+          line-height: 50px;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          text-align: center;
+          top: 0;
+          width: 50px;
+        }
+
+        ion-label {
+          bottom: 0;
+          font-size: 14px;
+          position: absolute;
+          text-align: center;
+          width: 100%;
+        }
+      }
     }
   }
 }
