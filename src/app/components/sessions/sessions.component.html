@@ -1,9 +1,10 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Sesión de entrenamiento</ion-title>
+    <ion-title>Sesión generada</ion-title>
   </ion-navbar>
   <ion-toolbar>
     <ion-title>Ya está lista tu sesión</ion-title>
+    <button (click)="startRutine()"> Iniciar</button>
   </ion-toolbar>
 </ion-header>
 
@@ -51,8 +52,4 @@
       </ion-card>
     </ion-slide>
   </ion-slides>
-  <br />
-  <div class="button-container">
-    <button (click)="startRutine()" class="session-button" ion-button>Iniciar</button>
-  </div>
 </ion-content>

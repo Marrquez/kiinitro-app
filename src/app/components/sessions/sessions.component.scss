@@ -18,6 +18,19 @@ sessions {
       background-color: #00BCD4;
     }
 
+    .toolbar-content {
+      button {
+        background-color: #0094A0;
+        border-radius: 3px;
+        color: #fff;
+        float: right;
+        font-size: 12px;
+        height: 30px;
+        text-align: center;
+        width: 50px;
+      }
+    }
+
     .toolbar-title {
       color: #fff;
       font-size: 1.3rem;
@@ -35,7 +48,7 @@ sessions {
     ion-slides {
       .swiper-pagination {
         button.swiper-pagination-bullet-active {
-          background-color: #00BCD4;
+          background-color: #0094A0;
         }
       }
     }
@@ -43,14 +56,6 @@ sessions {
     ion-card {
       box-shadow: none !important;
       -webkit-box-shadow: none !important;
-    }
-
-    .button-container {
-      text-align: center;
-
-      button.session-button {
-        background-color: #00BCD4 !important;
-      }
     }
   }
 }
