@@ -32,9 +32,15 @@ sessions {
       }
     }
 
+    ion-slides {
+      .swiper-pagination {
+        button.swiper-pagination-bullet-active {
+          background-color: #00BCD4;
+        }
+      }
+    }
+
     ion-card {
-      border: 1px solid #DDD !important;
-      border-radius: 4px !important;
       box-shadow: none !important;
       -webkit-box-shadow: none !important;
     }

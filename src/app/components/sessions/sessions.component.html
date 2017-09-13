@@ -8,45 +8,49 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let e of session.list" (click)="presentModal(e.id);">
-    <img [src]="e.imagen"/>
-    <ion-card-content>
-      <ion-card-title>
-        {{ e.nombre }}
-      </ion-card-title>
-      <p>{{ e.descripcion }}</p>
-    </ion-card-content>
-    <ion-row>
-      <ion-col>
-        <button class="series" ion-button icon-left clear small>
-          <ion-icon name="more"></ion-icon>
-          <div>
-            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ e.series[5] }}
-            </ng-container>
-            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ e.series[11] }}
-            </ng-container>
-            series
-          </div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button class="series" ion-button icon-left clear small>
-          <ion-icon name="refresh"></ion-icon>
-          <div>
-            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ e.repeticiones[5] }}
-            </ng-container>
-            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ e.repeticiones[11] }}
-            </ng-container>
-            rep.
-          </div>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+  <ion-slides pager>
+    <ion-slide *ngFor="let e of session.list" (click)="presentModal(e.id);">
+      <ion-card>
+        <img [src]="e.imagen"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ e.nombre }}
+          </ion-card-title>
+          <p>{{ e.descripcion }}</p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <button class="series" ion-button icon-left clear small>
+              <ion-icon name="more"></ion-icon>
+              <div>
+                <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+                  {{ e.series[5] }}
+                </ng-container>
+                <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+                  {{ e.series[11] }}
+                </ng-container>
+                series
+              </div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button class="series" ion-button icon-left clear small>
+              <ion-icon name="refresh"></ion-icon>
+              <div>
+                <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+                  {{ e.repeticiones[5] }}
+                </ng-container>
+                <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+                  {{ e.repeticiones[11] }}
+                </ng-container>
+                rep.
+              </div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
   <br />
   <div class="button-container">
     <button (click)="startRutine()" class="session-button" ion-button>Iniciar</button>
