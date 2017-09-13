@@ -12,35 +12,35 @@
 <ion-content padding>
   <div class="slides-container">
     <ion-slides pager>
-      <ion-slide class="bienestar">
+      <ion-slide>
         <!--<img src="../../../assets/img/bienestar.jpg"/>-->
         <div>Bienestar</div>
       </ion-slide>
 
-      <ion-slide class="inspiracion">
+      <ion-slide>
         <!--<img src="../../../assets/img/inspiracion.jpg"/>-->
         <div>Inspiración</div>
       </ion-slide>
-      <ion-slide class="motivacion">
+      <ion-slide>
         <!--<img src="../../../assets/img/motivacion.png"/>-->
         <div>Motivación</div>
       </ion-slide>
     </ion-slides>
   </div>
   <div class="container-view">
-    <div class="team">
+    <div class="team" (click)="showTeam();">
       <ion-icon name="contacts"></ion-icon>
       <ion-label>Equipo</ion-label>
     </div>
-    <div class="services">
-      <ion-icon name="flash-outline"></ion-icon>
+    <div class="services" (click)="showServices();">
+      <ion-icon name="flash"></ion-icon>
       <ion-label>Servicios</ion-label>
     </div>
-    <div class="benefits">
+    <div class="benefits" (click)="showBenefits();">
       <ion-icon name="pulse"></ion-icon>
       <ion-label>Beneficios</ion-label>
     </div>
-    <div class="favorites">
+    <div class="favorites" (click)="showExtras();">
       <ion-icon name="heart-outline"></ion-icon>
       <ion-label>#MeEncanta</ion-label>
     </div>

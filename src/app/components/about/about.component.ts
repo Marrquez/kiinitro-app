@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
+
+import { TeamComponent } from '../team/team.component';
+import { ServicesComponent } from '../services/services.component';
+import { BenefitsComponent } from '../benefits/benefits.component';
+import { ExtrasComponent } from '../extras/extras.component';
 
 @Component({
   selector: 'about',
@@ -9,10 +15,33 @@ import { Slides } from 'ionic-angular';
 })
 export class AboutComponent implements OnInit{
   @ViewChild(Slides) slides: Slides;
-  constructor(public navCtrl: NavController) { };
+  constructor(
+    public navCtrl: NavController,
+    public modalCtrl: ModalController
+    ) { };
 
   ngOnInit() {
     this.slides.autoplay = 1000;
     this.slides.loop = true;
-  }
+  };
+
+  showTeam(){
+    let modal = this.modalCtrl.create(TeamComponent);
+    modal.present();
+  };
+
+  showServices(){
+    let modal = this.modalCtrl.create(ServicesComponent);
+    modal.present();
+  };
+
+  showBenefits(){
+    let modal = this.modalCtrl.create(BenefitsComponent);
+    modal.present();
+  };
+
+  showExtras(){
+    let modal = this.modalCtrl.create(ExtrasComponent);
+    modal.present();
+  };
 }

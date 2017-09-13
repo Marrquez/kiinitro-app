@@ -14,6 +14,10 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { SessionComponent } from './components/session/session.component';
 import { SessionsComponent } from './components/sessions/sessions.component';
 import { SessionItemComponent } from './components/session-item/session-item.component';
+import { TeamComponent } from './components/team/team.component';
+import { ServicesComponent } from './components/services/services.component';
+import { BenefitsComponent } from './components/benefits/benefits.component';
+import { ExtrasComponent } from './components/extras/extras.component';
 import { RutineComponent } from './components/rutine/rutine.component';
 
 /**
@@ -33,7 +37,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SessionComponent,
     SessionsComponent,
     SessionItemComponent,
-    RutineComponent
+    RutineComponent,
+    TeamComponent,
+    ServicesComponent,
+    BenefitsComponent,
+    ExtrasComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +58,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SessionComponent,
     SessionsComponent,
     SessionItemComponent,
-    RutineComponent
+    RutineComponent,
+    TeamComponent,
+    ServicesComponent,
+    BenefitsComponent,
+    ExtrasComponent
   ],
   providers: [
     StatusBar,
