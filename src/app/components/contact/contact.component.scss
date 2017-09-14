@@ -21,9 +21,15 @@ contact {
 
   ion-content {
     ion-card {
+      box-shadow: none !important;
+      -webkit-box-shadow: none !important;
       color: #fff;
       padding: 15px 10px;
       text-align: center;
+
+      a {
+        text-decoration: none;
+      }
 
       ion-label {
         color: #757575;
@@ -47,32 +53,43 @@ contact {
     }
 
     .twitter {
-      background-color: #41A2F6;
       float: left;
       width: 42%;
+
+      a {
+        color: #41A2F6;
+      }
     }
 
     .facebook {
-      background-color: #405A9A;
+      a {
+        color: #405A9A;
+      }
     }
 
     .instagram {
-      background-color: #3E3C47;
       float: left;
       margin-top: 12px;
       width: 42%;
+
+      a {
+        color: #3E3C47;
+      }
     }
 
     .whatsapp {
-      background-color: #359D00;
+      color: #359D00;
       float: left;
       width: 42%;
     }
 
     .mail {
-      background-color: #D54635;
       float: left;
       width: 42%;
+
+      a {
+        color: #D54635;
+      }
     }
 
     .info {
