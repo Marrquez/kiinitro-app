@@ -62,8 +62,18 @@ contact {
     }
 
     .facebook {
+      float: left;
+
       a {
         color: #405A9A;
+      }
+    }
+
+    .youtube {
+      float: left;
+
+      a {
+        color: #FF2600;
       }
     }
 
