@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 import { SessionService } from '../../services/session.service';
 import { SessionsComponent } from '../sessions/sessions.component';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'session',
   templateUrl: 'session.component.html'
 })
-export class SessionComponent {
+export class SessionComponent implements OnInit {
   constructor(
     public navCtrl: NavController,
     public session: SessionService,
+    public auth: AuthService,
     public toastCtrl: ToastController
-  ) { }
+  ) {
+    this.auth.initFirebase();
+  };
+
+  ngOnInit() {
+    this.auth.isAuth();
+  };
 
   goToSession() {
     if(!this.session.data.gender || !this.session.data.time || !this.session.data.target || !this.session.data.place || !this.session.data.muscle){

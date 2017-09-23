@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, URLSearchParams, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/catch';
-import { UserService } from './user.service';
 
+import { UserService } from './user.service';
 import firebase from 'firebase';
 
 @Injectable()
@@ -12,6 +12,17 @@ export class AuthService {
 
   loginUser(email: string, password: string): firebase.Promise<any> {
     return firebase.auth().signInWithEmailAndPassword(email, password);
+  };
+
+  initFirebase(){
+    firebase.initializeApp({
+      apiKey: "AIzaSyCQLJM4RBmvPWaghoKjkTjUI60HKdx3KtA",
+      authDomain: "kiinitro-5eb0b.firebaseapp.com",
+      databaseURL: "https://kiinitro-5eb0b.firebaseio.com",
+      projectId: "kiinitro-5eb0b",
+      storageBucket: "kiinitro-5eb0b.appspot.com",
+      messagingSenderId: "871776241739"
+    });
   };
 
   logByGoogle(){
@@ -57,11 +68,13 @@ export class AuthService {
       if (user) {
         self.user.data = user;
         self.user.isLogged = true;
+        console.warn("The user is logged in");
         return true;
       } else {
         // No user is signed in.
         self.user.data = {};
         self.user.isLogged = false;
+        console.warn("The user isn't logged in");
         return false;
       }
     });

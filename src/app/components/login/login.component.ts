@@ -7,7 +7,6 @@ import { AuthService } from '../../services/auth.service';
 import { SessionComponent } from '../session/session.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 import { ResetPasswordComponent } from '../reset-password/reset-password.component';
-import firebase from 'firebase';
 
 @Component({
   selector: 'login',
@@ -27,16 +26,6 @@ export class LoginComponent implements OnInit {
     public formBuilder: FormBuilder
   ) {
     this.tab = this.navCtrl.parent;
-    firebase.initializeApp({
-      apiKey: "AIzaSyCQLJM4RBmvPWaghoKjkTjUI60HKdx3KtA",
-      authDomain: "kiinitro-5eb0b.firebaseapp.com",
-      databaseURL: "https://kiinitro-5eb0b.firebaseio.com",
-      projectId: "kiinitro-5eb0b",
-      storageBucket: "kiinitro-5eb0b.appspot.com",
-      messagingSenderId: "871776241739"
-    });
-
-    this.auth.isAuth();
 
     this.loginForm = formBuilder.group({
       email: ['', Validators.compose([Validators.required, ValidatorService.isValid])],
@@ -44,9 +33,7 @@ export class LoginComponent implements OnInit {
     });
   };
 
-  ngOnInit() {
-    var a = 1;
-  };
+  ngOnInit() { };
 
   logout() {
     this.auth.logoutUser();
