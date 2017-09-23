@@ -36,6 +36,8 @@ export class LoginComponent implements OnInit {
       messagingSenderId: "871776241739"
     });
 
+    this.auth.isAuth();
+
     this.loginForm = formBuilder.group({
       email: ['', Validators.compose([Validators.required, ValidatorService.isValid])],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])]

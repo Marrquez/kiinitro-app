@@ -44,22 +44,26 @@ export class AuthService {
     //return firebase.auth().signOut();
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
-      console.log("log out");
+      //console.log("log out");
     }, function(error) {
       // An error happened.
-      console.log("error");
+      //console.log("error");
     });
   }
 
-  isAuth(){
-    firebase.auth().onAuthStateChanged(function(user) {
+  isAuth() {
+    var self = this;
+    firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        console.log(true);
-        console.log(firebase.auth().currentUser);
+        self.user.data = user;
+        self.user.isLogged = true;
+        return true;
       } else {
-        console.log(false);
-        console.log(firebase.auth().currentUser);
+        // No user is signed in.
+        self.user.data = {};
+        self.user.isLogged = false;
+        return false;
       }
     });
-  };
+  }
 }
