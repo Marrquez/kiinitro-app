@@ -1,0 +1,45 @@
+login {
+  ion-navbar {
+    .toolbar-title {
+      color: #00BCD4 !important;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+
+    .toolbar-background {
+      background: transparent !important;
+    }
+  }
+
+  ion-toolbar {
+    .toolbar-background {
+      background-color: #00BCD4;
+    }
+
+    .toolbar-title {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+  }
+
+  .invalid {
+    border-bottom: 1px solid #FF6153;
+  }
+
+  .error-message .item-inner {
+    border-bottom: 0 !important;
+  }
+
+  ion-content {
+    .user-info {
+      box-shadow: none;
+
+      ion-avatar {
+        ion-icon {
+          font-size: 45px;
+        }
+      }
+    }
+  }
+}

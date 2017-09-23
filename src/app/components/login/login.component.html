@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Bienvenido
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="loginForm" (submit)="loginUser()" *ngIf="!user.isLogged" novalidate>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input formControlName="email" type="email" placeholder="Your email address"
+                 [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message"
+              *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="Your password"
+                 [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
+    </ion-item>
+    <ion-item class="error-message"
+              *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+
+    <button ion-button block type="submit" [disabled]="!loginForm.valid">
+      Iniciar sesión
+    </button>
+
+    <button ion-button block clear (click)="goToSignup()">
+      Crear cuenta
+    </button>
+  </form>
+  <div *ngIf="!user.isLogged" class="other-methods" (click)="logByGoogle();">
+    <ion-icon name="logo-google"></ion-icon>
+  </div>
+
+  <ion-card class="user-info" *ngIf="user.isLogged">
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-avatar>
+      <h2 *ngIf="user.data.displayName">
+        {{ user.data.displayName }}
+        <ion-title *ngIf="!user.data.displayName">{{ user.data.email }}</ion-title>
+      </h2>
+      <h2 *ngIf="!user.data.displayName">
+        {{ user.data.email }}
+      </h2>
+      <p>Active</p>
+    </ion-item>
+
+    <img src="img/advance-card-bttf.png">
+
+    <ion-card-content>
+      <p>Sesiones restantes: 30</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col (click)="logout()">
+        <button ion-button icon-left clear small>
+          <ion-icon name="power"></ion-icon>
+          <div>Salir</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <!--<button ion-button block clear (click)="goToResetPassword()">
+    I forgot my password
+  </button>-->
+</ion-content>

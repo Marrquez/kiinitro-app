@@ -19,13 +19,19 @@ import { ServicesComponent } from './components/services/services.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
 import { ExtrasComponent } from './components/extras/extras.component';
 import { RutineComponent } from './components/rutine/rutine.component';
+import { LoginComponent } from './components/login/login.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 /**
  * Services
  * */
 import { SessionService } from './services/session.service';
+import { AuthService } from './services/auth.service';
+import { ValidatorService } from './services/validator.service';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +47,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TeamComponent,
     ServicesComponent,
     BenefitsComponent,
-    ExtrasComponent
+    ExtrasComponent,
+    LoginComponent,
+    SignUpComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -62,12 +71,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TeamComponent,
     ServicesComponent,
     BenefitsComponent,
-    ExtrasComponent
+    ExtrasComponent,
+    LoginComponent,
+    SignUpComponent,
+    ResetPasswordComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
     SessionService,
+    AuthService,
+    ValidatorService,
+    UserService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
