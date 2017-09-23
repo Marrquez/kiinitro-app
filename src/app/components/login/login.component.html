@@ -31,11 +31,10 @@
     <button ion-button block type="submit" [disabled]="!loginForm.valid">
       Iniciar sesión
     </button>
-
-    <button ion-button block clear (click)="goToSignup()">
-      Crear cuenta
-    </button>
   </form>
+  <button *ngIf="!user.isLogged" ion-button block clear (click)="goToSignup()">
+    Crear cuenta
+  </button>
   <div *ngIf="!user.isLogged" class="other-methods" (click)="logByGoogle();">
     <ion-icon name="logo-google"></ion-icon>
   </div>

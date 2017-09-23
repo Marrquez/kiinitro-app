@@ -40,8 +40,15 @@ export class AuthService {
     return firebase.auth().sendPasswordResetEmail(email);
   };
 
-  logoutUser(): firebase.Promise<void> {
-    return firebase.auth().signOut();
+  logoutUser() {
+    //return firebase.auth().signOut();
+    firebase.auth().signOut().then(function() {
+      // Sign-out successful.
+      console.log("log out");
+    }, function(error) {
+      // An error happened.
+      console.log("error");
+    });
   }
 
   isAuth(){
