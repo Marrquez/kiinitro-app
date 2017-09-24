@@ -15,35 +15,48 @@ export class AuthService {
   };
 
   initFirebase(){
-    firebase.initializeApp({
-      apiKey: "AIzaSyCQLJM4RBmvPWaghoKjkTjUI60HKdx3KtA",
-      authDomain: "kiinitro-5eb0b.firebaseapp.com",
-      databaseURL: "https://kiinitro-5eb0b.firebaseio.com",
-      projectId: "kiinitro-5eb0b",
-      storageBucket: "kiinitro-5eb0b.appspot.com",
-      messagingSenderId: "871776241739"
-    });
+    if(!firebase.apps.length){
+      firebase.initializeApp({
+        apiKey: "AIzaSyCQLJM4RBmvPWaghoKjkTjUI60HKdx3KtA",
+        authDomain: "kiinitro-5eb0b.firebaseapp.com",
+        databaseURL: "https://kiinitro-5eb0b.firebaseio.com",
+        projectId: "kiinitro-5eb0b",
+        storageBucket: "kiinitro-5eb0b.appspot.com",
+        messagingSenderId: "871776241739"
+      });
+    }
   };
 
   logByGoogle(){
     var self = this;
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithRedirect(provider).then(function(result) {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      var token = result.credential.accessToken;
-      // The signed-in user info.
-      self.user.data = result.user;
-      self.user.isLogged = true;
-      // ...
+    return firebase.auth().signInWithRedirect(provider);
+  };
+
+  getGoogleUser(){
+    var self = this;
+
+    firebase.auth().getRedirectResult().then(function(result) {
+      if (result.credential) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        self.user.data = result.user;
+        self.user.isLogged = true;
+        if (!self.user.getUserInternalData(result.user.uid)) {
+
+        }
+      }
     }).catch(function(error) {
-      console.log("error singing");
     });
   };
 
-  signupUser(email: string, password: string): firebase.Promise<any> {
+  signupUser(email: string, password: string, username: string): firebase.Promise<any> {
+    var self = this;
+
     return firebase.auth().createUserWithEmailAndPassword(email, password).then( newUser => {
-      firebase.database().ref('/userProfile').child(newUser.uid)
-        .set({ email: email });
+      let uid = newUser.uid;
+      firebase.database().ref('/userProfile').child(uid).set({ email: email });
+      self.user.createUser(uid, username, 0);
     });
   };
 
@@ -55,10 +68,8 @@ export class AuthService {
     //return firebase.auth().signOut();
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
-      //console.log("log out");
     }, function(error) {
       // An error happened.
-      //console.log("error");
     });
   }
 
@@ -68,11 +79,16 @@ export class AuthService {
       if (user) {
         self.user.data = user;
         self.user.isLogged = true;
-        console.warn("The user is logged in");
+        self.user.getUserInternalData(self.user.data.uid);
         return true;
       } else {
         // No user is signed in.
-        self.user.data = {};
+        self.user.data = {uid: '', displayName: ''};
+        self.user.internalData = {
+          iPoints: 0,
+          iUserId: '',
+          vchUsername: ''
+        };
         self.user.isLogged = false;
         console.warn("The user isn't logged in");
         return false;

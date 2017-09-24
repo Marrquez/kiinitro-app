@@ -37,18 +37,25 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.auth.logoutUser();
-    this.user.data = {};
+    this.user.data = {uid: '', displayName: ''};
+    this.user.internalData = {
+      iPoints: 0,
+      iUserId: '',
+      vchUsername: ''
+    };
     this.user.isLogged = false;
   };
 
   loginUser(): void {
     var self = this;
-    if (!this.loginForm.valid){
-      console.log(this.loginForm.value);
+
+    if (!self.loginForm.valid){
+      console.log(self.loginForm.value);
     } else {
-      this.auth.loginUser(this.loginForm.value.email, this.loginForm.value.password).then( authData => {
+      this.auth.loginUser(self.loginForm.value.email, self.loginForm.value.password).then( authData => {
         self.user.data = authData;
         self.user.isLogged = true;
+        self.user.getUserInternalData(authData.uid);
         this.loading.dismiss().then( () => {
           //self.tab.select(0);
         });
@@ -71,7 +78,23 @@ export class LoginComponent implements OnInit {
   }
 
   logByGoogle(){
-    this.auth.logByGoogle();
+    var self = this;
+
+    this.auth.logByGoogle().then( authData => {
+      //self.user.validateAndRegister(self.user.data.uid, self.user.data.displayName);
+    }, error => {
+      this.loading.dismiss().then( () => {
+        let alert = this.alertCtrl.create({
+          message: error.message,
+          buttons: [{
+            text: "Ok",
+            role: 'cancel'
+          }]
+        });
+
+        alert.present();
+      });
+    });
   };
 
   goToSignup(): void { this.navCtrl.push(SignUpComponent); }

@@ -5,6 +5,7 @@ import { ToastController } from 'ionic-angular';
 import { SessionService } from '../../services/session.service';
 import { SessionsComponent } from '../sessions/sessions.component';
 import { AuthService } from '../../services/auth.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'session',
@@ -15,13 +16,15 @@ export class SessionComponent implements OnInit {
     public navCtrl: NavController,
     public session: SessionService,
     public auth: AuthService,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    public user: UserService
   ) {
     this.auth.initFirebase();
   };
 
   ngOnInit() {
     this.auth.isAuth();
+    this.auth.getGoogleUser();
   };
 
   goToSession() {
