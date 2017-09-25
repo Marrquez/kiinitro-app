@@ -30,7 +30,7 @@ export class AuthService {
   logByGoogle(){
     var self = this;
     var provider = new firebase.auth.GoogleAuthProvider();
-    return firebase.auth().signInWithRedirect(provider);
+    firebase.auth().signInWithRedirect(provider);
   };
 
   getGoogleUser(){
@@ -43,7 +43,32 @@ export class AuthService {
         self.user.data = result.user;
         self.user.isLogged = true;
         if (!self.user.getUserInternalData(result.user.uid)) {
+          self.user.createUser(result.user.uid, result.user.displayName, 0);
+          self.user.getUserInternalData(result.user.uid);
+        }
+      }
+    }).catch(function(error) {
+    });
+  };
 
+  logByFacebook(){
+    var self = this;
+    var provider = new firebase.auth.FacebookAuthProvider();
+    return firebase.auth().signInWithRedirect(provider);
+  };
+
+  getFacebookUser(){
+    var self = this;
+
+    firebase.auth().getRedirectResult().then(function(result) {
+      if (result.credential) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        self.user.data = result.user;
+        self.user.isLogged = true;
+        if (!self.user.getUserInternalData(result.user.uid)) {
+          self.user.createUser(result.user.uid, result.user.displayName, 0);
+          self.user.getUserInternalData(result.user.uid);
         }
       }
     }).catch(function(error) {

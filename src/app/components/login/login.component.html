@@ -35,8 +35,11 @@
   <button *ngIf="!user.isLogged" ion-button block clear (click)="goToSignup()">
     Crear cuenta
   </button>
-  <div *ngIf="!user.isLogged" class="other-methods" (click)="logByGoogle();">
+  <div *ngIf="!user.isLogged" class="other-methods google" (click)="logByGoogle();">
     <ion-icon name="logo-google"></ion-icon>
+  </div>
+  <div *ngIf="!user.isLogged" class="other-methods facebook" (click)="logByFacebook();">
+    <ion-icon name="logo-facebook"></ion-icon>
   </div>
 
   <ion-card class="user-info" *ngIf="user.isLogged">

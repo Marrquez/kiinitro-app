@@ -25,6 +25,7 @@ export class SessionComponent implements OnInit {
   ngOnInit() {
     this.auth.isAuth();
     this.auth.getGoogleUser();
+    this.auth.getFacebookUser();
   };
 
   goToSession() {

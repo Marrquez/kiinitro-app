@@ -82,21 +82,13 @@ export class LoginComponent implements OnInit {
   logByGoogle(){
     var self = this;
 
-    this.auth.logByGoogle().then( authData => {
-      //self.user.validateAndRegister(self.user.data.uid, self.user.data.displayName);
-    }, error => {
-      this.loading.dismiss().then( () => {
-        let alert = this.alertCtrl.create({
-          message: error.message,
-          buttons: [{
-            text: "Ok",
-            role: 'cancel'
-          }]
-        });
+    this.auth.logByGoogle();
+  };
 
-        alert.present();
-      });
-    });
+  logByFacebook(){
+    var self = this;
+
+    self.auth.logByFacebook();
   };
 
   changePoints(){
