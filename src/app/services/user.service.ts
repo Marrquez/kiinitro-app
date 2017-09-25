@@ -5,14 +5,15 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class UserService {
-  //private baseUrl = 'http://localhost:8080';
-  private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
+  private baseUrl = 'http://localhost:8080';
+  //private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
   public data = {uid: '', displayName: ''};
   public isLogged = false;
   public internalData = {
     iPoints: 0,
     iUserId: '',
-    vchUsername: ''
+    vchUsername: '',
+    dtLastSession: ''
   };
   constructor(private http: Http) { };
 
@@ -24,6 +25,7 @@ export class UserService {
         self.internalData.iPoints = response.data.iPoints;
         self.internalData.iUserId = response.data.iUserId;
         self.internalData.vchUsername = response.data.vchUsername;
+        self.internalData.dtLastSession = response.data.dtLastSession;
         return true;
       } else {
         return false;
@@ -54,6 +56,23 @@ export class UserService {
     };
 
     return this.http.post(url, params, options)
+      .toPromise()
+      .then(this.extractData)
+      .then(response => response);
+  };
+
+  public updatePoints(points: number){
+    let url = this.baseUrl + '/upd-userPoints';
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+
+    let params = {
+      'idUser': this.internalData.iUserId,
+      'points': points.toString(),
+      'dtLastSession': (new Date()).toString()
+    };
+
+    return this.http.put(url, params, options)
       .toPromise()
       .then(this.extractData)
       .then(response => response);

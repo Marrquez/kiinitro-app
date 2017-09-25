@@ -56,12 +56,12 @@
 
     <img src="img/advance-card-bttf.png">
 
-    <ion-card-content>
+    <!-- <ion-card-content>
       <p>Días restantes: 30</p>
-    </ion-card-content>
+    </ion-card-content>-->
 
     <ion-card-content>
-      <button ion-button block >
+      <button ion-button block (click)="changePoints();">
         Redimir {{ user.internalData.iPoints }} puntos
       </button>
     </ion-card-content>

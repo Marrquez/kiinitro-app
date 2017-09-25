@@ -87,7 +87,8 @@ export class AuthService {
         self.user.internalData = {
           iPoints: 0,
           iUserId: '',
-          vchUsername: ''
+          vchUsername: '',
+          dtLastSession: ''
         };
         self.user.isLogged = false;
         console.warn("The user isn't logged in");

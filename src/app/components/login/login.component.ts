@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage, Loading, LoadingController, NavController, AlertController, Nav, Tabs } from 'ionic-angular';
+import { IonicPage, ToastController, Loading, LoadingController, NavController, AlertController, Nav, Tabs } from 'ionic-angular';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ValidatorService } from '../../services/validator.service';
 import { UserService } from '../../services/user.service';
@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     public alertCtrl: AlertController,
     public auth: AuthService,
     public user: UserService,
+    public toastCtrl: ToastController,
     public formBuilder: FormBuilder
   ) {
     this.tab = this.navCtrl.parent;
@@ -41,7 +42,8 @@ export class LoginComponent implements OnInit {
     this.user.internalData = {
       iPoints: 0,
       iUserId: '',
-      vchUsername: ''
+      vchUsername: '',
+      dtLastSession: ''
     };
     this.user.isLogged = false;
   };
@@ -94,6 +96,19 @@ export class LoginComponent implements OnInit {
 
         alert.present();
       });
+    });
+  };
+
+  changePoints(){
+    var self = this;
+    self.user.updatePoints(0).then(response => {
+      self.user.internalData.iPoints = 0;
+      let toast = this.toastCtrl.create({
+        message: '¡Disfruta tu regalo!, ahora tienes 0 puntos. Gracias por usar Kiinitro Fitness.',
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
     });
   };
 
