@@ -60,6 +60,12 @@
       <p>Días restantes: 30</p>
     </ion-card-content>
 
+    <ion-card-content>
+      <button ion-button block >
+        Redimir {{ user.internalData.iPoints }} puntos
+      </button>
+    </ion-card-content>
+
     <ion-row>
       <ion-col (click)="logout()">
         <button ion-button icon-left clear small>
