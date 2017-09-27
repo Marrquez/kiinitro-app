@@ -22,6 +22,7 @@ import { RutineComponent } from './components/rutine/rutine.component';
 import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { TermsComponent } from './components/terms/terms.component';
 
 /**
  * Services
@@ -50,7 +51,8 @@ import { UserService } from './services/user.service';
     ExtrasComponent,
     LoginComponent,
     SignUpComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,8 @@ import { UserService } from './services/user.service';
     ExtrasComponent,
     LoginComponent,
     SignUpComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    TermsComponent
   ],
   providers: [
     StatusBar,

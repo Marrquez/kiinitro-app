@@ -14,16 +14,12 @@ import { ExtrasComponent } from '../extras/extras.component';
   templateUrl: 'about.component.html'
 })
 export class AboutComponent implements OnInit {
-  @ViewChild(Slides) slides: Slides;
   constructor(
     public navCtrl: NavController,
     public modalCtrl: ModalController
     ) { };
 
-  ngOnInit() {
-    this.slides.autoplay = 1000;
-    this.slides.loop = true;
-  };
+  ngOnInit() { };
 
   showTeam(){
     let modal = this.modalCtrl.create(TeamComponent);

@@ -1,11 +1,21 @@
 tabs {
   .tabbar {
-    .tab-button:hover:not(.disable-hover),
-    .tab-button[aria-selected=true] {
-      color: #00BCD4;
+    background: #2F2F2F !important;
+
+    .tab-button {
+      color: #DEE4BF;
 
       .tab-button-icon {
-        color: #00BCD4;
+        color: #DEE4BF;
+      }
+    }
+
+    .tab-button:hover:not(.disable-hover),
+    .tab-button[aria-selected=true] {
+      color: #BDD80F;
+
+      .tab-button-icon {
+        color: #BDD80F;
       }
     }
   }

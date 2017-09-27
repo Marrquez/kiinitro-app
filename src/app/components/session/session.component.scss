@@ -1,7 +1,12 @@
 session {
   ion-navbar {
+    .toolbar-background {
+      background-color: #fff;
+      border: none !important;
+    }
+
     .toolbar-title {
-      color: #00BCD4;
+      color: #44500D;
       font-size: 1.6rem;
       font-weight: normal;
     }
@@ -9,20 +14,29 @@ session {
 
   ion-toolbar {
     .toolbar-background {
-      background-color: #00BCD4;
+      background-color: #2F2F2F;
     }
 
-    .toolbar-title {
-      color: #fff;
-      font-size: 1.3rem;
-      font-weight: normal;
+    .title {
+      padding: 0 10px !important;
+
+      .toolbar-title {
+        color: #BDD80F;
+        font-size: 1.3rem;
+        font-weight: normal;
+      }
     }
   }
 
   ion-content {
     ion-item {
+      .item-inner {
+        border: none !important;
+      }
+
       ion-label {
-        color: #757575;
+        color: #44500D;
+        font-size: 13px;
       }
     }
 
@@ -30,7 +44,10 @@ session {
       text-align: center;
 
       button.session-button {
-        background-color: #00BCD4 !important;
+        background-color: #BDD80F !important;
+        border-radius: 3px;
+        color: #2F2F2F;
+        font-size: 12px;
       }
     }
   }

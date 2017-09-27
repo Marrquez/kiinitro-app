@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar>
     <ion-title>
       Bienvenido
     </ion-title>
@@ -45,7 +45,7 @@
   <ion-card class="user-info" *ngIf="user.isLogged">
     <ion-item>
       <ion-avatar item-start>
-        <ion-icon name="person-outline"></ion-icon>
+        <img src="./assets/img/kiinitro fitness 2.png"/>
       </ion-avatar>
       <h2 *ngIf="user.data.displayName">
         {{ user.data.displayName }}
@@ -64,7 +64,7 @@
     </ion-card-content>-->
 
     <ion-card-content>
-      <button ion-button block (click)="changePoints();">
+      <button ion-button (click)="changePoints();">
         Redimir {{ user.internalData.iPoints }} puntos
       </button>
     </ion-card-content>

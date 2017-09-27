@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 import { SessionService } from '../../services/session.service';
 import { SessionsComponent } from '../sessions/sessions.component';
+import { TermsComponent } from '../terms/terms.component';
 import { AuthService } from '../../services/auth.service';
 import { UserService } from '../../services/user.service';
 
@@ -17,7 +19,8 @@ export class SessionComponent implements OnInit {
     public session: SessionService,
     public auth: AuthService,
     public toastCtrl: ToastController,
-    public user: UserService
+    public user: UserService,
+    public modalCtrl: ModalController
   ) {
     this.auth.initFirebase();
   };
@@ -54,4 +57,9 @@ export class SessionComponent implements OnInit {
       this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[2]));
     }
   }
+
+  showTerms(){
+    let modal = this.modalCtrl.create(TermsComponent);
+    modal.present();
+  };
 }

@@ -1,7 +1,12 @@
 about {
   ion-navbar {
+    .toolbar-background {
+      background-color: #fff;
+      border: none !important;
+    }
+
     .toolbar-title {
-      color: #00BCD4;
+      color: #44500D;
       font-size: 1.6rem;
       font-weight: normal;
     }
@@ -9,13 +14,18 @@ about {
 
   ion-toolbar {
     .toolbar-background {
-      background-color: #00BCD4;
+      background-color: #2F2F2F;
+      border: none !important;
     }
 
-    .toolbar-title {
-      color: #fff;
-      font-size: 1.3rem;
-      font-weight: normal;
+    .title {
+      padding: 0 10px !important;
+
+      .toolbar-title {
+        color: #BDD80F;
+        font-size: 1.3rem;
+        font-weight: normal;
+      }
     }
   }
 
@@ -28,36 +38,9 @@ about {
       height: 50%;
       width: 100%;
 
-      button.swiper-pagination-bullet-active {
-        background-color: #8DDEEB !important;
-      }
-
-      ion-slide {
-        position: relative;
-
-        .slide-zoom {
-          height: 100%;
-        }
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-
-        div {
-          bottom: 0;
-          color: #757575;
-          font-size: 20px;
-          height: 40px;
-          left: 0;
-          line-height: 40px;
-          margin: auto;
-          position: absolute;
-          right: 0;
-          text-align: center;
-          top: 0;
-          width: 150px;
-        }
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
 
@@ -70,23 +53,19 @@ about {
       }
 
       .team {
-        background: #298390;
-        color: #fff;
+        color: #E09000;
       }
 
       .services {
-        background: #64D0E2;
-        color: #fff;
+        color: #758320;
       }
 
       .benefits {
-        background: #39ACC2;
-        color: #fff;
+        color: #BDD80F;
       }
 
       .favorites {
-        background: #3197A8;
-        color: #fff;
+        color: #42649E;
       }
 
       .team, .services, .benefits, .favorites {

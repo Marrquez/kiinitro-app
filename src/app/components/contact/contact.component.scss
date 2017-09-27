@@ -1,20 +1,13 @@
 contact {
   ion-navbar {
-    .toolbar-title {
-      color: #00BCD4;
-      font-size: 1.6rem;
-      font-weight: normal;
-    }
-  }
-
-  ion-toolbar {
     .toolbar-background {
-      background-color: #00BCD4;
+      background-color: #fff;
+      border: none !important;
     }
 
     .toolbar-title {
-      color: #fff;
-      font-size: 1.3rem;
+      color: #44500D;
+      font-size: 1.6rem;
       font-weight: normal;
     }
   }
@@ -24,7 +17,8 @@ contact {
       box-shadow: none !important;
       -webkit-box-shadow: none !important;
       color: #fff;
-      padding: 15px 10px;
+      padding: 10px;
+      margin: 5px !important;
       text-align: center;
 
       a {
@@ -36,7 +30,7 @@ contact {
       }
 
       .card-title {
-        font-size: 17px;
+        font-size: 12px;
       }
 
       ion-label.card-subtitle {
@@ -44,7 +38,7 @@ contact {
       }
 
       .card-subtitle {
-        font-size: 11px;
+        font-size: 12px;
       }
 
       ion-icon {
@@ -54,7 +48,7 @@ contact {
 
     .twitter {
       float: left;
-      width: 42%;
+      width: 30%;
 
       a {
         color: #41A2F6;
@@ -63,6 +57,7 @@ contact {
 
     .facebook {
       float: left;
+      width: 30%;
 
       a {
         color: #405A9A;
@@ -71,6 +66,7 @@ contact {
 
     .youtube {
       float: left;
+      width: 30%;
 
       a {
         color: #FF2600;
@@ -80,7 +76,7 @@ contact {
     .instagram {
       float: left;
       margin-top: 12px;
-      width: 42%;
+      width: 30%;
 
       a {
         color: #3E3C47;
@@ -90,12 +86,12 @@ contact {
     .whatsapp {
       color: #359D00;
       float: left;
-      width: 42%;
+      width: 30%;
     }
 
     .mail {
       float: left;
-      width: 42%;
+      width: 30%;
 
       a {
         color: #D54635;
