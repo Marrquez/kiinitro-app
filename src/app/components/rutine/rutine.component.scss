@@ -14,14 +14,15 @@ rutine {
 
   ion-toolbar {
     .toolbar-background {
-      background-color: #2F2F2F;
+      background-color: #DEE4BF;
+      border: none !important;
     }
 
     .title {
       padding: 0 10px !important;
 
       .toolbar-title {
-        color: #BDD80F;
+        color: #2F2F2F;
         font-size: 1.3rem;
         font-weight: normal;
       }
