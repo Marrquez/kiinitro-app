@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 import { SessionItemComponent } from '../session-item/session-item.component';
 import { RutineComponent } from '../rutine/rutine.component';
@@ -18,12 +19,21 @@ export class SessionsComponent implements OnInit {
     public modalCtrl: ModalController,
     public session: SessionService,
     public user: UserService,
-    private splash: SplashScreen
+    private splash: SplashScreen,
+    private ga: GoogleAnalytics,
   ) { };
 
   ngOnInit() {
     this.splash.show();
     this.getTasks();
+
+    this.ga.startTrackerWithId('UA-39578145-1').then(() => {
+      console.log('Google analytics is ready now');
+      //this.ga.trackView('test');
+      this.ga.trackView('sessions');
+      // Tracker is ready
+      // You can now track pages or set additional information such as AppVersion or UserId
+    }).catch(e => console.log('Error starting GoogleAnalytics', e));
   };
 
   getTasks(){

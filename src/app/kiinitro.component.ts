@@ -19,15 +19,10 @@ export class Kiinitro {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      this.ga.startTrackerWithId('UA-26817815-1').then(() => {
+      this.ga.startTrackerWithId('UA-39578145-1').then(() => {
         console.log('Google analytics is ready now');
         //this.ga.trackView('test');
-        this.ga.trackView('session');
-        this.ga.trackView('sessions');
-        this.ga.trackView('session-item');
-        this.ga.trackView('rutine');
-        this.ga.trackView('contact');
-        this.ga.trackView('terms');
+        this.ga.trackView('kiinitro');
         // Tracker is ready
         // You can now track pages or set additional information such as AppVersion or UserId
       }).catch(e => console.log('Error starting GoogleAnalytics', e));

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController, Nav, Tabs  } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 import { SessionService } from '../../services/session.service';
 import { UserService } from '../../services/user.service';
@@ -18,13 +19,22 @@ export class RutineComponent implements OnInit {
     public navCtrl: NavController,
     public session: SessionService,
     public user: UserService,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private ga: GoogleAnalytics
   ) {
     this.tab = this.navCtrl.parent;
   };
 
   ngOnInit() {
     this.session.current = this.session.list[this.session.currentIndex];
+
+    this.ga.startTrackerWithId('UA-39578145-1').then(() => {
+      console.log('Google analytics is ready now');
+      //this.ga.trackView('test');
+      this.ga.trackView('rutine');
+      // Tracker is ready
+      // You can now track pages or set additional information such as AppVersion or UserId
+    }).catch(e => console.log('Error starting GoogleAnalytics', e));
   };
 
   goNext(){

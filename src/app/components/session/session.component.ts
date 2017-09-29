@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 import { SessionService } from '../../services/session.service';
 import { SessionsComponent } from '../sessions/sessions.component';
@@ -20,7 +21,8 @@ export class SessionComponent implements OnInit {
     public auth: AuthService,
     public toastCtrl: ToastController,
     public user: UserService,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    private ga: GoogleAnalytics
   ) {
     this.auth.initFirebase();
   };
@@ -29,6 +31,14 @@ export class SessionComponent implements OnInit {
     this.auth.isAuth();
     this.auth.getGoogleUser();
     this.auth.getFacebookUser();
+
+    this.ga.startTrackerWithId('UA-39578145-1').then(() => {
+      console.log('Google analytics is ready now');
+      //this.ga.trackView('test');
+      this.ga.trackView('session');
+      // Tracker is ready
+      // You can now track pages or set additional information such as AppVersion or UserId
+    }).catch(e => console.log('Error starting GoogleAnalytics', e));
   };
 
   goToSession() {

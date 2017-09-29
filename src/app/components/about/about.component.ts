@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 import { TeamComponent } from '../team/team.component';
 import { ServicesComponent } from '../services/services.component';
@@ -19,10 +20,18 @@ export class AboutComponent implements OnInit {
   constructor(
     public navCtrl: NavController,
     public user: UserService,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    private ga: GoogleAnalytics
     ) { };
 
-  ngOnInit() { };
+  ngOnInit() {
+    this.ga.startTrackerWithId('UA-39578145-1').then(() => {
+      console.log('Google analytics is ready now');
+      this.ga.trackView('about');
+      // Tracker is ready
+      // You can now track pages or set additional information such as AppVersion or UserId
+    }).catch(e => console.log('Error starting GoogleAnalytics', e));
+  };
 
   showTeam(){
     let modal = this.modalCtrl.create(TeamComponent);
