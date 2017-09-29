@@ -53,10 +53,12 @@ export class RutineComponent implements OnInit {
       points = this.getDiference() >= 24 ? self.user.internalData.iPoints + 10 : self.user.internalData.iPoints;
     }
 
-    self.user.updatePoints(points).then(response => {
-      self.user.internalData.dtLastSession = self.user.internalData.dtEnd;
-      self.user.internalData.iPoints = points;
-    });
+    if(this.user.internalData.iUserId && this.user.internalData.iUserId != ''){
+      self.user.updatePoints(points).then(response => {
+        self.user.internalData.dtLastSession = self.user.internalData.dtEnd;
+        self.user.internalData.iPoints = points;
+      });
+    }
   };
 
   goBack(){
