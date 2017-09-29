@@ -5,8 +5,8 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class UserService {
-  private baseUrl = 'http://localhost:8080';
-  //private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
+  //private baseUrl = 'http://localhost:8080';
+  private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
   public data = {uid: '', displayName: ''};
   public isLogged = false;
   public mainImg = './assets/img/kiinitro fitness 3.png';

@@ -22,7 +22,7 @@ export class TabsComponent {
 
   changeImage(){
     let base = './assets/img/kiinitro fitness ';
-    let imgNumber = Math.floor((Math.random() * 4) + 1);
+    let imgNumber = Math.floor((Math.random() * 5) + 1);
     this.user.mainImg = base + imgNumber + '.png';
   };
 }
