@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Kiinitro } from './kiinitro.component';
 import { HttpModule } from '@angular/http';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 /**
  * Components
@@ -86,6 +87,7 @@ import { UserService } from './services/user.service';
     AuthService,
     ValidatorService,
     UserService,
+    GoogleAnalytics,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -9,6 +9,8 @@ import { ServicesComponent } from '../services/services.component';
 import { BenefitsComponent } from '../benefits/benefits.component';
 import { ExtrasComponent } from '../extras/extras.component';
 
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'about',
   templateUrl: 'about.component.html'
@@ -16,6 +18,7 @@ import { ExtrasComponent } from '../extras/extras.component';
 export class AboutComponent implements OnInit {
   constructor(
     public navCtrl: NavController,
+    public user: UserService,
     public modalCtrl: ModalController
     ) { };
 

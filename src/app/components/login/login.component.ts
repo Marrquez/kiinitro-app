@@ -43,7 +43,9 @@ export class LoginComponent implements OnInit {
       iPoints: 0,
       iUserId: '',
       vchUsername: '',
-      dtLastSession: ''
+      dtLastSession: '',
+      dtBegin: '',
+      dtEnd: ''
     };
     this.user.isLogged = false;
   };

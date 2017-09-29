@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SessionItemComponent } from '../session-item/session-item.component';
 import { RutineComponent } from '../rutine/rutine.component';
 import { SessionService } from '../../services/session.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'sessions',
@@ -16,6 +17,7 @@ export class SessionsComponent implements OnInit {
     public navCtrl: NavController,
     public modalCtrl: ModalController,
     public session: SessionService,
+    public user: UserService,
     private splash: SplashScreen
   ) { };
 
@@ -206,6 +208,9 @@ export class SessionsComponent implements OnInit {
   };
 
   startRutine(){
-    this.navCtrl.push(RutineComponent);
+    var self = this;
+    let currentDate = new Date();
+    self.user.internalData.dtBegin = currentDate.toString();
+    self.navCtrl.push(RutineComponent);
   };
 }

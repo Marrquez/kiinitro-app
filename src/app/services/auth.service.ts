@@ -113,7 +113,9 @@ export class AuthService {
           iPoints: 0,
           iUserId: '',
           vchUsername: '',
-          dtLastSession: ''
+          dtLastSession: '',
+          dtBegin: '',
+          dtEnd: ''
         };
         self.user.isLogged = false;
         console.warn("The user isn't logged in");

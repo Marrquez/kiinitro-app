@@ -6,6 +6,8 @@ import { HomeComponent } from '../home/home.component';
 import { SessionComponent } from '../session/session.component';
 import { LoginComponent } from '../login/login.component';
 
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'tabs',
   templateUrl: 'tabs.component.html'
@@ -16,5 +18,11 @@ export class TabsComponent {
   tab3Root = ContactComponent;
   tab4Root = LoginComponent;
 
-  constructor() { }
+  constructor(public user: UserService) { };
+
+  changeImage(){
+    let base = './assets/img/kiinitro fitness ';
+    let imgNumber = Math.floor((Math.random() * 4) + 1);
+    this.user.mainImg = base + imgNumber + '.png';
+  };
 }

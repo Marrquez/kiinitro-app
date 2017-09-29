@@ -44,9 +44,17 @@ export class RutineComponent implements OnInit {
 
   sumPoints(){
     var self = this;
-    let points = this.getDiference() >= 24 ? self.user.internalData.iPoints + 100 : self.user.internalData.iPoints;
+    let currentDate = new Date();
+    self.user.internalData.dtEnd = currentDate.toString();
+    let points = 0;
+    if(this.user.internalData.dtLastSession === '-'){
+      points = 100;
+    }else{
+      points = this.getDiference() >= 24 ? self.user.internalData.iPoints + 10 : self.user.internalData.iPoints;
+    }
 
     self.user.updatePoints(points).then(response => {
+      self.user.internalData.dtLastSession = self.user.internalData.dtEnd;
       self.user.internalData.iPoints = points;
     });
   };
@@ -58,8 +66,8 @@ export class RutineComponent implements OnInit {
   };
 
   getDiference() {
-    if(this.user.internalData.dtLastSession !== '-'){
-      let diff = new Date().getTime() - new Date(this.user.internalData.dtLastSession).getTime();
+    if(this.user.internalData.dtEnd !== '-' && this.user.internalData.dtEnd && this.user.internalData.dtLastSession != '-') {
+      let diff = new Date(this.user.internalData.dtEnd).getTime() - new Date(this.user.internalData.dtLastSession).getTime();
       return diff / 1000 / 60 / 60;
     }else{
       return 24;

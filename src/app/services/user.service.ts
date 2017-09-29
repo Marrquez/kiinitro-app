@@ -5,14 +5,17 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class UserService {
-  //private baseUrl = 'http://localhost:8080';
-  private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
+  private baseUrl = 'http://localhost:8080';
+  //private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
   public data = {uid: '', displayName: ''};
   public isLogged = false;
+  public mainImg = './assets/img/kiinitro fitness 3.png';
   public internalData = {
     iPoints: 0,
     iUserId: '',
     vchUsername: '',
+    dtBegin: '',
+    dtEnd: '',
     dtLastSession: ''
   };
   constructor(private http: Http) { };
@@ -69,7 +72,8 @@ export class UserService {
     let params = {
       'idUser': this.internalData.iUserId,
       'points': points.toString(),
-      'dtLastSession': (new Date()).toString()
+      'dtBegin': this.internalData.dtBegin,
+      'dtEnd': this.internalData.dtEnd
     };
 
     return this.http.put(url, params, options)
