@@ -5,6 +5,10 @@ login {
       border: none !important;
     }
 
+    .title {
+      padding: 0 10px !important;
+    }
+
     .toolbar-title {
       color: #44500D;
       font-size: 1.6rem;
@@ -42,6 +46,7 @@ login {
 
       ion-avatar {
         img {
+          border: 1px solid #DEE4BF;
           height: 75px;
           width: 75px;
         }
