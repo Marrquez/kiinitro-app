@@ -11,6 +11,36 @@
 <ion-content *ngIf="!isFinished" padding>
   <ion-card>
     <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button class="series" ion-button icon-left clear small>
+            <ion-icon name="more"></ion-icon>
+            <div>
+              <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+                {{ session.current.series[5] }}
+              </ng-container>
+              <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+                {{ session.current.series[11] }}
+              </ng-container>
+              series
+            </div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button class="series" ion-button icon-left clear small>
+            <ion-icon name="refresh"></ion-icon>
+            <div>
+              <ng-container *ngIf="session.data.time == '0 - 5 meses'">
+                {{ session.current.repeticiones[5] }}
+              </ng-container>
+              <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+                {{ session.current.repeticiones[11] }}
+              </ng-container>
+              rep.
+            </div>
+          </button>
+        </ion-col>
+      </ion-row>
       <p class="respiracion">Respiración: {{ session.current.respiracion }}</p>
       <img [src]="session.current.gif">
       <h2>Tips</h2>
