@@ -46,8 +46,29 @@ export class SessionsComponent implements OnInit {
       self.session.fullData = response.data;
       self.updateArrays();
       self.selectExercises();
+      self.addRest();
       self.splash.hide();
     });
+  };
+
+  addRest(){
+    let reps = 0;
+
+    for(var i = 0; i < this.session.list.length; i++){
+      if(this.session.data.time === '0 - 5 meses'){
+        reps = this.session.list[i].repeticiones[5];
+      }
+
+      if(this.session.data.time === '6 - 11 meses'){
+        reps = this.session.list[i].repeticiones[11];
+      }
+
+      if(this.session.data.time === '12 o más'){
+        reps = 12;
+      }
+
+      this.session.list[i].rest = this.session.list[i].descanso[reps];
+    }
   };
 
   addElements(indice: number, list: any){

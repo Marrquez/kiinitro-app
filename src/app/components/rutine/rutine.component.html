@@ -43,6 +43,15 @@
             </div>
           </button>
         </ion-col>
+        <ion-col>
+          <button class="series" ion-button icon-left clear small>
+            <ion-icon name="hand"></ion-icon>
+            <div>
+              {{ session.current.rest }}
+              s.
+            </div>
+          </button>
+        </ion-col>
       </ion-row>
       <p class="respiracion">Respiración: {{ session.current.respiracion }}</p>
       <img [src]="session.current.gif">

@@ -52,6 +52,14 @@ rutine {
       box-shadow: none !important;
       -webkit-box-shadow: none !important;
       margin-top: -30px !important;
+
+      ion-col.col {
+        width: 33% !important;
+
+        .button-inner {
+          font-size: 11px;
+        }
+      }
     }
   }
 
