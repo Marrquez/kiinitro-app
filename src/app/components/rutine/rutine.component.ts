@@ -60,7 +60,7 @@ export class RutineComponent implements OnInit {
     if(this.user.internalData.dtLastSession === '-'){
       points = 100;
     }else{
-      points = this.getDiference() >= 24 ? self.user.internalData.iPoints + 10 : self.user.internalData.iPoints;
+      points = this.getDiference() >= 24 ? self.user.internalData.iPoints + 50 : self.user.internalData.iPoints;
     }
 
     if(this.user.internalData.iUserId && this.user.internalData.iUserId != ''){

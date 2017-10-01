@@ -33,8 +33,11 @@
               <ng-container *ngIf="session.data.time == '0 - 5 meses'">
                 {{ session.current.repeticiones[5] }}
               </ng-container>
-              <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
+              <ng-container *ngIf="session.data.time == '6 - 11 meses'">
                 {{ session.current.repeticiones[11] }}
+              </ng-container>
+              <ng-container *ngIf="session.data.time == '12 o más'">
+                12
               </ng-container>
               rep.
             </div>
