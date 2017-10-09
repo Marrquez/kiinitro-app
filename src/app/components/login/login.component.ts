@@ -7,6 +7,7 @@ import { AuthService } from '../../services/auth.service';
 import { SessionComponent } from '../session/session.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 import { ResetPasswordComponent } from '../reset-password/reset-password.component';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
 @Component({
   selector: 'login',
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
     public auth: AuthService,
     public user: UserService,
     public toastCtrl: ToastController,
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private ga: GoogleAnalytics
   ) {
     this.tab = this.navCtrl.parent;
 
@@ -34,7 +36,15 @@ export class LoginComponent implements OnInit {
     });
   };
 
-  ngOnInit() { };
+  ngOnInit() {
+    this.ga.startTrackerWithId('UA-39578145-1').then(() => {
+      console.log('Google analytics is ready now');
+      //this.ga.trackView('test');
+      this.ga.trackView('login');
+      // Tracker is ready
+      // You can now track pages or set additional information such as AppVersion or UserId
+    }).catch(e => console.log('Error starting GoogleAnalytics', e));
+  };
 
   logout() {
     this.auth.logoutUser();

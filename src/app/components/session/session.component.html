@@ -21,14 +21,13 @@
     <ion-label>Entreno hace</ion-label>
     <ion-select
       [(ngModel)]="session.data.time"
-      (ngModelChange)="updateMuscles();"
     >
       <ion-option *ngFor="let time of session.dataItems.times" [value]="time.name">{{ time.name }}</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label>M&uacute;sculo</ion-label>
-    <ion-select [(ngModel)]="session.data.muscle">
+    <ion-select [(ngModel)]="session.data.muscles" multiple="true">
       <ion-option *ngFor="let muscle of session.dataItems.muscles" [value]="muscle.name">{{ muscle.name }}</ion-option>
     </ion-select>
   </ion-item>

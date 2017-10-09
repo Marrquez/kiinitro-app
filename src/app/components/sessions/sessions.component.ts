@@ -39,7 +39,7 @@ export class SessionsComponent implements OnInit {
   getTasks(){
     var self = this;
     this.setGroup();
-    let muscles = JSON.stringify(this.session.data.muscle.split('-'));
+    let muscles = JSON.stringify(this.session.data.muscles);
     this.session.list = [];
 
     this.session.getEjercicesByMuscle(muscles).then(response => {
@@ -92,7 +92,7 @@ export class SessionsComponent implements OnInit {
   };
 
   selectExercises(){
-    let muscles = this.session.data.muscle.split('-');
+    let muscles = this.session.data.muscles;
 
     for(let i = 0; i < muscles.length; i++) {
       let exercise =  muscles[i];
@@ -207,16 +207,16 @@ export class SessionsComponent implements OnInit {
   };
 
   setGroup(){
-    if(this.session.data.gender === 'Hombre'){
-      if(this.session.data.time === '12 o más'){
+    if(this.session.data.gender === 'Hombre') {
+      if(this.session.data.time === '12 o más') {
         this.session.group = JSON.parse(this.session.groupC);
       }else if(this.session.data.time === "0 - 5 meses") {
         this.session.group = JSON.parse(this.session.groupA);
       }else {
         this.session.group = JSON.parse(this.session.groupB);
       }
-    }else if(this.session.data.gender === 'Mujer'){
-      if(this.session.data.time === '12 o más'){
+    }else if(this.session.data.gender === 'Mujer') {
+      if(this.session.data.time === '12 o más') {
         this.session.group = JSON.parse(this.session.groupE);
       }else if(this.session.data.time === "0 - 5 meses") {
         this.session.group = JSON.parse(this.session.groupD);

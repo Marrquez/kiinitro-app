@@ -42,7 +42,7 @@ export class SessionComponent implements OnInit {
   };
 
   goToSession() {
-    if(!this.session.data.gender || !this.session.data.time || !this.session.data.target || !this.session.data.place || !this.session.data.muscle){
+    if(!this.session.data.gender || !this.session.data.time || !this.session.data.target || !this.session.data.place || this.session.data.muscles.length === 0){
       let toast = this.toastCtrl.create({
         message: 'Todas las opciones deben estar seleccionadas',
         duration: 3000,
@@ -56,16 +56,31 @@ export class SessionComponent implements OnInit {
 
   updateMuscles(){
     if(this.session.data.gender === 'Hombre'){
-      if(this.session.data.time === '12 o más'){
-        this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[1]));
-      }else if(this.session.data.time === "0 - 5 meses" || this.session.data.time == '6 - 11 meses') {
-        this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[0]));
-      }else {
-        this.session.dataItems.muscles = [];
+      if(!this.existTrapecio()){
+        this.session.muscles.push({ name: 'Trapecio', id: 7 });
       }
     }else {
-      this.session.dataItems.muscles = JSON.parse(JSON.stringify(this.session.muscles[2]));
+      this.removeTrapecio();
     }
+
+    this.session.dataItems.muscles = this.session.muscles;
+  }
+
+  removeTrapecio(){
+    this.session.muscles = this.session.muscles.filter(function(muscle){
+      return muscle.name !== 'Trapecio';
+    });
+  }
+
+  existTrapecio(){
+    var resp = false;
+    for(var i = 0; i < this.session.muscles.length; i++){
+      let muscle = this.session.muscles[i];
+      if(muscle.name === 'Trapecio'){
+        resp = true;
+      }
+    }
+    return resp;
   }
 
   showTerms(){

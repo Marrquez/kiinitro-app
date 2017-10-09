@@ -41,10 +41,10 @@
   <button *ngIf="!user.isLogged" ion-button block clear (click)="goToSignup()">
     Crear cuenta
   </button>
-  <div *ngIf="!user.isLogged" class="other-methods google" (click)="logByGoogle();">
+  <div showWhen="android" *ngIf="!user.isLogged" class="other-methods google" (click)="logByGoogle();">
     <ion-icon name="logo-google"></ion-icon>
   </div>
-  <div *ngIf="!user.isLogged" class="other-methods facebook" (click)="logByFacebook();">
+  <div showWhen="android" *ngIf="!user.isLogged" class="other-methods facebook" (click)="logByFacebook();">
     <ion-icon name="logo-facebook"></ion-icon>
   </div>
 
@@ -55,8 +55,6 @@
       </ion-avatar>
       <p>Active</p>
     </ion-item>
-
-    <img src="img/advance-card-bttf.png">
 
     <!-- <ion-card-content>
       <p>Días restantes: 30</p>
