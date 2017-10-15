@@ -1,13 +1,7 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar [ngClass]="{ 'logged': user.isLogged }">
     <ion-title *ngIf="!user.isLogged">
       Bienvenido
-    </ion-title>
-    <ion-title *ngIf="user.data.displayName">
-      {{ user.data.displayName }}
-    </ion-title>
-    <ion-title *ngIf="!user.data.displayName">
-      {{ user.data.email }}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -48,35 +42,78 @@
     <ion-icon name="logo-facebook"></ion-icon>
   </div>
 
-  <ion-card class="user-info" *ngIf="user.isLogged">
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="./assets/img/kiinitro fitness 2.png"/>
-      </ion-avatar>
-      <p>Active</p>
-    </ion-item>
+  <div class="user-info" *ngIf="user.isLogged">
+    <p class="title" *ngIf="user.data.displayName">
+      {{ user.data.displayName }}
+    </p>
+    <p class="title" *ngIf="!user.data.displayName">
+      {{ user.data.email }}
+    </p>
+    <p class="subtitle">Active</p>
+    <br />
+    <div class ="ion-avatar">
+      <img src="./assets/img/kiinitro fitness 2.png"/>
+    </div>
+    <br />
+    <div class="user-actions">
+      <div class="action">
+      </div>
+      <div class="action">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <div class="subtitle">Guardar</div>
+      </div>
+      <div class="action">
+        <div class="points">{{ user.internalData.iPoints }}</div>
+        <div class="subtitle">Puntos</div>
+      </div>
+      <div (click)="logout()" class="action">
+        <ion-icon name="power"></ion-icon>
+        <div class="subtitle">Salir</div>
+      </div>
+      <div class="action">
+      </div>
+    </div>
+    <br />
+    <div class="user-indicators">
+      <div class="indicator">
+        <span class="indicator-title">Peso</span>
+        <br />
+        <span>65 kg</span>
+      </div>
+      <div class="indicator">
+        <span class="indicator-title">Estatura</span>
+        <br />
+        <span>173 cm</span>
+      </div>
+      <div class="indicator">
+        <span class="indicator-title">IMC</span>
+        <br />
+        <span>3.3</span>
+        <ion-icon name="help"></ion-icon>
+      </div>
+    </div>
+    <div class="edit-user-info">
+      <div class="edit-info-title">Edit user info</div>
+      <div class="edit-user-field">
+        <span>Peso</span>
+        <br />
+        <input type="number" placeholder="Escribe tu peso..."/>
+      </div>
+      <div class="edit-user-field">
+        <span>Estatura</span>
+        <br />
+        <input type="number" placeholder="Escribe tu estatura..."/>
+      </div>
+    </div>
+  </div>
 
-    <!-- <ion-card-content>
-      <p>Días restantes: 30</p>
-    </ion-card-content>-->
+  <!--<button ion-button block clear (click)="goToResetPassword()">
+    I forgot my password
 
     <ion-card-content>
       <button ion-button (click)="changePoints();">
         Redimir {{ user.internalData.iPoints }} puntos
       </button>
     </ion-card-content>
-
-    <ion-row>
-      <ion-col (click)="logout()">
-        <button ion-button icon-left clear small>
-          <ion-icon name="power"></ion-icon>
-          <div>Salir</div>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-  <!--<button ion-button block clear (click)="goToResetPassword()">
-    I forgot my password
   </button>-->
 </ion-content>

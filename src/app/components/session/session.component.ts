@@ -46,7 +46,8 @@ export class SessionComponent implements OnInit {
       let toast = this.toastCtrl.create({
         message: 'Todas las opciones deben estar seleccionadas',
         duration: 3000,
-        position: 'top'
+        position: 'top',
+        cssClass: 'error-item'
       });
       toast.present();
     }else {

@@ -16,8 +16,18 @@
 // automatically applied to the <body> element in the app.
 .suggestion-item-muscle .toast-wrapper {
   background: #F8F8F8 !important;
+  border-radius: 2px !important;
 
   .toast-message {
     color: #FF6D00 !important;
+  }
+}
+
+.error-item .toast-wrapper {
+  background: #FD4841 !important;
+  border-radius: 2px !important;
+
+  .toast-message {
+    color: #FFF !important;
   }
 }

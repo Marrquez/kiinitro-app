@@ -5,6 +5,8 @@
   </ion-navbar>
   <ion-toolbar *ngIf="!isFinished">
     <ion-title>{{ session.current.musculo }}</ion-title>
+    <button *ngIf="lastItem != session.current.id" (click)="goNext()" class="session-button" ion-button>Siguiente</button>
+    <button *ngIf="lastItem == session.current.id" (click)="finish()" class="session-button" ion-button>Finalizar</button>
   </ion-toolbar>
 </ion-header>
 
@@ -61,12 +63,6 @@
       </ol>
     </ion-card-content>
   </ion-card>
-
-  <br />
-  <div class="button-container">
-    <button *ngIf="lastItem != session.current.id" (click)="goNext()" class="session-button" ion-button>Siguiente</button>
-    <button *ngIf="lastItem == session.current.id" (click)="finish()" class="session-button" ion-button>Finalizar</button>
-  </div>
 </ion-content>
 
 <ion-content class="final-screen" *ngIf="isFinished" padding>
@@ -78,6 +74,8 @@
       <div class="button-container">
         <button (click)="rate()" class="session-button" ion-button>Quiero más sesiones</button>
       </div>
+      <br />
+      <br />
       <br />
       <div (click)="goBack()" class="card-subtitle">Terminar</div>
     </ion-card>

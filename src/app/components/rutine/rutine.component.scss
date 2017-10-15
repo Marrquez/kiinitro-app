@@ -18,9 +18,26 @@ rutine {
       border-bottom: 0.5px solid #EEE !important;
     }
 
-    .title {
-      padding: 0 10px !important;
+    .toolbar-content {
+      button {
+        background-color: #BDD80F;
+        border-radius: 3px;
+        color: #44500D;
+        float: right;
+        font-size: 11px;
+        height: 30px;
+        text-align: center;
+        width: 60px !important;
+      }
 
+      button.session-button {
+        position: absolute;
+        right: 10px;
+        top: 0;
+      }
+    }
+
+    .title {
       .toolbar-title {
         color: #2F2F2F;
         font-size: 1.8rem;
@@ -30,23 +47,6 @@ rutine {
   }
 
   ion-content {
-    .button-container {
-      text-align: center;
-
-      button.session-button {
-        background-color: #BDD80F !important;
-        color: #44500D;
-        font-size: 12px;
-      }
-
-      button.session-button-2 {
-        background-color: #CCC !important;
-        border-radius: 3px;
-        font-size: 12px;
-        height: 30px;
-      }
-    }
-
     ion-card {
       border: none !important;
       box-shadow: none !important;
@@ -72,8 +72,20 @@ rutine {
         color: #757575;
       }
 
+      button {
+        background-color: #BDD80F;
+        border-radius: 2px;
+        color: #44500D;
+        float: right;
+        font-size: 11px;
+        height: 30px;
+        text-align: center;
+        width: 100%;
+      }
+
       .card-subtitle {
         color: #757575;
+        font-size: 11px;
         text-decoration: underline;
       }
     }
