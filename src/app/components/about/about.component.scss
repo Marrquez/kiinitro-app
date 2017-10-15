@@ -14,8 +14,8 @@ about {
 
   ion-toolbar {
     .toolbar-background {
-      background-color: #DEE4BF;
-      border: none !important;
+      background-color: #FFF;
+      border-bottom: 0.5px solid #EEE !important;
     }
 
     .title {
@@ -23,8 +23,8 @@ about {
 
       .toolbar-title {
         color: #2F2F2F;
-        font-size: 1.3rem;
-        font-weight: normal;
+        font-size: 1.8rem;
+        font-weight: bold;
       }
     }
   }

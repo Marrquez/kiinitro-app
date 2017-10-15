@@ -26,9 +26,9 @@
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label>M&uacute;sculo</ion-label>
-    <ion-select [(ngModel)]="session.data.muscles" multiple="true">
-      <ion-option *ngFor="let muscle of session.dataItems.muscles" [value]="muscle.name">{{ muscle.name }}</ion-option>
+    <ion-label (click)="showSuggestions('')">M&uacute;sculo</ion-label>
+    <ion-select (click)="showSuggestions('')" [(ngModel)]="session.data.muscles" multiple="true">
+      <ion-option (ionSelect)="showSuggestions(muscle.name);" *ngFor="let muscle of session.dataItems.muscles" [value]="muscle.name">{{ muscle.name }}</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>

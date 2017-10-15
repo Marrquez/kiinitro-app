@@ -14,17 +14,17 @@ session-item {
 
   ion-toolbar {
     .toolbar-background {
-      background-color: #fff;
-      border: none !important;
+      background-color: #FFF;
+      border-bottom: 0.5px solid #EEE !important;
     }
 
     .title {
       padding: 0 10px !important;
 
       .toolbar-title {
-        color: #44500D;
-        font-size: 1.3rem;
-        font-weight: normal;
+        color: #2F2F2F;
+        font-size: 1.8rem;
+        font-weight: bold;
       }
     }
   }

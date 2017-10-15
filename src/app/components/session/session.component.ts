@@ -87,4 +87,62 @@ export class SessionComponent implements OnInit {
     let modal = this.modalCtrl.create(TermsComponent);
     modal.present();
   };
+
+  showSuggestions(muscle: string) {
+    let msg = 'Puedes combinar ';
+    if(muscle === ''){
+      let toast = this.toastCtrl.create({
+        message: 'Terecomendamos seleccionar entre 3 y 4 músculos.',
+        duration: 5000,
+        position: 'top',
+        cssClass: 'suggestion-item-muscle'
+      });
+      toast.present();
+    }else{
+      msg += muscle;
+      switch(muscle){
+        case 'Abdomen':
+          msg += ' con cualquier músculo';
+          break;
+
+        case 'Pantorrillas':
+          msg += ' con: Muslos y/o Abdomen';
+          break;
+
+        case 'Pecho':
+          msg += ' con: Bíceps, Tríceps y/o Abdomen';
+          break;
+
+        case 'Espalda':
+        case 'Hombros':
+          msg += ' con: Bíceps, Tríceps, Trapecio y/o Abdomen';
+          break;
+
+        case 'Muslos':
+          msg += ' con: Pantorrillas y/o Abdomen';
+          break;
+
+        case 'Trapecio':
+          msg += ' con: Espalda, Hombros y/o Abdomen';
+          break;
+
+        case 'Bíceps':
+        case 'Tríceps':
+          msg += ' con: Espalda, Hombros, Pecho y/o Abdomen';
+          break;
+      }
+
+      let toast = this.toastCtrl.create({
+        message: msg,
+        duration: 5000,
+        position: 'top',
+        cssClass: 'suggestion-item-muscle'
+      });
+      toast.present();
+    }
+  }
+
+  validateMuscle(muscle: string){
+    return this.session.data.muscles.filter(function(element){return element === muscle}).length > 0;
+  };
 }
