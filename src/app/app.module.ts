@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { TermsComponent } from './components/terms/terms.component';
+import { ImcInfoComponent } from './components/imc-info/imc-info.component';
 
 /**
  * Services
@@ -53,7 +54,8 @@ import { UserService } from './services/user.service';
     LoginComponent,
     SignUpComponent,
     ResetPasswordComponent,
-    TermsComponent
+    TermsComponent,
+    ImcInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ import { UserService } from './services/user.service';
     LoginComponent,
     SignUpComponent,
     ResetPasswordComponent,
-    TermsComponent
+    TermsComponent,
+    ImcInfoComponent
   ],
   providers: [
     StatusBar,

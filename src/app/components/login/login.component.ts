@@ -6,6 +6,7 @@ import { UserService } from '../../services/user.service';
 import { AuthService } from '../../services/auth.service';
 import { SessionComponent } from '../session/session.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { ImcInfoComponent } from '../imc-info/imc-info.component';
 import { ResetPasswordComponent } from '../reset-password/reset-password.component';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
@@ -155,6 +156,20 @@ export class LoginComponent implements OnInit {
       });
       toast.present();
     });
+  };
+
+  showImcInfo(){
+    if(this.user.internalData.imc > 0){
+      this.navCtrl.push(ImcInfoComponent);
+    }else{
+      let toast = this.toastCtrl.create({
+        message: 'Debes especificar tu peso y estatura para obtener más información',
+        duration: 3000,
+        position: 'top',
+        cssClass: 'info-item'
+      });
+      toast.present();
+    }
   };
 
   goToSignup(): void { this.navCtrl.push(SignUpComponent); }
