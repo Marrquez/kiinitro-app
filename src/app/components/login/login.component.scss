@@ -168,7 +168,7 @@ login {
           }
 
           .invalid {
-            border-bottom: 0.5px solid red !important;
+            border-left: 0.5px solid red !important;
           }
         }
 
@@ -194,6 +194,7 @@ login {
             border: none;
             height: 30px;
             line-height: 30px;
+            padding: 0 8px;
           }
         }
       }
