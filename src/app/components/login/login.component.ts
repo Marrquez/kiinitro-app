@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, ToastController, Loading, LoadingController, NavController, AlertController, Nav, Tabs } from 'ionic-angular';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 import { ValidatorService } from '../../services/validator.service';
 import { UserService } from '../../services/user.service';
 import { AuthService } from '../../services/auth.service';
@@ -14,8 +14,10 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
   templateUrl: 'login.component.html'
 })
 export class LoginComponent implements OnInit {
+  @ViewChild('submitSave') submitSave: ElementRef;
   tab:Tabs;
   public loginForm:FormGroup;
+  public editForm:FormGroup;
   public loading:Loading;
 
   constructor(
@@ -26,13 +28,18 @@ export class LoginComponent implements OnInit {
     public user: UserService,
     public toastCtrl: ToastController,
     public formBuilder: FormBuilder,
-    private ga: GoogleAnalytics
+    private ga: GoogleAnalytics,
   ) {
     this.tab = this.navCtrl.parent;
 
     this.loginForm = formBuilder.group({
       email: ['', Validators.compose([Validators.required, ValidatorService.isValid])],
-      password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
+      password: ['', Validators.compose([Validators.minLength(2), Validators.required])]
+    });
+
+    this.editForm = formBuilder.group({
+      weight: ['', Validators.compose([Validators.minLength(2), Validators.required])],
+      height: ['', Validators.compose([Validators.minLength(2), Validators.required])]
     });
   };
 
@@ -55,9 +62,43 @@ export class LoginComponent implements OnInit {
       vchUsername: '',
       dtLastSession: '',
       dtBegin: '',
-      dtEnd: ''
+      dtEnd: '',
+      height: 0,
+      weight: 0,
+      imc: 0
     };
     this.user.isLogged = false;
+  };
+
+  saveUser(){
+    this.submitSave.nativeElement.click();
+  };
+
+  editUser(): void {
+    var self = this;
+
+    if(!self.editForm.valid){
+      let toast = this.toastCtrl.create({
+        message: 'Todos los campos son obligatorios',
+        duration: 3000,
+        position: 'top',
+        cssClass: 'error-item'
+      });
+      toast.present();
+    }else{
+      this.user.updateUserProfile().then(response => {
+        self.user.internalData.imc = self.user.internalData.weight && self.user.internalData.height ?
+          Number((Number(self.user.internalData.weight) / ( (Number(self.user.internalData.height)/100) * (Number(self.user.internalData.height)/100) ) ).toFixed(2)) : 0;
+
+        let toast = this.toastCtrl.create({
+          message: 'Los cambios se han guardado correctamente',
+          duration: 3000,
+          position: 'top',
+          cssClass: 'success-item'
+        });
+        toast.present();
+      });
+    }
   };
 
   loginUser(): void {

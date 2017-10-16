@@ -58,15 +58,15 @@
     <div class="user-actions">
       <div class="action">
       </div>
-      <div class="action">
+      <div class="action one" (click)="saveUser()">
         <ion-icon name="checkmark-circle-outline"></ion-icon>
         <div class="subtitle">Guardar</div>
       </div>
-      <div class="action">
+      <div class="action two">
         <div class="points">{{ user.internalData.iPoints }}</div>
         <div class="subtitle">Puntos</div>
       </div>
-      <div (click)="logout()" class="action">
+      <div (click)="logout()" class="action three">
         <ion-icon name="power"></ion-icon>
         <div class="subtitle">Salir</div>
       </div>
@@ -78,32 +78,41 @@
       <div class="indicator">
         <span class="indicator-title">Peso</span>
         <br />
-        <span>65 kg</span>
+        <span>{{ user.internalData.weight }} kg</span>
       </div>
       <div class="indicator">
         <span class="indicator-title">Estatura</span>
         <br />
-        <span>173 cm</span>
+        <span>{{ user.internalData.height }} cm</span>
       </div>
       <div class="indicator">
         <span class="indicator-title">IMC</span>
         <br />
-        <span>3.3</span>
+        <span>{{ user.internalData.imc}}</span>
         <ion-icon name="help"></ion-icon>
       </div>
     </div>
     <div class="edit-user-info">
-      <div class="edit-info-title">Edit user info</div>
-      <div class="edit-user-field">
-        <span>Peso</span>
-        <br />
-        <input type="number" placeholder="Escribe tu peso..."/>
-      </div>
-      <div class="edit-user-field">
-        <span>Estatura</span>
-        <br />
-        <input type="number" placeholder="Escribe tu estatura..."/>
-      </div>
+      <div class="edit-info-title">Editar información del usuario</div>
+      <form method="get" [formGroup]="editForm" (submit)="editUser()" novalidate>
+        <ion-item class="edit-user-field">
+          <ion-label stacked>Peso (kg)</ion-label>
+          <ion-input formControlName="weight"
+                     type="number"
+                     placeholder="Tu peso"
+                     [(ngModel)]="user.internalData.weight"
+                     [class.invalid]="!editForm.controls.weight.valid && editForm.controls.weight.dirty"></ion-input>
+        </ion-item>
+        <ion-item class="edit-user-field">
+          <ion-label stacked>Estatura (cm)</ion-label>
+          <ion-input formControlName="height"
+                     type="number"
+                     placeholder="Tu estatura"
+                     [(ngModel)]="user.internalData.height"
+                     [class.invalid]="!editForm.controls.height.valid && editForm.controls.height.dirty"></ion-input>
+        </ion-item>
+        <button type="submit" #submitSave style="display:none;"></button>
+      </form>
     </div>
   </div>
 

@@ -16,7 +16,10 @@ export class UserService {
     vchUsername: '',
     dtBegin: '',
     dtEnd: '',
-    dtLastSession: ''
+    dtLastSession: '',
+    height: 0,
+    weight: 0,
+    imc: 0
   };
   constructor(private http: Http) { };
 
@@ -29,6 +32,9 @@ export class UserService {
         self.internalData.iUserId = response.data.iUserId;
         self.internalData.vchUsername = response.data.vchUsername;
         self.internalData.dtLastSession = response.data.dtLastSession;
+        self.internalData.height = response.data.fHeight || 0;
+        self.internalData.weight = response.data.iWeight || 0;
+        self.internalData.imc = response.data.weight && response.data.height ? Number((response.data.weight / ( (response.data.height / 100) * (response.data.height/100) )).toFixed(2)) : 0;
         return true;
       } else {
         return false;
@@ -73,7 +79,28 @@ export class UserService {
       'idUser': this.internalData.iUserId,
       'points': points.toString(),
       'dtBegin': this.internalData.dtBegin,
-      'dtEnd': this.internalData.dtEnd
+      'dtEnd': this.internalData.dtEnd,
+      'fHeight': this.internalData.height,
+      'iWeight': this.internalData.weight,
+      'iImc': this.internalData.imc
+    };
+
+    return this.http.put(url, params, options)
+      .toPromise()
+      .then(this.extractData)
+      .then(response => response);
+  };
+
+  public updateUserProfile(){
+    let url = this.baseUrl + '/upd-userSize';
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+
+    let params = {
+      'idUser': this.internalData.iUserId,
+      'fHeight': this.internalData.height,
+      'iWeight': this.internalData.weight,
+      'iImc': this.internalData.imc
     };
 
     return this.http.put(url, params, options)
