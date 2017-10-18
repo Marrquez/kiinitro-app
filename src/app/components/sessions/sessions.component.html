@@ -13,13 +13,6 @@
   <ion-slides pager>
     <ion-slide *ngFor="let e of session.list" (click)="presentModal(e.id);">
       <ion-card>
-        <img [src]="e.imagen"/>
-        <ion-card-content>
-          <ion-card-title>
-            {{ e.nombre }}
-          </ion-card-title>
-          <p>{{ e.descripcion }}</p>
-        </ion-card-content>
         <ion-row>
           <ion-col>
             <button class="series" ion-button icon-left clear small>
@@ -59,6 +52,13 @@
             </button>
           </ion-col>
         </ion-row>
+        <img [src]="e.imagen"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ e.nombre }}
+          </ion-card-title>
+          <p>{{ e.descripcion }}</p>
+        </ion-card-content>
       </ion-card>
     </ion-slide>
   </ion-slides>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Platform, NavParams, ViewController } from 'ionic-angular';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'imc-info',
@@ -11,7 +12,8 @@ export class ImcInfoComponent implements OnInit {
     public platform: Platform,
     public params: NavParams,
     public viewCtrl: ViewController,
-    private ga: GoogleAnalytics
+    private ga: GoogleAnalytics,
+    public user: UserService,
   ) { }
 
   dismiss() {

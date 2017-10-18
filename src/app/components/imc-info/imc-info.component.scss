@@ -31,7 +31,17 @@ imc-info {
 
   ion-content {
     p {
+      font-size: 13px;
       padding: 0 15px !important;
+    }
+
+    ion-slides {
+      ion-slide {
+        img {
+          height: 250px !important;
+          width: 150px !important;
+        }
+      }
     }
   }
 }

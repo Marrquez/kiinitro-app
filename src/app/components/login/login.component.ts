@@ -87,10 +87,9 @@ export class LoginComponent implements OnInit {
       });
       toast.present();
     }else{
+      self.user.internalData.imc = self.user.internalData.weight && self.user.internalData.height ?
+        Number((Number(self.user.internalData.weight) / ( (Number(self.user.internalData.height)/100) * (Number(self.user.internalData.height)/100) ) ).toFixed(2)) : 0;
       this.user.updateUserProfile().then(response => {
-        self.user.internalData.imc = self.user.internalData.weight && self.user.internalData.height ?
-          Number((Number(self.user.internalData.weight) / ( (Number(self.user.internalData.height)/100) * (Number(self.user.internalData.height)/100) ) ).toFixed(2)) : 0;
-
         let toast = this.toastCtrl.create({
           message: 'Los cambios se han guardado correctamente',
           duration: 3000,

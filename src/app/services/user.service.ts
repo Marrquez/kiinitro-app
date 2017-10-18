@@ -34,7 +34,7 @@ export class UserService {
         self.internalData.dtLastSession = response.data.dtLastSession;
         self.internalData.height = response.data.fHeight || 0;
         self.internalData.weight = response.data.iWeight || 0;
-        self.internalData.imc = response.data.weight && response.data.height ? Number((response.data.weight / ( (response.data.height / 100) * (response.data.height/100) )).toFixed(2)) : 0;
+        self.internalData.imc = response.data.iWeight && response.data.fHeight ? Number((response.data.iWeight / ( (response.data.fHeight / 100) * (response.data.fHeight/100) )).toFixed(2)) : 0;
         return true;
       } else {
         return false;
@@ -98,9 +98,9 @@ export class UserService {
 
     let params = {
       'idUser': this.internalData.iUserId,
-      'fHeight': this.internalData.height,
-      'iWeight': this.internalData.weight,
-      'iImc': this.internalData.imc
+      'height': this.internalData.height,
+      'weight': this.internalData.weight,
+      'imc': this.internalData.imc.toString()
     };
 
     return this.http.put(url, params, options)

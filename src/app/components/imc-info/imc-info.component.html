@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      IMC
+      Tu IMC: {{ user.internalData.imc }}
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -13,10 +13,41 @@
 </ion-header>
 
 <ion-content>
-  <p>
-    El IMC es una medida de obesidad. La obesidad puede causar la elevación de la concentración de colesterol total y de la presión arterial, y aumentar el riesgo de sufrir la enfermedad arterial coronaria.
-  </p>
-  <p>
-    La obesidad aumenta las probabilidades de que se presenten otros factores de riesgo cardiovascular, en especial, presión arterial alta, colesterol elevado y diabetes.
-  </p>
+  <ion-slides pager>
+    <ion-slide class="bienestar">
+      <p>
+        El IMC es una medida de obesidad. La obesidad puede causar la elevación de la concentración de colesterol, presión arterial y aumentar el riesgo de sufrir la enfermedad arterial coronaria.
+      </p>
+      <p>
+        La obesidad aumenta las probabilidades de que se presenten factores de riesgo cardiovascular y diabetes.
+      </p>
+      <p>
+        A continuación podrás ver ilustraciones con valores de referencia, para que sepas en qué grupo de IMC te ubicas.
+      </p>
+    </ion-slide>
+    <ion-slide class="bienestar">
+      <img src="./assets/img/imc-1.png"/>
+      <h2>IMC < 18.5</h2>
+    </ion-slide>
+    <ion-slide class="inspiracion">
+      <img src="./assets/img/imc-2.png"/>
+      <h2>IMC 18.5-24.9</h2>
+    </ion-slide>
+    <ion-slide class="motivacion">
+      <img src="./assets/img/imc-3.png"/>
+      <h2>IMC 25-29.9</h2>
+    </ion-slide>
+    <ion-slide class="motivacion">
+      <img src="./assets/img/imc-4.png"/>
+      <h2>IMC 30-34.9</h2>
+    </ion-slide>
+    <ion-slide class="motivacion">
+      <img src="./assets/img/imc-5.png"/>
+      <h2>IMC 35-39.9</h2>
+    </ion-slide>
+    <ion-slide class="motivacion">
+      <img src="./assets/img/imc-6.png"/>
+      <h2>IMC 40 ó Más</h2>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
