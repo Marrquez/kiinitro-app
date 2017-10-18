@@ -32,9 +32,9 @@
       Iniciar sesión
     </button>
   </form>
-  <button *ngIf="!user.isLogged" ion-button block clear (click)="goToSignup()">
+  <div *ngIf="!user.isLogged" ion-button block clear (click)="goToSignup()">
     Crear cuenta
-  </button>
+  </div>
   <div showWhen="android" *ngIf="!user.isLogged" class="other-methods google" (click)="logByGoogle();">
     <ion-icon name="logo-google"></ion-icon>
   </div>

@@ -20,6 +20,17 @@ export class SessionService {
     { name: 'Tríceps', id: 8 }
   ];
   public data = {gender:'',time:'',target:'',place:'',muscles:[]};
+  public stretchData = {allMuscles: [
+    { name: 'Abdomen', id: 0 },
+    { name: 'Bíceps', id: 1 },
+    { name: 'Espalda', id: 2 },
+    { name: 'Hombros', id: 3 },
+    { name: 'Muslos', id: 4 },
+    { name: 'Pantorrillas', id: 5 },
+    { name: 'Pecho', id: 6 },
+    { name: 'Trapecio', id: 7 },
+    { name: 'Tríceps', id: 8 }
+  ], muscles: []};
   public groupA = '[ 3, 3, 4, 1, 2, 2, 4, 1, 2 ]';
   public groupB = '[ 4, 4, 4, 2, 3, 3, 4, 2, 2 ]';
   public groupC = '[ 5, 5, 5, 2, 4, 4, 5, 2, 2 ]';
