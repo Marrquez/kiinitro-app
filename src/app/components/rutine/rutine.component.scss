@@ -89,5 +89,36 @@ rutine {
         text-decoration: underline;
       }
     }
+
+    .button-container {
+      text-align: center;
+
+      button.session-button {
+        background-color: #BDD80F !important;
+        border-radius: 2px;
+        color: #2F2F2F;
+        font-size: 11px;
+        width: 100% !important;
+      }
+    }
+
+    ion-item {
+      .item-inner {
+        border: none !important;
+      }
+
+      ion-label {
+        color: #757575;
+        font-size: 13px;
+      }
+    }
+
+    .stretching-exercises {
+      background: #EEF1F6;
+      color: #333;
+      font-size: 12px;
+      padding: 5px 10px;
+      width: 100%;
+    }
   }
 }

@@ -143,20 +143,6 @@ export class SessionComponent implements OnInit {
     }
   }
 
-  getStretching (){
-    if(this.session.stretchData.muscles.length === 0){
-      let toast = this.toastCtrl.create({
-        message: 'Debes seleccionar por lo menos 1 músculo para el calentamiento',
-        duration: 3000,
-        position: 'top',
-        cssClass: 'error-item'
-      });
-      toast.present();
-    }else{
-      console.log("Show strectching...");
-    }
-  }
-
   validateMuscle(muscle: string){
     return this.session.data.muscles.filter(function(element){return element === muscle}).length > 0;
   };

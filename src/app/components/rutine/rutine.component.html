@@ -79,5 +79,18 @@
       <br />
       <div (click)="goBack()" class="card-subtitle">Terminar</div>
     </ion-card>
+    <br />
+    <br />
+    <br />
+    <div class="stretching-exercises">Ejercicios de estiramiento</div>
+    <ion-item>
+      <ion-label>M&uacute;sculo</ion-label>
+      <ion-select [(ngModel)]="session.stretchData.muscles" multiple="true">
+        <ion-option *ngFor="let muscle of session.stretchData.allMuscles" [value]="muscle.valueName">{{ muscle.name }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <div class="button-container">
+      <button (click)="getStretching()" class="session-button" ion-button>Ver estiramiento</button>
+    </div>
   </ion-content>
 </ion-content>

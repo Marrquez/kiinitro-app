@@ -47,15 +47,8 @@
     <button (click)="goToSession()" class="session-button" ion-button>Generar sesión</button>
   </div>
   <br />
-  <div class="stretching-exercises">Ejercicios de calentamiento</div>
-  <ion-item>
-    <ion-label>M&uacute;sculo</ion-label>
-    <ion-select [(ngModel)]="session.stretchData.muscles" multiple="true">
-      <ion-option *ngFor="let muscle of session.stretchData.allMuscles" [value]="muscle.name">{{ muscle.name }}</ion-option>
-    </ion-select>
-  </ion-item>
-  <div class="button-container">
-    <button (click)="getStretching()" class="session-button" ion-button>Ver calentamiento</button>
-  </div>
+  <br />
+  <br />
+  <br />
   <ion-label class="terms-and-conditions" (click)="showTerms();">Consulta nuestros <a>Términos y Condiciones</a></ion-label>
 </ion-content>

@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController, Nav, Tabs  } from 'ionic-angular';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { ModalController } from 'ionic-angular';
 
 import { SessionService } from '../../services/session.service';
 import { UserService } from '../../services/user.service';
+import { StretchComponent } from '../stretch/stretch.component';
 
 @Component({
   selector: 'rutine',
@@ -20,7 +22,8 @@ export class RutineComponent implements OnInit {
     public session: SessionService,
     public user: UserService,
     public toastCtrl: ToastController,
-    private ga: GoogleAnalytics
+    private ga: GoogleAnalytics,
+    public modalCtrl: ModalController,
   ) {
     this.tab = this.navCtrl.parent;
   };
@@ -86,4 +89,19 @@ export class RutineComponent implements OnInit {
       return 24;
     }
   };
+
+  getStretching (){
+    if(this.session.stretchData.muscles.length === 0){
+      let toast = this.toastCtrl.create({
+        message: 'Debes seleccionar por lo menos 1 músculo para el calentamiento',
+        duration: 3000,
+        position: 'top',
+        cssClass: 'error-item'
+      });
+      toast.present();
+    }else{
+      let modal = this.modalCtrl.create(StretchComponent);
+      modal.present();
+    }
+  }
 }

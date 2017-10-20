@@ -1,0 +1,42 @@
+stretch {
+  ion-navbar {
+    .toolbar-background {
+      background-color: #fff;
+      border: none !important;
+    }
+
+    .toolbar-title {
+      color: #44500D;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+  }
+
+  ion-toolbar {
+    .toolbar-background {
+      background-color: #FFF;
+      border-bottom: 0.5px solid #EEE !important;
+    }
+
+    .title {
+      padding: 0 10px !important;
+
+      .toolbar-title {
+        color: #2F2F2F;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  ion-content {
+    ion-slides {
+      ion-slide {
+        img {
+          height: 250px !important;
+          width: 150px !important;
+        }
+      }
+    }
+  }
+}
