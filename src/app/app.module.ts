@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Kiinitro } from './kiinitro.component';
 import { HttpModule } from '@angular/http';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { AppRate } from '@ionic-native/app-rate';
 
 /**
  * Components
@@ -94,6 +95,7 @@ import { UserService } from './services/user.service';
     ValidatorService,
     UserService,
     GoogleAnalytics,
+    AppRate,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
