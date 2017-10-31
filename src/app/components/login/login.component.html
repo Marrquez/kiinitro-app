@@ -1,13 +1,16 @@
 <ion-header>
   <ion-navbar [ngClass]="{ 'logged': user.isLogged }">
-    <ion-title *ngIf="!user.isLogged">
+    <ion-title showWhen="android" *ngIf="!user.isLogged">
       Bienvenido
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="loginForm" (submit)="loginUser()" *ngIf="!user.isLogged" novalidate>
+  <div class="banner" *ngIf="!user.isLogged">
+    <img src="./assets/img/kiinitro fitness 2.png"/>
+  </div>
+  <form class="log-form" [formGroup]="loginForm" (submit)="loginUser()" *ngIf="!user.isLogged" novalidate>
     <ion-item>
       <ion-label stacked>Email</ion-label>
       <ion-input formControlName="email" type="email" placeholder="Your email address"
@@ -27,19 +30,31 @@
               *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
-
-    <button ion-button block type="submit" [disabled]="!loginForm.valid">
-      Iniciar sesión
-    </button>
+    <div *ngIf="!user.isLogged" class="create-account" ion-button block clear (click)="goToSignup()">
+      Crear cuenta
+    </div>
+    <div class="button-container">
+      <button ion-button block type="submit" [disabled]="!loginForm.valid">
+        Iniciar sesión
+      </button>
+    </div>
   </form>
-  <div *ngIf="!user.isLogged" ion-button block clear (click)="goToSignup()">
-    Crear cuenta
+
+  <div class="separator" showWhen="android">
+    <br />
+    <br />
+    <div class="separator-element line"><hr /></div>
+    <div class="separator-element"> o con&eacute;tate con</div>
+    <div class="separator-element line"><hr /></div>
   </div>
-  <div showWhen="android" *ngIf="!user.isLogged" class="other-methods google" (click)="logByGoogle();">
-    <ion-icon name="logo-google"></ion-icon>
-  </div>
-  <div showWhen="android" *ngIf="!user.isLogged" class="other-methods facebook" (click)="logByFacebook();">
-    <ion-icon name="logo-facebook"></ion-icon>
+  <div class="login-methods">
+    <br />
+    <div showWhen="android" *ngIf="!user.isLogged" class="other-methods google" (click)="logByGoogle();">
+      <ion-icon name="logo-google"></ion-icon>
+    </div>
+    <div showWhen="android" *ngIf="!user.isLogged" class="other-methods facebook" (click)="logByFacebook();">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </div>
   </div>
 
   <div class="user-info" *ngIf="user.isLogged">

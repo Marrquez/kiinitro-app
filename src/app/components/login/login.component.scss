@@ -51,6 +51,116 @@ login {
       padding: 0 !important;
     }
 
+    .banner {
+      height: 30%;
+      position: relative;
+      width: 100%;
+
+      img {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+      }
+    }
+
+    form.log-form {
+      ion-item.item {
+        padding: 0 30px;
+
+        div.item-inner {
+          border-bottom: 0.5px solid #DEE4BF !important;
+          -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+
+          ion-label {
+            color: #768522;
+            text-transform: uppercase;
+          }
+
+          ion-input {
+            input {
+              color: #A9A9A9;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      .create-account {
+        color: #BDD80F;
+        float: right;
+        text-align: right;
+        text-transform: capitalize;
+        width: 150px;
+      }
+
+      .button-container {
+        float: left;
+        min-height: 50px;
+        position: relative;
+        width: 100%;
+
+        button {
+          left: 0;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          width: 250px;
+        }
+      }
+
+      ion-item.item.error-message {
+        div.item-inner {
+          border: none !important;
+
+          ion-label {
+            p {
+              color: #FF6153;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .separator {
+      float: left;
+      height: 30px;
+      padding: 0 30px;
+      width: 100%;
+
+      .separator-element {
+        color: #A9A9A9;
+        float: left;
+        font-size: 11px;
+        height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 33%;
+      }
+    }
+
+    .login-methods {
+      float: left;
+      height: 30px;
+      padding: 0 30px;
+      width: 100%;
+
+      .other-methods {
+        float: left;
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 50%;
+      }
+    }
+
     .user-info {
       background: #DEE4BF;
       box-shadow: none;
@@ -165,6 +275,8 @@ login {
 
           .item-inner {
             border: none;
+            border-bottom-color: #fff !important;
+            box-shadow: none !important;
           }
 
           .invalid {
@@ -222,16 +334,6 @@ login {
       }
     }
 
-    .other-methods {
-      display: inline-block;
-      float: left;
-      font-size: 20px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      width: 50px;
-    }
-
     .facebook {
       color: #405A9A;
     }
@@ -259,7 +361,7 @@ login {
 
     button {
       background-color: #BDD80F !important;
-      border-radius: 2px;
+      border-radius: 30px !important;
       color: #2F2F2F;
       font-size: 11px;
       width: 50%;
