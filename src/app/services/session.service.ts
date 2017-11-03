@@ -7,7 +7,20 @@ import 'rxjs/add/operator/catch';
 export class SessionService {
   //private baseUrl = 'http://localhost:8080';
   private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
-  public dataItems = {genders:[{name:'Hombre',id:0},{name:'Mujer',id:1}],times:[{name:'0 - 5 meses',id:0},{name:'6 - 11 meses',id:1},{name:'12 o más',id:2}],targets:[{name:'Aumentar masa',id:0},{name:'Tonificar',id:1},{name:'Bajar de peso',id:2}],places:[{name:'Casa',id:0},{name:'Gimnasio',id:1}],muscles:[]};
+  public dataItems = {
+    genders:[{name:'Hombre',id:0},{name:'Mujer',id:1}],
+    times:[{name:'0 - 5 meses',id:0},{name:'6 - 11 meses',id:1},{name:'12 o más',id:2}],
+    targets:[{name:'Aumentar masa',id:0},{name:'Tonificar',id:1},{name:'Bajar de peso',id:2}],
+    places:[{name:'Casa',id:0},{name:'Gimnasio',id:1}],
+    muscles:[],
+    bodyParts: [{ name: 'Tren superior', id: 1 }, { name: 'Tren inferior', id: 2 }, { name: 'Cuerpo completo', id: 3 }, { name: 'Abdomen', id: 4 },]
+  };
+  public bodyParts = [
+    { name: 'Tren superior', id: 6 },
+    { name: 'Tren inferior', id: 6 },
+    { name: 'Cuerpo completo', id: 6 },
+    { name: 'Abdomen', id: 6 },
+  ];
   public muscles = [
     { name: 'Pecho', id: 6 },
     { name: 'Espalda', id: 2 },
@@ -19,7 +32,7 @@ export class SessionService {
     { name: 'Pantorrillas', id: 5 },
     { name: 'Abdomen', id: 0 }
   ];
-  public data = {gender:'',time:'',target:'',place:'',muscles:[]};
+  public data = {gender:'',time:'',target:'',place:'',muscles:[],warm:false, bodyParts:[]};
   public stretchData = {allMuscles: [
     { name: 'Abdomen', id: 0, valueName: 'Abdomen' },
     { name: 'Bíceps', id: 1, valueName: 'Biceps' },

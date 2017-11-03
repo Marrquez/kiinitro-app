@@ -3,12 +3,17 @@
     <ion-title showWhen="android" *ngIf="!user.isLogged">
       Bienvenido
     </ion-title>
+    <div class="about-button" (click)="showContact()">
+      <img class="about-icon" src="./assets/img/kiinitro fitness 2.png"/>
+      <span class="about-label">About us</span>
+    </div>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <div class="banner" *ngIf="!user.isLogged">
-    <img src="./assets/img/kiinitro fitness 2.png"/>
+    <!--<img src="./assets/img/kiinitro fitness 2.png"/>-->
+    <ion-icon name="contact"></ion-icon>
   </div>
   <form class="log-form" [formGroup]="loginForm" (submit)="loginUser()" *ngIf="!user.isLogged" novalidate>
     <ion-item>
@@ -40,7 +45,7 @@
     </div>
   </form>
 
-  <div class="separator" showWhen="android">
+  <div class="separator" showWhen="android" *ngIf="!user.isLogged">
     <br />
     <br />
     <div class="separator-element line"><hr /></div>
@@ -67,7 +72,8 @@
     <p class="subtitle">Active</p>
     <br />
     <div class ="ion-avatar">
-      <img src="./assets/img/kiinitro fitness 2.png"/>
+      <!--<img src="./assets/img/kiinitro fitness 2.png"/>-->
+      <ion-icon name="contact"></ion-icon>
     </div>
     <br />
     <div class="user-actions">

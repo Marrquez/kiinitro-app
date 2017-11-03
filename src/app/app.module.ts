@@ -27,6 +27,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { TermsComponent } from './components/terms/terms.component';
 import { ImcInfoComponent } from './components/imc-info/imc-info.component';
 import { StretchComponent } from './components/stretch/stretch.component';
+import { DictionaryComponent } from './components/dictionary/dictionary.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 /**
  * Services
@@ -58,7 +60,9 @@ import { UserService } from './services/user.service';
     ResetPasswordComponent,
     TermsComponent,
     ImcInfoComponent,
-    StretchComponent
+    StretchComponent,
+    DictionaryComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +89,9 @@ import { UserService } from './services/user.service';
     ResetPasswordComponent,
     TermsComponent,
     ImcInfoComponent,
-    StretchComponent
+    StretchComponent,
+    DictionaryComponent,
+    SettingsComponent
   ],
   providers: [
     StatusBar,

@@ -39,6 +39,20 @@ session {
         color: #757575;
         font-size: 13px;
       }
+
+      ion-toggle.toggle-ios {
+        height: 22px !important;
+        width: 39px !important;
+
+        .toggle-icon {
+          background-color: #BDD80F !important;
+
+          .toggle-inner {
+            height: 17px !important;
+            width: 17px !important;
+          }
+        }
+      }
     }
 
     .button-container {

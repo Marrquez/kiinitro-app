@@ -7,6 +7,7 @@ import { AuthService } from '../../services/auth.service';
 import { SessionComponent } from '../session/session.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
 import { ImcInfoComponent } from '../imc-info/imc-info.component';
+import { ContactComponent } from '../contact/contact.component';
 import { ResetPasswordComponent } from '../reset-password/reset-password.component';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 
@@ -174,4 +175,8 @@ export class LoginComponent implements OnInit {
   goToSignup(): void { this.navCtrl.push(SignUpComponent); }
 
   goToResetPassword(): void { this.navCtrl.push(ResetPasswordComponent); }
+
+  showContact(){
+    this.navCtrl.push(ContactComponent);
+  };
 }

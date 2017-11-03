@@ -6,13 +6,43 @@ login {
     }
 
     .title {
-      padding: 0 10px !important;
+      padding: 10px !important;
+      float: left;
+      width: 180px;
     }
 
     .toolbar-title {
       color: #44500D;
       font-size: 1.6rem;
       font-weight: normal;
+    }
+
+    .about-button {
+      float: right;
+      height: 40px;
+      position: relative;
+      text-align: center;
+      width: 70px;
+
+      .about-icon {
+        border-radius: 50%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+      }
+
+      .about-label {
+        color: #444;
+        font-size: 10px;
+        left: 0;
+        padding: 0 10px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
     }
   }
 
@@ -56,13 +86,16 @@ login {
       position: relative;
       width: 100%;
 
-      img {
+      ion-icon {
         bottom: 0;
+        color: #A9A9A9;
+        font-size: 100px;
         left: 0;
         margin: auto;
         position: absolute;
         right: 0;
-        top: 0;
+        text-align: center;
+        top: 40px;
         width: 80px;
       }
     }
@@ -316,14 +349,17 @@ login {
         position: relative;
         width: 100%;
 
-        img {
+        ion-icon {
           border: 1px solid #DEE4BF;
           border-radius: 50%;
+          color: #A9A9A9;
+          font-size: 100px;
           height: 110px;
           left: 0;
           margin: auto;
           position: absolute;
           right: 0;
+          text-align: center;
           top: 0;
           width: 110px;
         }

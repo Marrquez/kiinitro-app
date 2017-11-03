@@ -9,6 +9,10 @@
 
 <ion-content padding>
   <ion-item>
+    <ion-label>Incluir calentamiento</ion-label>
+    <ion-toggle [(ngModel)]="session.data.warm"></ion-toggle>
+  </ion-item>
+  <ion-item>
     <ion-label>Soy</ion-label>
     <ion-select
       [(ngModel)]="session.data.gender"
@@ -18,6 +22,12 @@
     </ion-select>
   </ion-item>
   <ion-item>
+    <ion-label>Entreno en</ion-label>
+    <ion-select [(ngModel)]="session.data.place">
+      <ion-option *ngFor="let place of session.dataItems.places" [value]="place.name">{{ place.name }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="session.data.place == 'Gimnasio'">
     <ion-label>Entreno hace</ion-label>
     <ion-select
       [(ngModel)]="session.data.time"
@@ -25,22 +35,22 @@
       <ion-option *ngFor="let time of session.dataItems.times" [value]="time.name">{{ time.name }}</ion-option>
     </ion-select>
   </ion-item>
-  <ion-item>
+  <ion-item *ngIf="session.data.place == 'Gimnasio'">
     <ion-label (click)="showSuggestions('')">M&uacute;sculo</ion-label>
     <ion-select (click)="showSuggestions('')" [(ngModel)]="session.data.muscles" multiple="true">
       <ion-option (ionSelect)="showSuggestions(muscle.name);" *ngFor="let muscle of session.dataItems.muscles" [value]="muscle.name">{{ muscle.name }}</ion-option>
     </ion-select>
   </ion-item>
-  <ion-item>
+  <ion-item *ngIf="session.data.place == 'Casa'">
+    <ion-label>Parte a entrenar</ion-label>
+    <ion-select [(ngModel)]="session.data.bodyParts" multiple="true">
+      <ion-option *ngFor="let muscle of session.dataItems.bodyParts" [value]="muscle.name">{{ muscle.name }}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item *ngIf="session.data.place == 'Gimnasio'">
     <ion-label>Mi objetivo</ion-label>
     <ion-select [(ngModel)]="session.data.target">
       <ion-option *ngFor="let target of session.dataItems.targets" [value]="target.name">{{ target.name }}</ion-option>
-    </ion-select>
-  </ion-item>
-  <ion-item>
-    <ion-label>Entreno en</ion-label>
-    <ion-select [(ngModel)]="session.data.place">
-      <ion-option *ngFor="let place of session.dataItems.places" [value]="place.name">{{ place.name }}</ion-option>
     </ion-select>
   </ion-item>
   <div class="button-container">
