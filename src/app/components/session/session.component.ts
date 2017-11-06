@@ -42,17 +42,25 @@ export class SessionComponent implements OnInit {
   };
 
   goToSession() {
-    if(!this.session.data.gender || !this.session.data.time || !this.session.data.target || !this.session.data.place || this.session.data.muscles.length === 0){
-      let toast = this.toastCtrl.create({
-        message: 'Todas las opciones deben estar seleccionadas',
-        duration: 3000,
-        position: 'top',
-        cssClass: 'error-item'
-      });
-      toast.present();
+    if(!this.session.data.gender){
+      this.notifyError();
+    } else if(this.session.data.place === ''){
+      this.notifyError();
+    } else if((this.session.data.place === 'Gimnasio' && (!this.session.data.time || !this.session.data.target || !this.session.data.place || this.session.data.muscles.length === 0)) || (this.session.data.place === 'Casa' && this.session.data.bodyParts.length === 0)) {
+      this.notifyError();
     }else {
       this.navCtrl.push(SessionsComponent);
     }
+  };
+
+  notifyError(){
+    let toast = this.toastCtrl.create({
+      message: 'Todas las opciones deben estar seleccionadas',
+      duration: 3000,
+      position: 'top',
+      cssClass: 'error-item'
+    });
+    toast.present();
   };
 
   updateMuscles(){

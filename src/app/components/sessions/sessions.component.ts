@@ -38,17 +38,24 @@ export class SessionsComponent implements OnInit {
 
   getTasks(){
     var self = this;
-    this.setGroup();
-    let muscles = JSON.stringify(this.session.data.muscles);
     this.session.list = [];
 
-    this.session.getEjercicesByMuscle(muscles).then(response => {
-      self.session.fullData = response.data;
-      self.updateArrays();
-      self.selectExercises();
-      self.addRest();
-      self.splash.hide();
-    });
+    if(this.session.data.place === 'Gimnasio') {
+      this.setGroup();
+      let muscles = JSON.stringify(this.session.data.muscles);
+
+      this.session.getEjercicesByMuscle(muscles).then(response => {
+        self.session.fullData = response.data;
+        self.updateArrays();
+        self.selectExercises();
+        self.addRest();
+        self.splash.hide();
+      });
+    } else if(this.session.data.place === 'Casa') {
+
+    } else {
+
+    }
   };
 
   addRest(){
