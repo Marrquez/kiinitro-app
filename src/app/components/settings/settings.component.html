@@ -5,10 +5,12 @@
     </ion-title>
   </ion-navbar>
   <ion-toolbar>
-    <ion-title>....</ion-title>
+    <ion-title>{{ 'choise_your_lang' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  Configuraciones generales....
+  <ion-list>
+    <ion-item [ngClass]="{ 'active': lang.key === _translate._currentLang }" (click)="setLang(lang.key);" *ngFor="let lang of _translate.langs">{{ lang.name }}</ion-item>
+  </ion-list>
 </ion-content>

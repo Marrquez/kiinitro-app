@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { TranslateService } from './components/localization/translate.service';
 
 import { TabsComponent } from './components/tabs/tabs.component';
 
@@ -12,7 +13,10 @@ import { TabsComponent } from './components/tabs/tabs.component';
 export class Kiinitro {
   rootPage:any = TabsComponent;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private ga: GoogleAnalytics) {
+  constructor(platform: Platform,
+              statusBar: StatusBar,
+              splashScreen: SplashScreen, private ga: GoogleAnalytics,
+              private _translate: TranslateService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -28,4 +32,15 @@ export class Kiinitro {
       }).catch(e => console.log('Error starting GoogleAnalytics', e));
     });
   }
+
+  ngOnInit() {
+    this._translate.subscribeToLangChanged();
+
+    // set language
+    this._translate.setDefaultLang('en');
+    this._translate.enableFallback(true);
+    this._translate.selectLang('es');
+  }
+
+
 }

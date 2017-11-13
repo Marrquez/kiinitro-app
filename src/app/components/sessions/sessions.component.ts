@@ -40,6 +40,18 @@ export class SessionsComponent implements OnInit {
     var self = this;
     this.session.list = [];
 
+    if(this.session.data.warm){
+      this.session.getWarmByPlace(this.session.data.place).then(response => {
+        console.log(response.data);
+        //this.getExcersices();
+      });
+    }else{
+      this.getExcersices();
+    }
+  };
+
+  getExcersices(){
+    var self = this;
     if(this.session.data.place === 'Gimnasio') {
       this.setGroup();
       let muscles = JSON.stringify(this.session.data.muscles);
@@ -52,7 +64,12 @@ export class SessionsComponent implements OnInit {
         self.splash.hide();
       });
     } else if(this.session.data.place === 'Casa') {
+      var trainingType = this.session.data.warm ? 'Musculación,Cardiovascular' : 'Musculación';
+      var trainingZone = this.session.bodyParts[0].name;
 
+      this.session.getHomeEjercices(this.session.data.place, trainingType, trainingZone).then(response => {
+        console.log(response.data);
+      });
     } else {
 
     }

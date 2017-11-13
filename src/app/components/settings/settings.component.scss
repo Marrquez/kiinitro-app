@@ -30,6 +30,12 @@ settings {
   }
 
   ion-content {
+    ion-item {
+      color: #A9A9A9 !important;
+    }
 
+    ion-item.active {
+      color: #BDD80F !important;
+    }
   }
 }

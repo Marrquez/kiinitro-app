@@ -5,6 +5,7 @@ import { Kiinitro } from './kiinitro.component';
 import { HttpModule } from '@angular/http';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { AppRate } from '@ionic-native/app-rate';
+import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './components/localization/imports';
 
 /**
  * Components
@@ -62,7 +63,8 @@ import { UserService } from './services/user.service';
     ImcInfoComponent,
     StretchComponent,
     DictionaryComponent,
-    SettingsComponent
+    SettingsComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -102,6 +104,8 @@ import { UserService } from './services/user.service';
     UserService,
     GoogleAnalytics,
     AppRate,
+    TRANSLATION_PROVIDERS,
+    TranslateService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -13,5 +13,21 @@
 </ion-header>
 
 <ion-content padding>
-  Catalogo de ejercicios....
+    <ng-container *ngFor="let group of session.dictionary">
+      <ion-list>
+        <ion-list-header>
+          {{ group.type }}
+        </ion-list-header>
+        <ng-container *ngFor="let muscle of group.excercises">
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="{{ muscle.img }}">
+            </ion-avatar>
+            <h2>{{ muscle.name | translate }}</h2>
+            <h3><ng-container *ngFor="let eq of muscle.machines">{{ eq.S }}. </ng-container></h3>
+            <p>{{ muscle.place }}</p>
+          </ion-item>
+        </ng-container>
+      </ion-list>
+    </ng-container>
 </ion-content>
