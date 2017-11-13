@@ -41,9 +41,9 @@ export class SessionsComponent implements OnInit {
     this.session.list = [];
 
     if(this.session.data.warm){
-      this.session.getWarmByPlace(this.session.data.place).then(response => {
+      this.session.getWarmByPlace(this.session.data.place, '["Cardiovascular"]').then(response => {
         console.log(response.data);
-        //this.getExcersices();
+        this.getExcersices();
       });
     }else{
       this.getExcersices();
@@ -64,7 +64,7 @@ export class SessionsComponent implements OnInit {
         self.splash.hide();
       });
     } else if(this.session.data.place === 'Casa') {
-      var trainingType = this.session.data.warm ? 'Musculación,Cardiovascular' : 'Musculación';
+      var trainingType = '["Musculación"]';
       var trainingZone = this.session.bodyParts[0].name;
 
       this.session.getHomeEjercices(this.session.data.place, trainingType, trainingZone).then(response => {

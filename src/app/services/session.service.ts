@@ -89,6 +89,18 @@ export class SessionService {
     {
       type: 'Bíceps',
       excercises: [
+        {id:6,name:'flexion_codo_curl_nombre',machines:[{"S":"Barra Z"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/curl+barra+z.jpg'},
+        {id:7,name:'predicador_nombre',machines:[{"S":"Barra recta"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/predicador.jpg'},
+        {id:8,name:'concentrado_nombre',machines:[{"S":"Mancuerna"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/curl_biceps_concentrado_apoyo_muslo.jpg'},
+        {id:9,name:'flexion_codo_martillo_nombre',machines:[{"S":"Barra romana"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/martillo+romana+variante.jpg'},
+        {id:42,name:'flexion_codo_curl_nombre',machines:[{"S":"Barra recta"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/Curl+barra1.jpg'},
+        {id:43,name:'flexion_codo_curl_nombre',machines:[{"S":"Polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/polea+pie.jpg'},
+        {id:44,name:'flexion_codo_curl_nombre',machines:[{"S":"Mancuerna"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/curl+mancuernas+2+manos.png'},
+        {id:45,name:'predicador_nombre',machines:[{"S":"Barra Z"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/predicador.jpg'},
+        {id:46,name:'predicador_nombre',machines:[{"S":"Máquina"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/curl+banco+predicador+maquina.jpg'},
+        {id:47,name:'predicador_nombre',machines:[{"S":"Mancuerna"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/curl+banco+predicador+mancuerna.gif'},
+        {id:48,name:'flexion_codo_martillo_nombre',machines:[{"S":"Mancuerna"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/martillo.png'},
+        {id:49,name:'flexion_codo_martillo_nombre',machines:[{"S":"Polea lazo"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/martillo+polea.jpg'},
       ]
     },
     {
@@ -183,13 +195,12 @@ export class SessionService {
       .then(response => response);
   };
 
-  public getWarmByPlace(place: string) {
-    let url = this.baseUrl + '/get-warmUpByPlaceTypeZone';
+  public getWarmByPlace(place: string, type: string) {
+    let url = this.baseUrl + '/get-warmUpByPlaceType';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('place', place);
-    params.set('trainingType', '["Cardiovascular", "Musculación"]');
-    params.set('corporalZone', 'Tren inferior');
+    params.set('trainingType', type);
 
     return this.http.get(url, { params: params })
       .toPromise()
