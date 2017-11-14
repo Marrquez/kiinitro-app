@@ -10,6 +10,7 @@
 </ion-header>
 
 <ion-content padding>
+  <button *ngIf="session.data.warm" ion-button full (click)="showWarm()">{{ 'warm_excercises' | translate }}</button>
   <ion-slides pager>
     <ion-slide *ngFor="let e of session.list" (click)="presentModal(e.id);">
       <ion-card>

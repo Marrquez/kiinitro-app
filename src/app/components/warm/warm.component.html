@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Calentamiento
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <p>Antes de comenzar tu rutina, te recomendamos realizar alguno de estos ejercicios de calentamiento</p>
+  <ion-slides pager>
+    <ion-slide *ngFor="let e of session.warmExercises">
+      <ion-card>
+        <ion-row>
+          <ion-col>
+            <button class="series" ion-button icon-left clear small>
+              <ion-icon name="more"></ion-icon>
+              <div>
+                  {{ e.iDuration }}s
+              </div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button class="series" ion-button icon-left clear small>
+              <ion-icon name="refresh"></ion-icon>
+              <div>
+                  {{ e.iRepetition }} rep.
+              </div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button class="series" ion-button icon-left clear small>
+              <ion-icon name="hand"></ion-icon>
+              <div>
+                30s.
+              </div>
+            </button>
+          </ion-col>
+        </ion-row>
+        <img [src]="e.imgGif"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ e.vchName }}
+          </ion-card-title>
+          <p>{{ e.vchDescription }}</p>
+          <p>Intensity. {{ e.vchIntensity }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

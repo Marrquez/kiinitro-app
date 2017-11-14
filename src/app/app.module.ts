@@ -30,6 +30,7 @@ import { ImcInfoComponent } from './components/imc-info/imc-info.component';
 import { StretchComponent } from './components/stretch/stretch.component';
 import { DictionaryComponent } from './components/dictionary/dictionary.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { WarmComponent } from './components/warm/warm.component';
 
 /**
  * Services
@@ -64,7 +65,8 @@ import { UserService } from './services/user.service';
     StretchComponent,
     DictionaryComponent,
     SettingsComponent,
-    TranslatePipe
+    TranslatePipe,
+    WarmComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +95,8 @@ import { UserService } from './services/user.service';
     ImcInfoComponent,
     StretchComponent,
     DictionaryComponent,
-    SettingsComponent
+    SettingsComponent,
+    WarmComponent
   ],
   providers: [
     StatusBar,

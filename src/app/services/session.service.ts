@@ -65,6 +65,7 @@ export class SessionService {
   public exercise = {gif: '', imagen: ''};
   public current = {id: '', tips: [], gif: ''};
   public currentIndex = 0;
+  public warmExercises = [];
   public dictionary = [
     {
       type: 'Abdomen',
@@ -121,6 +122,21 @@ export class SessionService {
     {
       type: 'Espalda',
       excercises: [
+        {id:10,name:'dominadas_nombre',machines:[{"S":"Barra fija"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/dominadas.jpg'},
+        {id:11,name:'jalon_frontal_abierto_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/espalda_jalones-frente_01.jpg'},
+        {id:12,name:'jalon_frontal_cerrado_agarre_neutro_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/jalon+frontal+cerrado.png'},
+        {id:13,name:'remo_mancuerna_nombre',machines:[{"S":"Mancuerna"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/remo+barra.png'},
+        {id:14,name:'remo_polea_bajo_barra_v_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/remo+bajo+polea.jpg'},
+        {id:50,name:'dominadas_asistidas_nombre',machines:[{"S":"Máquina"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/DominadasAsistidasHombre.jpg'},
+        {id:51,name:'jalon_frontal_abierto_nombre',machines:[{"S":"Máquina Hammer"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/Jalon+Frontal+Abierto+Hammer.jpg'},
+        {id:52,name:'jalon_frontal_cerrado_supino_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/JalonFrontalCerradoSupinoHombre.jpg'},
+        {id:53,name:'remo_barra_supino_nombre',machines:[{"S":"Barra"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/remo+barra.png'},
+        {id:54,name:'remo_barra_prono_nombre',machines:[{"S":"Barra"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/remo+barra.png'},
+        {id:55,name:'remo_polea_bajo_supino_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/RemoBajoPoleaSupinoHombre.jpg'},
+        {id:56,name:'remo_polea_bajo_prono_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/RemoBajoPoleaPronoHombre.jpg'},
+        {id:57,name:'remo_anclado_nombre',machines:[{"S":"Máquina de polea"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/RemoAncladoHombre.jpg'},
+        {id:58,name:'remo_barra_t_neutro_nombre',machines:[{"S":"Barra recta con barra V"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/RemoBarraTHombre.gif'},
+        {id:59,name:'remo_barra_t_maquina_nombre',machines:[{"S":"Máquina T"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Back/RemoBarraTM%C3%A1quinaHombre.jpg'},
       ]
     },
     {

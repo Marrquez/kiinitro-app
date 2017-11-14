@@ -24,6 +24,7 @@ export const LANG_EN_TRANS = {
   'today': 'What do you train today?',
   'training place': 'Where do you train?',
   'training time': 'How long have you been training?',
+  'warm_excercises': 'See warmn excercises',
   'weight': 'Weight',
   'welcome': 'Welcome',
   'choise_your_lang': 'Available languages',

@@ -47,6 +47,15 @@ sessions {
   }
 
   ion-content {
+    .button-full {
+      background: #fff;
+      border-bottom: 0.5px solid #DDD;
+      color: #488AFF;
+      font-size: 15px;
+      height: 30px;
+      text-decoration: underline;
+    }
+
     ion-col {
       .series {
         color: #44500D;

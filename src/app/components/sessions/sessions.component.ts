@@ -8,6 +8,7 @@ import { SessionItemComponent } from '../session-item/session-item.component';
 import { RutineComponent } from '../rutine/rutine.component';
 import { SessionService } from '../../services/session.service';
 import { UserService } from '../../services/user.service';
+import { WarmComponent } from '../warm/warm.component';
 
 @Component({
   selector: 'sessions',
@@ -42,7 +43,7 @@ export class SessionsComponent implements OnInit {
 
     if(this.session.data.warm){
       this.session.getWarmByPlace(this.session.data.place, '["Cardiovascular"]').then(response => {
-        console.log(response.data);
+        self.session.warmExercises = response.data;
         this.getExcersices();
       });
     }else{
@@ -267,5 +268,10 @@ export class SessionsComponent implements OnInit {
     let currentDate = new Date();
     self.user.internalData.dtBegin = currentDate.toString();
     self.navCtrl.push(RutineComponent);
+  };
+
+  showWarm(){
+    let modal = this.modalCtrl.create(WarmComponent);
+    modal.present();
   };
 }
