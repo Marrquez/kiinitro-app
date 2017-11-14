@@ -106,6 +106,16 @@ export class SessionService {
     {
       type: 'Cuerpo completo',
       excercises: [
+        {id:25,name:'burpee_sin_flexion_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:26,name:'saltos_laterales_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:27,name:'cuatro_en_uno_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:28,name:'escaladores_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:29,name:'guerrero_a_una_pierna_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:30,name:'paso_de_oso_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:31,name:'saltos_con_pausa_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:32,name:'paso_de_cangrejo_lateral_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:33,name:'burpee_con_flexion_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
+        {id:34,name:'orugas_nombre',machines:[{"S":"body_height"}],place: 'home', img:''},
       ]
     },
     {

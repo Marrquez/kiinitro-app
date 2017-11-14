@@ -3,6 +3,7 @@ export const LANG_EN_NAME = 'en';
 export const LANG_EN_TRANS = {
   'about': 'About us',
   'anonimous': 'Anonimous',
+  'body_height': 'Body weight',
   'chest': 'Chest',
   'back': 'Back',
   'generate session': 'Generate fast session',
