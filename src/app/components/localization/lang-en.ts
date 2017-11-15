@@ -3,13 +3,13 @@
 export const LANG_EN_NAME = 'en';
 
 export const LANG_EN_TRANS = {
-  'abdomen': 'Abdomen',
-  'abdominales': 'Abdominales',
-  'abdominales_basicas_nombre': 'Abdominales básicas',
-  'abdominales_basicas_decripcion': 'Ubicando pies fijos en el suelo, rodillas flexionadas, manos sobre el pecho, cabeza o hacia al frente, inhala y realiza una contracción abdominal, levantando el tronco hasta la altura de los muslos. Exhala mientras retornas el tronco a la posición inicial. Evita mover la cabeza hacia adelante, manteniendo la vista fija hacia arriba.',
+  'abdomen': 'Abdominal',
+  'abdominales': 'Abs',
+  'abdominales_basicas_nombre': 'Basic crunches',
+  'abdominales_basicas_descripcion': 'Ubicando pies fijos en el suelo, rodillas flexionadas, manos sobre el pecho, cabeza o hacia al frente, inhala y realiza una contracción abdominal, levantando el tronco hasta la altura de los muslos. Exhala mientras retornas el tronco a la posición inicial. Evita mover la cabeza hacia adelante, manteniendo la vista fija hacia arriba.',
   'abdominales_basicas_intensidad': 'Usando peso, más velocidad o al subir el tronco lo más alto posible, agregas intensidad y trabajo a la zona abdominal',
   'abdominales_en_v_nombre': 'Abdominales en V',
-  'abdominales_en_v_decripcion': 'Estira los brazos sobre la cabeza y extiende las rodillas. Inhala y eleva el tronco y las piernas, manteniendo la extensión de brazos y rodillas, hasta la mayor altura que puedas, casi tocando los pies con las manos. Exhala mientras regresas suavemente a la posición inicial.',
+  'abdominales_en_v_descripcion': 'Estira los brazos sobre la cabeza y extiende las rodillas. Inhala y eleva el tronco y las piernas, manteniendo la extensión de brazos y rodillas, hasta la mayor altura que puedas, casi tocando los pies con las manos. Exhala mientras regresas suavemente a la posición inicial.',
   'abdominales_en_v_intensidad': 'Gana fuerza haciendo el movimiento corto o doblando levemente las rodillas al iniciar. Puedes alternar peso entre manos y piernas para mayor resistencia muscular.',
   'abdominales_invertidas_nombre': 'Abdominales invertidas',
   'abdominales_invertidas_decripcion': 'Manteniendo la espalda y cabeza apoyadas en el suelo, brazos a los lados, inhala mientras levantas las piernas lo más alto posible. Exhala mientras regresas a la posición inicial. Evita levantar la cadera del suelo y puedes doblar las rodillas al comienzo, para ganar técnica y fuerza abdominal.',
