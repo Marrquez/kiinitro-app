@@ -15,7 +15,7 @@ export const LANG_ES_TRANS = {
   'abdominales_invertidas_decripcion': 'Manteniendo la espalda y cabeza apoyadas en el suelo, brazos a los lados, inhala mientras levantas las piernas lo más alto posible. Exhala mientras regresas a la posición inicial. Evita levantar la cadera del suelo y puedes doblar las rodillas al comienzo, para ganar técnica y fuerza abdominal.',
   'abdominales_invertidas_intensidad': 'Entre más alto levantes las piernas, mayor intensidad. Puedes usar un balón entre ambas piernas para mayor trabajo en la parte inferior del abdomen.',
   'abdominales_laterales_nombre': 'Abdominales laterales',
-  'abdominales_laterales_decripcion': 'Acostado sobre un costado del cuerpo, piernas levemente flexionadas, brazo apoyado en el suelo (o codo sobre colchoneta), levanta el tronco lo más alto que puedas. Puedes estirar la mano al costado para mayor alcance y estirar las piernas para dar más apoyo. Respora al subir y bajar el tronco.',
+  'abdominales_laterales_decripcion': 'Acostado sobre un costado del cuerpo, piernas levemente flexionadas, brazo apoyado en el suelo (o codo sobre colchoneta), levanta el tronco lo más alto que puedas. Puedes estirar la mano al costado para mayor alcance y estirar las piernas para dar más apoyo. Respira al subir y bajar el tronco.',
   'abdominales_laterales_intensidad': 'Realiza la mayor cantidad de repeticiones posibles con cada costado. Puedes elevar los pies junto con el tronco, para un entrenamiento más intenso.',
   'abdominales_mariposa_nombre': 'Abdominales mariposa',
   'abdominales_mariposa_decripcion': 'Juntando las plantas o talones de los pies y con las manos estiradas sobre la cabeza, inhala mientras levantas el tronco, llevando las manos a tomar los pies. Exhala mientras regresas el tronco a la posición incial. Puedes ayudarte con los brazos y evita mover los pies de la posición inicial.',
@@ -60,7 +60,7 @@ export const LANG_ES_TRANS = {
   'calentamiento': 'Calentamiento',
   'cardiovascular_tipo': 'Cardiovascular',
   'casa_sitio': 'Casa',
-  'choise_your_lang': 'Selcciona tu lenguaje',
+  'choise_your_lang': 'Selecciona tu lenguaje',
   'colchonera_equipamiento': 'Colchonera',
   'colchoneta_equipamiento': 'Colchoneta',
   'concentrado_nombre': 'Concentrado',
@@ -136,7 +136,7 @@ export const LANG_ES_TRANS = {
   'crunches_laterales_tips1': 'Puedes ubicar las manos cruzadas sobre el pecho o hacia adelante (recomendado para principiantes)',
   'crunches_laterales_tips2': 'Busca mantener las piernas fijas en el suelo o posición lateral y realiza muchas repeticiones para mayor intensidad muscular',
   'cuatro_en_uno_nombre': 'Cuatro en Uno',
-  'cuatro_en_uno_decripcion': 'De pie, dobla las rodillas y coloca las manos en el suelo. Luego, envía las piernas hacia atrás, apoyando la punta de los pies (UNO). Da un salto, abriendo los pies a cada lado (DOS), cierras (TRES) y llevas las piernas hacia adelante, para finalmente ponerte de nuevo de pie (CUATRO). Busca mantener la espalda recta y cuerpo alineado.',
+  'cuatro_en_uno_descripcion': 'De pie, dobla las rodillas y coloca las manos en el suelo. Luego, envía las piernas hacia atrás, apoyando la punta de los pies (UNO). Da un salto, abriendo los pies a cada lado (DOS), cierras (TRES) y llevas las piernas hacia adelante, para finalmente ponerte de nuevo de pie (CUATRO). Busca mantener la espalda recta y cuerpo alineado.',
   'cuatro_en_uno_intensidad': 'Realiza el ejercicio con mayor velocidad para hacerlo más intenso, Respira constantemente.',
   'cuerpo_completo': 'Cuerpo completo',
   'curl_biceps_con_peso_nombre': 'Curl bíceps con peso',
@@ -949,5 +949,6 @@ export const LANG_ES_TRANS = {
   'mas_sesiones': 'Quiero más sesiones',
   'terminar': 'Terminar',
   'ejercicios_estiramiento': 'Ejercicios de estiramiento',
-  'estiramientos': 'Ver estiramientos'
+  'estiramientos': 'Ver estiramientos',
+  'colchoneta_banco_equipamiento': 'Colchoneta - banco'
 };
