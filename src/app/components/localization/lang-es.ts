@@ -61,8 +61,6 @@ export const LANG_ES_TRANS = {
   'cardiovascular_tipo': 'Cardiovascular',
   'casa_sitio': 'Casa',
   'choise_your_lang': 'Selecciona tu lenguaje',
-  'colchonera_equipamiento': 'Colchonera',
-  'colchoneta_equipamiento': 'Colchoneta',
   'concentrado_nombre': 'Concentrado',
   'concentrado_descripcion': 'Ejercicio de aislamiento que permite controlar el ejercicio en amplitud, velocidad y movimiento sobre el bíceps y braquial anterior',
   'concentrado_paso1': 'Sentado, mancuerna con agarre en supinación y brazo apoyado sobre la cara interna del muslo.',
@@ -183,7 +181,7 @@ export const LANG_ES_TRANS = {
   'extensiones_de_codo_decripcion': 'Inclinado hacia adelante, peso ligero en cada mano (botellas de agua, mancuernas, etc.), rodillas levemente flexionadas. Inhala y extiende los brazos, manteniendo el codo fijo en una misma posición. Exhala y regresa el peso a la posición inicial. Evita el efecto palanca o impulso al bajar el peso.',
   'extensiones_de_codo_intensidad': 'Puedes realizar el ejercicio unilateral (con un brazo a la vez) o ambos al tiempo. Gana peso y técnica antes de agregar peso, para brindar mayor intensidad al músculo.',
   'extensiones_en_base_nombre': 'Extensiones en base',
-  'extensiones_en_base_decripcion': 'Ubica las manos al ancho de hombros al borde de una mesa junto a la pared o una barra. Inhala mientras doblas los brazos llevando la cabeza bajo el nivel de la mesa o barra. Exhala al extender los brazos.',
+  'extensiones_en_base_descripcion': 'Ubica las manos al ancho de hombros al borde de una mesa junto a la pared o una barra. Inhala mientras doblas los brazos llevando la cabeza bajo el nivel de la mesa o barra. Exhala al extender los brazos.',
   'extensiones_en_base_intensidad': 'Entre más baja la base y mayor la distancia de pies hacia atrás, mayor la dificultad en ejecutar el ejercicio.',
   'elevacion_de_cadera_con_peso_nombre': 'Elevación de cadera con peso',
   'elevacion_de_cadera_con_peso_descripcion': 'Ejercicio de musculación, especialmente de los isquiotibiales y gluteos, para trabajar resistencia muscular y fortalecimiento de esta zona, así como abdomen y cintura',
@@ -950,5 +948,12 @@ export const LANG_ES_TRANS = {
   'terminar': 'Terminar',
   'ejercicios_estiramiento': 'Ejercicios de estiramiento',
   'estiramientos': 'Ver estiramientos',
-  'colchoneta_banco_equipamiento': 'Colchoneta - banco'
+  'colchoneta_banco_equipamiento': 'Colchoneta - banco',
+  'barra_plano_step_equipamiento': 'Barra , Banco plano - step',
+  'colchonera_banco_equipamiento': 'Colchonera , Banco',
+  'mancuernas_polea_equipamiento': 'Mancuerna , Polea',
+  'mancuernas_barra_equipamiento': 'Mancuernas , Barra',
+  'mancuernas_lazo_barra_equipamiento': 'Mancuernas , Polea lazo , Barra',
+  'mancuernas_maquina_equipamiento': 'Máquina , Mancuernas',
+  'maquina_smith_equipamiento': 'Máquina , Máquina Smith'
 };
