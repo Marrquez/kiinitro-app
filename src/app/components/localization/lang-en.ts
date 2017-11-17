@@ -249,7 +249,7 @@ export const LANG_EN_TRANS = {
   'elevaciones_frontales_polea_tips1': 'Keep your back straight and firm, avoiding the backward impulse as much as possible',
   'elevaciones_frontales_polea_tips2': 'Variations can be made in low pulley, with the back to the machine and with a bar or rope.',
   'elevaciones_frontales_polea_tips3': 'Sets with many repetitions are more recommended than heavy weights.',
-  'elevaciones_frontales_polea_unilateral_nombre': 'Elevaciones frontales polea unilateral',
+  'elevaciones_frontales_polea_unilateral_nombre': 'Elevaciones frontales  polea unilateral',
   'elevaciones_frontales_polea_unilateral_descripcion': 'Este ejercicio enfoca el entrenamiento en el deltoides anterior y haz clavicular del pectoral (primarios), así como deltoides lateral y posterior (secundarios)',
   'elevaciones_frontales_polea_unilateral_paso1': 'De pie de espaldas a la polea, rodillas ligeramente flexionadas, tomar con una mano la barra de la polea baja en pronación',
   'elevaciones_frontales_polea_unilateral_paso2': 'Con espalda recta, abdomen contraido y brazo levemente flexionado, elevar el brazo adelante hasta la altura del hombro',
