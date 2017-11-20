@@ -70,21 +70,31 @@ export class SessionService {
     {
       type: 'Abdomen',
       excercises: [
-        {id:35,name:'crunches_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/642x361_Sit-Ups_vs._Crunches_0.jpg'},
-        {id:36,name:'planchas_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/plank.jpg'},
-        {id:37,name:'crunches_invertidos_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Crunches+invertidos1.jpg'},
-        {id:88,name:'bicicletas_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/BicicletasHombre.JPG'},
-        {id:89,name:'tijeras_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/TijerasHombre.JPG'},
-        {id:90,name:'sit_ups_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/sit-ups.JPG'},
-        {id:91,name:'elevacion_de_piernas_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/ElevacionPiernas_Hombre.jpg'},
-        {id:92,name:'elevacion_de_piernas_cadera_acostado_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Elevaci%C3%B3nCrunchesInvertidos_Hombre.JPG'},
-        {id:93,name:'crunches_con_pies_juntos_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesPiesJuntos_Hombre.JPG'},
-        {id:94,name:'crunches_con_elevacion_de_piernas_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesPiesElevados_Hombre.JPG'},
-        {id:95,name:'crunches_laterales_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesLaterales_Hombre.JPG'},
+        {id:35,name:'crunches_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/642x361_Sit-Ups_vs._Crunches_0.jpg'},
+        {id:36,name:'planchas_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/plank.jpg'},
+        {id:37,name:'crunches_invertidos_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Crunches+invertidos1.jpg'},
+        {id:88,name:'bicicletas_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/BicicletasHombre.JPG'},
+        {id:89,name:'tijeras_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/TijerasHombre.JPG'},
+        {id:90,name:'sit_ups_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/sit-ups.JPG'},
+        {id:91,name:'elevacion_de_piernas_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/ElevacionPiernas_Hombre.jpg'},
+        {id:92,name:'elevacion_de_piernas_cadera_acostado_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Elevaci%C3%B3nCrunchesInvertidos_Hombre.JPG'},
+        {id:93,name:'crunches_con_pies_juntos_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesPiesJuntos_Hombre.JPG'},
+        {id:94,name:'crunches_con_elevacion_de_piernas_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesPiesElevados_Hombre.JPG'},
+        {id:95,name:'crunches_laterales_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesLaterales_Hombre.JPG'},
         {id:96,name:'crunches_en_maquina_nombre',machines:[{"S":"maquina_especifica_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesEnMaquina_Hombre.jpg'},
-        {id:97,name:'crunches_en_balon_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesEnBalon_Hombre.JPG'},
-        {id:98,name:'crunches_en_v_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Crunches+V_Hombre.JPG'},
-        {id:99,name:'crunches_invertidos_en_banco_inclinado_nombre',machines:[{"S":"colchonera_equipamiento"},{"S":"banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Crunches+invertidos+inclinado_Hombre_GIF.jpg'}
+        {id:97,name:'crunches_en_balon_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/CrunchesEnBalon_Hombre.JPG'},
+        {id:98,name:'crunches_en_v_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Crunches+V_Hombre.JPG'},
+        {id:99,name:'crunches_invertidos_en_banco_inclinado_nombre',machines:[{"S":"colchonera_banco_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Abs/Crunches+invertidos+inclinado_Hombre_GIF.jpg'},
+        {id:25,name:'abdominales_basicas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'abdominales_en_v_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'abdominales_invertidas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'bicicletas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'abdominales_laterales_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'abdominales_mariposa_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'giro_ruso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'planchas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'puentes_laterales_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:25,name:'superman_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''}
       ]
     },
     {
@@ -102,6 +112,22 @@ export class SessionService {
         {id:47,name:'predicador_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/curl+banco+predicador+mancuerna.gif'},
         {id:48,name:'flexion_codo_martillo_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/martillo.png'},
         {id:49,name:'flexion_codo_martillo_nombre',machines:[{"S":"polea_lazo_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Biceps/martillo+polea.jpg'},
+      ]
+    },
+    {
+      type: 'Calentamiento',
+      excercises: [
+        {id:25,name:'pies_rapidos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:26,name:'jumping_jacks_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:27,name:'elevacion_de_rodillas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:28,name:'rotacion_de_brazos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:29,name:'rotacion_de_piernas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:30,name:'saltos_alternos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:31,name:'trote_en_sitio_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:1,name:'tren_inferior_caminadora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/treadmill.jpg'},
+        {id:2,name:'tren_inferior_eliptica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/eliptica.jpg'},
+        {id:3,name:'tren_inferior_escaladora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/escaleras.png'},
+        {id:4,name:'tren_inferior_bicicleta_estatica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/Bici-est%C3%A1tica_uni.jpg'}
       ]
     },
     {
@@ -161,36 +187,100 @@ export class SessionService {
     {
       type: 'Muslos',
       excercises: [
+        {id:27,name:'sentadilla_libre_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/1200px-Squats.svg.png'},
+        {id:28,name:'prensa_inclinada_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/prensa+inclinada.jpg'},
+        {id:29,name:'extension_de_rodilla_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/extension+de+rodilla.jpg'},
+        {id:30,name:'flexion_de_rodilla_acostado_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/lying-leg-curl_Hombre.jpg'},
+        {id:31,name:'peso_muerto_barra_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/romanian%2Bdeadlift.jpg'},
+        {id:32,name:'zancadas_nombre',machines:[{"S":"barra_equipamiento"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/lunges-1.png'},
+        {id:73,name:'sentadilla_smith_nombre',machines:[{"S":"maquina_smith_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/Squat_Smith_Hombre.png'},
+        {id:74,name:'flexion_de_rodilla_sentado_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/lying-leg-curl_Hombre.jpg'},
+        {id:75,name:'flexion_de_rodilla_unipodal_nombre',machines:[{"S":"maquina_unipodal_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/standing-leg-curl-1.png'},
+        {id:76,name:'peso_muerto_mancuerna_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/dumbbell_romanian_deadlift_pos_b.jpg'},
+        {id:77,name:'peso_muerto_mancuerna_unipodal_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/Dumbell-Deadlift_Single_Hombre.JPG'},
+        {id:78,name:'zancadas_mancuerna_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/Dumbbell-Lunge-2.png'},
+        {id:79,name:'zancadas_mancuerna_en_banco_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/zancada+una+pierna+en+banco_Hombre.JPG'},
+        {id:80,name:'zancadas_barra_en_banco_nombre',machines:[{"S":"barra_equipamiento"},{"S":"banco_plano_step_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/zancada+una+pierna+en+banco+barra_Mujer.jpg'},
+        {id:81,name:'zancadas_en_smith_nombre',machines:[{"S":"maquina_smith_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/zancada+una+pierna+Smith_Mujer1.jpg'},
+        {id:82,name:'zancadas_en_smith_con_banco_nombre',machines:[{"S":"maquina_smith_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/zancada+una+pierna+Smith+en+banco_Mujer.jpg'},
+        {id:83,name:'sentadilla_frontal_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/sentadillafrontalHombre.JPG'},
+        {id:84,name:'prensa_horizontal_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/seated-leg-press-action.jpg'},
+        {id:85,name:'sentadilla_hack_nombre',machines:[{"S":"maquina_hack"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/hack+squat+Hombre2.jpg'},
+        {id:87,name:'elevacion_de_cadera_con_peso_nombre',machines:[{"S":"barra_equipamiento"},{"S":"maquina_smith_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Legs/ElevacionesCaderaPeso_Hombre.jpg'},
       ]
     },
     {
       type: 'Pantorrillas',
       excercises: [
+        {id:33,name:'elevacion_talones_sentado_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Calves/elevacion+talones+sentado.jpg'},
+        {id:34,name:'elevacion_talones_de_pie_nombre',machines:[{"S":"maquina_equipamiento"},{"S":"maquina_smith_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Calves/elevacion+talones+pie.jpg'},
       ]
     },
     {
       type: 'Pecho',
       excercises: [
+        {id:1,name:'press_inclinado_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/Inclinado+mancuerna.jpg'},
+        {id:2,name:'press_plano_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/plano+resized.jpeg'},
+        {id:3,name:'press_declinado_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/press-declinado1.png'},
+        {id:4,name:'pull_over_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/pull+over+resized.jpeg'},
+        {id:5,name:'peck_deck_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/Butterfly_M_WorkoutLabs.png'},
+        {id:38,name:'press_inclinado_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/Press+inclinado+barra.jpg'},
+        {id:39,name:'press_plano_nombre',machines:[{"S":"mancuernas_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/press+plano+mancuerna.jpg'},
+        {id:40,name:'press_declinado_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/Press+declinado+mancuerna.jpg'},
+        {id:41,name:'aperturas_en_banco_inclinado_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/apertura+inclinada++mancuerna.jpg'},
+        {id:86,name:'flexiones_de_pecho_nombre',machines:[{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Chest/Flexiones+de+Pecho_Hombre.JPG'},
       ]
     },
     {
       type: 'Trapecio',
       excercises: [
+        {id:25,name:'encogimientos_nombre',machines:[{"S":"maquina_equipamiento"},{"S":"mancuernas_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Traps/encogimientos.jpg'},
+        {id:26,name:'remo_erguido_nombre',machines:[{"S":"mancuernas_equipamiento"},{"S":"barra_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Traps/remo+erguido.jpg'},
       ]
     },
     {
       type: 'Tren superior',
       excercises: [
+        {id:5,name:'flexiones_de_pecho_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Flexiones+de+Pecho_Hombre.JPG'},
+        {id:6,name:'remo_a_dos_manos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/remo.jpg'},
+        {id:7,name:'flexiones_diamante_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Flexiones+Diamante_Hombre.JPG'},
+        {id:8,name:'extensiones_en_base_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Triceps+extension+mesa.jpg'},
+        {id:9,name:'curl_biceps_con_peso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Curl+biceps.jpg'},
+        {id:10,name:'press_hombro_con_peso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Press+hombro.jpg'},
+        {id:11,name:'elevaciones_laterales_con_peso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Elevaciones+laterales.JPG'},
+        {id:12,name:'extensiones_de_codo_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/ExtensionCodo.JPG'},
+        {id:13,name:'dominadas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/dominadas.jpg'},
+        {id:14,name:'escalado_de_pared_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
       ]
     },
     {
       type: 'Tren inferior',
       excercises: [
+        {id:15,name:'sentadilla_con_salto_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/Sentadilla+con+salto.JPG'},
+        {id:16,name:'sentadilla_isometrica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/Sentadilla+isometrica.JPG'},
+        {id:17,name:'elevaciones_de_cadera_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/elevaciones+de+cadera.JPG'},
+        {id:18,name:'zancadas_alternas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/Zaancadas+alternas.JPG'},
+        {id:19,name:'sentadilla_sumo_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/sentadilla+sumo.JPG'},
+        {id:20,name:'peso_muerto_a_una_pierna_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/Peso+muerto+una+pierna.JPG'},
+        {id:21,name:'sentadilla_bulgara_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/sentadilla+bulgara.JPG'},
+        {id:22,name:'zancadas_laterales_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/zancada+lateral.JPG'},
+        {id:23,name:'patada_de_caballo_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/patada+de+caballo.JPG'},
+        {id:24,name:'elevacion_de_talones_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/elevacion+talones.JPG'},
       ]
     },
     {
       type: 'Tríceps',
       excercises: [
+        {id:15,name:'extension_codos_sentado_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/copa_mancuerna_hombre.png'},
+        {id:16,name:'extension_codos_acostado_nombre',machines:[{"S":"mancuerna_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/Press+frances+mancuerna+hombre.jpg'},
+        {id:17,name:'push_down_nombre',machines:[{"S":"polea_lazo_barra_recta_o_barra_v_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/cable-tricep-pushdowns.jpg'},
+        {id:18,name:'extension_codo_nombre',machines:[{"S":"mancuerna_equipamiento"},{"S":"polea_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/extension+codo.jpg'},
+        {id:60,name:'extension_codos_sentado_nombre',machines:[{"S":"barra_z_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/Copa_Barra_Hombre1.jpg'},
+        {id:61,name:'extension_codos_acostado_nombre',machines:[{"S":"barra_z_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/press+frances+barra+hombre.jpg'},
+        {id:62,name:'fondos_libres_nombre',machines:[{"S":"maquina_libre_barras_paralelas_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/fondos_libre_hombre.jpg'},
+        {id:63,name:'fondos_asistidos_nombre',machines:[{"S":"maquina_asistida_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/fondos_asistidos_hombre.jpg'},
+        {id:64,name:'fondos_en_bancos_nombre',machines:[{"S":"bancos_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/fondos_banco_hombre.jpg'},
+        {id:65,name:'fondos_maquina_nombre',machines:[{"S":"maquina_equipamiento"}],place: 'Gym', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Triceps/fondos_maquina_hombre.jpg'},
       ]
     },
   ];
