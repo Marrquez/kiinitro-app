@@ -123,7 +123,11 @@ export class SessionService {
         {id:28,name:'rotacion_de_brazos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
         {id:29,name:'rotacion_de_piernas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
         {id:30,name:'saltos_alternos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
-        {id:31,name:'trote_en_sitio_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''}
+        {id:31,name:'trote_en_sitio_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:1,name:'tren_inferior_caminadora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/treadmill.jpg'},
+        {id:2,name:'tren_inferior_eliptica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/eliptica.jpg'},
+        {id:3,name:'tren_inferior_escaladora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/escaleras.png'},
+        {id:4,name:'tren_inferior_bicicleta_estatica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/Bici-est%C3%A1tica_uni.jpg'}
       ]
     },
     {
@@ -252,10 +256,6 @@ export class SessionService {
     {
       type: 'Tren inferior',
       excercises: [
-        {id:1,name:'tren_inferior_caminadora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/treadmill.jpg'},
-        {id:2,name:'tren_inferior_eliptica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/eliptica.jpg'},
-        {id:3,name:'tren_inferior_escaladora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/escaleras.png'},
-        {id:4,name:'tren_inferior_bicicleta_estatica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/Bici-est%C3%A1tica_uni.jpg'},
         {id:15,name:'sentadilla_con_salto_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/Sentadilla+con+salto.JPG'},
         {id:16,name:'sentadilla_isometrica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/Sentadilla+isometrica.JPG'},
         {id:17,name:'elevaciones_de_cadera_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Lower+Body/elevaciones+de+cadera.JPG'},

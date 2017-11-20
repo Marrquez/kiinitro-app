@@ -17,6 +17,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { SessionComponent } from './components/session/session.component';
 import { SessionsComponent } from './components/sessions/sessions.component';
 import { SessionItemComponent } from './components/session-item/session-item.component';
+import { CatalogItemComponent } from './components/catalog-item/catalog-item.component';
 import { TeamComponent } from './components/team/team.component';
 import { ServicesComponent } from './components/services/services.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
@@ -52,6 +53,7 @@ import { UserService } from './services/user.service';
     SessionComponent,
     SessionsComponent,
     SessionItemComponent,
+    CatalogItemComponent,
     RutineComponent,
     TeamComponent,
     ServicesComponent,
@@ -83,6 +85,7 @@ import { UserService } from './services/user.service';
     SessionComponent,
     SessionsComponent,
     SessionItemComponent,
+    CatalogItemComponent,
     RutineComponent,
     TeamComponent,
     ServicesComponent,

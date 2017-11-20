@@ -19,7 +19,7 @@
           {{ group.type }}
         </ion-list-header>
         <ng-container *ngFor="let muscle of group.excercises">
-          <ion-item>
+          <ion-item (click)="showCatalogItem(muscle)">
             <ion-avatar item-start>
               <img src="{{ muscle.img }}">
             </ion-avatar>
