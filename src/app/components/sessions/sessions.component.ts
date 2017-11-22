@@ -254,9 +254,10 @@ export class SessionsComponent implements OnInit {
   presentModal(id: string) {
     var self = this;
     let modal = self.modalCtrl.create(SessionItemComponent);
+    let place:string = this.session.data.place === 'Gimnasio' ? '1' : '0';
     self.splash.show();
 
-    self.session.getEjercicio(id).then(response => {
+    self.session.getEjercicio(id, place).then(response => {
       self.session.exercise = response.data;
       self.splash.hide();
       modal.present();

@@ -25,6 +25,17 @@ export class CatalogItemComponent {
       // Tracker is ready
       // You can now track pages or set additional information such as AppVersion or UserId
     }).catch(e => console.log('Error starting GoogleAnalytics', e));
+
+    this.getCatalogItem();
+  };
+
+  getCatalogItem(){
+    //console.log(this.session.catalogItem);
+    let place:string = this.session.catalogItem.place === 'Gym' ? '1' : '0';
+
+    this.session.getEjercicio(this.session.catalogItem.id, place).then(response => {
+      console.log(response.data);
+    });
   };
 
   dismiss() {

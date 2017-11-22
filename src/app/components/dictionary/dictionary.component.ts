@@ -22,7 +22,7 @@ export class DictionaryComponent implements OnInit {
   };
 
   showCatalogItem(catalogItem: any){
-    console.log(catalogItem);
+    this.session.catalogItem = catalogItem;
     this.navCtrl.push(CatalogItemComponent);
   };
 }
