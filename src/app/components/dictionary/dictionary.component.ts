@@ -25,4 +25,8 @@ export class DictionaryComponent implements OnInit {
     this.session.catalogItem = catalogItem;
     this.navCtrl.push(CatalogItemComponent);
   };
+
+  updateCurrentData(){
+    console.log("update current data");
+  };
 }

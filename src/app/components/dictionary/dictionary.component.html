@@ -6,7 +6,7 @@
   </ion-navbar>
   <ion-toolbar>
     <div class="search-container">
-      <input type="text">
+      <input type="text" (ngModelChange)="updateCurrentData();" [(ngModel)]="session.filterCriteria">
       <ion-icon name="search"></ion-icon>
     </div>
   </ion-toolbar>

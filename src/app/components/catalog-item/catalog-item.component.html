@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      {{ session.exercise.nombre }}
+      Item #{{ session.catalogItem.id }}
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -13,55 +13,39 @@
 </ion-header>
 
 <ion-content>
+  <div class="title">
+    <ion-label>{{ session.catalogItem.nombre }}</ion-label>
+  </div>
   <ion-card>
+    <img [src]="session.catalogItem.img">
     <ion-item>
-      <ion-avatar item-start>
-        <img [src]="session.exercise.imagen">
-      </ion-avatar>
-      <h2>{{ session.exercise.musculo }}</h2>
-      <p><ng-container *ngFor="let eq of session.exercise.equipamiento">{{ eq }}. </ng-container></p>
+      <ion-icon name="information-circle-outline" item-start large></ion-icon>
+      <h2>{{ 'descripcion' | translate }}</h2>
+      <p>{{ session.catalogItem.desc }}</p>
     </ion-item>
-    <p class="respiracion">Respiración: {{ session.exercise.respiracion }}</p>
 
-    <img [src]="session.exercise.gif">
+    <ion-item *ngIf="session.catalogItem.pasos && session.catalogItem.pasos.length > 0">
+      <ion-icon name="list" item-left large ></ion-icon>
+      <h2>{{ 'pasos' | translate }}</h2>
+      <ul>
+        <li *ngFor="let paso of session.catalogItem.pasos">{{ paso }}</li>
+      </ul>
+    </ion-item>
 
-    <ion-card-content>
-      <h2>Pasos</h2>
-      <ol>
-        <li *ngFor="let paso of session.exercise.pasos">{{ paso }}</li>
-      </ol>
-    </ion-card-content>
+    <ion-item *ngIf="session.catalogItem.int">
+      <ion-icon name="list" item-left large ></ion-icon>
+      <h2>{{ 'intensity' | translate }}</h2>
+      <p>
+        {{ session.catalogItem.int }}
+      </p>
+    </ion-item>
 
-    <ion-row>
-      <ion-col>
-        <button class="series" ion-button icon-left clear small>
-          <ion-icon name="more"></ion-icon>
-          <div>
-            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ session.exercise.series[5] }}
-            </ng-container>
-            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ session.exercise.series[11] }}
-            </ng-container>
-            series
-          </div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button class="series" ion-button icon-left clear small>
-          <ion-icon name="refresh"></ion-icon>
-          <div>
-            <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ session.exercise.repeticiones[5] }}
-            </ng-container>
-            <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ session.exercise.repeticiones[11] }}
-            </ng-container>
-            rep.
-          </div>
-        </button>
-      </ion-col>
-    </ion-row>
+    <!--<ion-item>
+      <button ion-button icon-left clear item-end>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>-->
 
   </ion-card>
 </ion-content>

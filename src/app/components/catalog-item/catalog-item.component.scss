@@ -30,6 +30,18 @@ catalog-item {
   }
 
   ion-content {
+    .title {
+      text-align:center;
+    }
+
+    p {
+      white-space: normal;
+    }
+
+    ul {
+      padding: 0 20px;
+    }
+
     .button-container {
       text-align: center;
 

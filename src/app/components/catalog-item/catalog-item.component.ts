@@ -30,11 +30,22 @@ export class CatalogItemComponent {
   };
 
   getCatalogItem(){
-    //console.log(this.session.catalogItem);
-    let place:string = this.session.catalogItem.place === 'Gym' ? '1' : '0';
+    var self = this;
+    let place:string = self.session.catalogItem.place === 'Gym' ? '1' : '0';
 
-    this.session.getEjercicio(this.session.catalogItem.id, place).then(response => {
-      console.log(response.data);
+    this.session.getEjercicio(self.session.catalogItem.id, place).then(response => {
+      if(self.session.catalogItem.place === 'Gym'){
+        self.session.catalogItem.nombre = response.data.nombre;
+        self.session.catalogItem.desc = response.data.descripcion;
+        self.session.catalogItem.img = response.data.gif;
+        self.session.catalogItem.pasos = response.data.pasos;
+      }else{
+        self.session.catalogItem.nombre = response.data.vchName;
+        self.session.catalogItem.desc = response.data.vchDescription;
+        self.session.catalogItem.img = response.data.imgGif;
+        self.session.catalogItem.int = response.data.vchIntensity;
+        self.session.catalogItem.pasos = [];
+      }
     });
   };
 
