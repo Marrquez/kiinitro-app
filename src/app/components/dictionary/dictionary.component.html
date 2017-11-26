@@ -3,17 +3,14 @@
     <ion-title>
       Lista de ejercicios
     </ion-title>
+    <button ion-button icon-start (click)="presentActionSheet()">
+      <ion-icon name="funnel"></ion-icon>
+    </button>
   </ion-navbar>
-  <ion-toolbar>
-    <div class="search-container">
-      <input type="text" (ngModelChange)="updateCurrentData();" [(ngModel)]="session.filterCriteria">
-      <ion-icon name="search"></ion-icon>
-    </div>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-    <ng-container *ngFor="let group of session.dictionary">
+    <ng-container *ngFor="let group of items">
       <ion-list>
         <ion-list-header>
           {{ group.type }}

@@ -49,3 +49,17 @@
     color: #FFF !important;
   }
 }
+
+.custom-actionsheet {
+  button.action-sheet-button {
+    border-bottom: 0.5px solid #EEE;
+    min-height: 25px;
+    padding: 0 10px;
+    text-transform: uppercase;
+
+    span {
+      color: #A9A9A9;
+      font-size: 10px;
+    }
+  }
+}
