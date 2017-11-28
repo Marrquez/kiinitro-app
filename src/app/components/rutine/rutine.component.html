@@ -1,12 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title *ngIf="!isFinished">{{ session.current.nombre }}</ion-title>
+    <ion-title *ngIf="!isFinished && session.current.nombre">{{ session.current.nombre }}</ion-title>
+    <ion-title *ngIf="!isFinished && session.current.vchName">{{ session.current.vchName }}</ion-title>
     <ion-title *ngIf="isFinished">¡Felicitaciones!</ion-title>
   </ion-navbar>
   <ion-toolbar *ngIf="!isFinished">
     <ion-title>{{ session.current.musculo }}</ion-title>
-    <button *ngIf="lastItem != session.current.id" (click)="goNext()" class="session-button" ion-button>Siguiente</button>
-    <button *ngIf="lastItem == session.current.id" (click)="finish()" class="session-button" ion-button>Finalizar</button>
+    <button *ngIf="(this.session.data.place === 'Gimnasio' && lastItem != session.current.id) || (session.data.place === 'Casa' && session.currentCicle < 3)" (click)="goNext()" class="session-button" ion-button>Siguiente</button>
+    <button *ngIf="(session.data.place === 'Gimnasio' && lastItem == session.current.id) || (session.data.place === 'Casa' && session.currentCicle >= 3)" (click)="finish()" class="session-button" ion-button>Finalizar</button>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +15,7 @@
   <ion-card>
     <ion-card-content>
       <ion-row>
-        <ion-col>
+        <ion-col *ngIf="session.data.place === 'Gimnasio'">
           <button class="series" ion-button icon-left clear small>
             <ion-icon name="more"></ion-icon>
             <div>
@@ -31,7 +32,7 @@
         <ion-col>
           <button class="series" ion-button icon-left clear small>
             <ion-icon name="refresh"></ion-icon>
-            <div>
+            <div *ngIf="session.data.place === 'Gimnasio'">
               <ng-container *ngIf="session.data.time == '0 - 5 meses'">
                 {{ session.current.repeticiones[5] }}
               </ng-container>
@@ -41,26 +42,42 @@
               <ng-container *ngIf="session.data.time == '12 o más'">
                 12
               </ng-container>
-              rep.
             </div>
+            <div *ngIf="session.data.place === 'Casa'">
+              {{ session.current.iRepetition }}
+            </div>
+            rep.
           </button>
         </ion-col>
         <ion-col>
           <button class="series" ion-button icon-left clear small>
             <ion-icon name="hand"></ion-icon>
-            <div>
+            <div *ngIf="session.current.rest">
               {{ session.current.rest }}
+              s.
+            </div>
+            <div *ngIf="!session.current.rest">
+              30
               s.
             </div>
           </button>
         </ion-col>
       </ion-row>
-      <p class="respiracion">Respiración: {{ session.current.respiracion }}</p>
-      <img [src]="session.current.gif">
-      <h2>Tips</h2>
-      <ol>
-        <li *ngFor="let tip of session.current.tips">{{ tip }}</li>
-      </ol>
+      <p *ngIf="session.data.place === 'Gimnasio'" class="respiracion">Respiración: {{ session.current.respiracion }}</p>
+      <p *ngIf="session.data.place === 'Casa'" class="respiracion">{{ 'level' | translate }}: {{ session.current.vchLevel }}</p>
+      <img *ngIf="session.current.gif" [src]="session.current.gif">
+      <img *ngIf="session.current.imgGif" [src]="session.current.imgGif">
+      <div *ngIf="session.data.place === 'Gimnasio'">
+        <h2>Tips</h2>
+        <ol>
+          <li *ngFor="let tip of session.current.tips">{{ tip }}</li>
+        </ol>
+      </div>
+      <div *ngIf="session.data.place === 'Casa'">
+        <br />
+        <h2>{{ 'descripcion' | translate }}</h2>
+        <p>{{ session.current.vchDescription }}</p>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>

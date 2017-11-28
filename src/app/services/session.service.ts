@@ -8,6 +8,7 @@ export class SessionService {
   private baseUrl = 'http://localhost:8080';
   //private baseUrl = 'http://ec2-52-42-164-164.us-west-2.compute.amazonaws.com:4500';
   public filterCriteria = 'All';
+  public homeExc = [];
   public dataItems = {
     genders:[{name:'Hombre',id:0},{name:'Mujer',id:1}],
     times:[{name:'0 - 5 meses',id:0},{name:'6 - 11 meses',id:1},{name:'12 o más',id:2}],
@@ -66,7 +67,8 @@ export class SessionService {
   public list = [];
   public exercise = {gif: '', imagen: ''};
   public current = {id: '', tips: [], gif: ''};
-  public currentIndex = 0;
+  public currentIndex = -1;
+  public currentCicle = 0;
   public warmExercises = [];
   public dictionary = [
     {

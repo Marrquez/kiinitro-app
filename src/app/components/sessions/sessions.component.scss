@@ -81,6 +81,18 @@ sessions {
           font-size: 11px;
         }
       }
+
+      img {
+        max-height: 220px !important;
+      }
+
+      ion-card-content {
+        padding: 0 !important;
+
+        p {
+          font-size: 11px !important;
+        }
+      }
     }
   }
 }

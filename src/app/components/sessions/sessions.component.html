@@ -15,7 +15,7 @@
     <ion-slide *ngFor="let e of session.list" (click)="presentModal(e.id);">
       <ion-card>
         <ion-row>
-          <ion-col>
+          <ion-col *ngIf="session.data.place === 'Gimnasio'">
             <button class="series" ion-button icon-left clear small>
               <ion-icon name="more"></ion-icon>
               <div>
@@ -32,7 +32,7 @@
           <ion-col>
             <button class="series" ion-button icon-left clear small>
               <ion-icon name="refresh"></ion-icon>
-              <div>
+              <div *ngIf="session.data.place === 'Gimnasio'">
                 <ng-container *ngIf="session.data.time == '0 - 5 meses'">
                   {{ e.repeticiones[5] }}
                 </ng-container>
@@ -41,24 +41,37 @@
                 </ng-container>
                 rep.
               </div>
+              <div *ngIf="session.data.place === 'Casa'">
+                {{ e.iRepetition }}
+                rep.
+              </div>
             </button>
           </ion-col>
           <ion-col>
             <button class="series" ion-button icon-left clear small>
               <ion-icon name="hand"></ion-icon>
-              <div>
+              <div *ngIf="e.rest">
                 {{ e.rest }}
+                s.
+              </div>
+              <div *ngIf="!e.rest">
+                30
                 s.
               </div>
             </button>
           </ion-col>
         </ion-row>
-        <img [src]="e.imagen"/>
+        <img *ngIf="e.imagen" [src]="e.imagen"/>
+        <img *ngIf="e.imgGif" [src]="e.imgGif"/>
         <ion-card-content>
-          <ion-card-title>
+          <ion-card-title *ngIf="e.nombre">
             {{ e.nombre }}
           </ion-card-title>
-          <p>{{ e.descripcion }}</p>
+          <ion-card-title *ngIf="e.vchName">
+            {{ e.vchName }}
+          </ion-card-title>
+          <p *ngIf="e.descripcion">{{ e.descripcion }}</p>
+          <p *ngIf="e.vchDescription">{{ e.vchDescription }}</p>
         </ion-card-content>
       </ion-card>
     </ion-slide>

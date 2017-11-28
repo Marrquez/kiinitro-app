@@ -69,7 +69,9 @@ export class SessionsComponent implements OnInit {
       var trainingZone = this.session.bodyParts[0].name;
 
       this.session.getHomeEjercices(this.session.data.place, trainingType, trainingZone).then(response => {
-        console.log(response.data);
+        self.session.list = [];
+        self.session.homeExc = response.data;
+        self.addElements(-1, self.session.homeExc);
       });
     } else {
 
@@ -97,7 +99,7 @@ export class SessionsComponent implements OnInit {
   };
 
   addElements(indice: number, list: any){
-    var cantidad: number = this.session.group[indice];
+    var cantidad: number = indice === -1 ? 4 : this.session.group[indice];
     var total = list.length;
     var arr = [];
 

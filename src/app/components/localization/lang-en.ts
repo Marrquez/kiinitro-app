@@ -494,6 +494,7 @@ export const LANG_EN_TRANS = {
   'jumping_jacks_nombre': 'Jumping jacks',
   'jumping_jacks_decripcion': 'De pie, junta los pies y las manos hacia los lados. Abre las piernas haciendo un salto, mientras levantas los brazos lateralmente. Salta de nuevo para regresar a la posición inicial. Respira constantmente y procura caer sobre la punta de los pies. ',
   'jumping_jacks_intensidad': 'Hazlo lo más rápido que puedas. Puedes subir los brazos hasta encima de la cabeza (casi juntando las manos) y abrir las piernas lo más que puedas.',
+  'level': 'Difficulty',
   'mancuerna_equipamiento': 'Mancuerna',
   'mancuernas_equipamiento': 'Mancuernas',
   'maquina_equipamiento': 'Máquina',

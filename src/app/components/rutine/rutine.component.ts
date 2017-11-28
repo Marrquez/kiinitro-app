@@ -29,7 +29,8 @@ export class RutineComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.session.current = this.session.list[this.session.currentIndex];
+    this.goNext();
+    //this.session.current = this.session.list[this.session.currentIndex];
 
     this.ga.startTrackerWithId('UA-39578145-1').then(() => {
       console.log('Google analytics is ready now');
@@ -42,11 +43,22 @@ export class RutineComponent implements OnInit {
 
   goNext(){
     this.session.currentIndex++;
-    this.session.current = this.session.list[this.session.currentIndex];
+    if(this.session.data.place === 'Gimnasio'){
+      this.session.current = this.session.list[this.session.currentIndex];
+    }else{
+      if(this.session.currentCicle < 3){
+        this.session.current = this.session.list[this.session.currentIndex];
+        if(this.session.currentIndex === (this.session.list.length - 1)){
+          this.session.currentCicle++;
+          this.session.currentIndex = -1;
+        }
+      }
+    }
   };
 
   finish(){
-    this.session.currentIndex = 0;
+    this.session.currentIndex = -1;
+    this.session.currentCicle = 0;
     this.isFinished = true;
     this.sumPoints();
   };
