@@ -861,6 +861,7 @@ export const LANG_EN_TRANS = {
   'trote_en_sitio_nombre': 'Trote en sitio',
   'trote_en_sitio_decripcion': 'En la posición donde te encuentres, realiza en trote leve, levantando alternamente cada pie del suelo, moviendo los brazos para activar músculos y articulaciones de todo el cuerpo. Si tienes espacio, trota alrededor del salón, moviendo manos, brazos, hombros, cabeza y demás extremidades, como calentamiento previo y recuperación al final del entrenamiento.',
   'trote_en_sitio_intensidad': 'Puedes ejecutar el ejercicio por dos o tres minutos, pasando por escalones, saltos, movimientos de brazos, manos, hombros, cabeza, etc., para activación previo al ejercicio.',
+  'warm_excercises': 'Warm excercises',
   'zancadas_alternas_nombre': 'Zancadas alternas',
   'zancadas_alternas_decripcion': 'Inhala mientras realizas una zancada (paso lagro al frente) con una pierna, descendiendo la rodilla posterior al nivel del suelo. Exhala al regresar la pierna delantera a la posición inicial. Puedes realizar este movimiento con una pierna alternamente o con la misma hasta terminar las repeticiones o tiempo definidos. También, puede ser realizados como caminata.',
   'zancadas_alternas_intensidad': 'Al ganar técnica, puedes agregar peso sobre el trapecio (como en sentadilla), para mayor intensidad y esfuerzo en el entrenamiento.',

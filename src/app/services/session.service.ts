@@ -144,7 +144,7 @@ export class SessionService {
         {id:29,name:'guerrero_a_una_pierna_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
         {id:30,name:'paso_de_oso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Paso+de+oso.JPG'},
         {id:31,name:'saltos_con_pausa_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Saltos+con+pausa.JPG'},
-        {id:32,name:'paso_de_cangrejo_lateral_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Sentadilla+isometrica+lateral.JPG'},
+        {id:32,name:'paso_isometrico_lateral_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Sentadilla+isometrica+lateral.JPG'},
         {id:33,name:'burpee_con_flexion_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/burpee+flexion.JPG'},
         {id:34,name:'orugas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
       ]

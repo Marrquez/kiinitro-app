@@ -64,7 +64,7 @@ export class RutineComponent implements OnInit {
   };
 
   rate(){
-    this.tab.select(0);
+    this.tab.select(1);
   };
 
   sumPoints(){
@@ -90,7 +90,7 @@ export class RutineComponent implements OnInit {
   goBack(){
     var self = this;
 
-    self.tab.select(3);
+    self.tab.select(4);
   };
 
   getDiference() {
@@ -105,7 +105,7 @@ export class RutineComponent implements OnInit {
   getStretching (){
     if(this.session.stretchData.muscles.length === 0){
       let toast = this.toastCtrl.create({
-        message: 'Debes seleccionar por lo menos 1 músculo para el calentamiento',
+        message: 'Debes seleccionar por lo menos 1 músculo para el estiramiento',
         duration: 3000,
         position: 'top',
         cssClass: 'error-item'
