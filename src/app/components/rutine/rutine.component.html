@@ -64,7 +64,7 @@
         </ion-col>
       </ion-row>
       <p *ngIf="session.data.place === 'Gimnasio'" class="respiracion">Respiración: {{ session.current.respiracion }}</p>
-      <p *ngIf="session.data.place === 'Casa'" class="respiracion">{{ 'level' | translate }}: {{ session.current.vchLevel }}</p>
+      <p *ngIf="session.data.place === 'Casa'" class="respiracion"><strong>{{ 'level' | translate }}:</strong> {{ session.current.vchLevel }} | <strong>Ciclo:</strong> <ng-container *ngIf="session.currentCicle + 1 <= 3">{{ session.currentCicle + 1 }}</ng-container><ng-container *ngIf="session.currentCicle + 1 > 3">3</ng-container>/3</p>
       <img *ngIf="session.current.gif" [src]="session.current.gif">
       <img *ngIf="session.current.imgGif" [src]="session.current.imgGif">
       <div *ngIf="session.data.place === 'Gimnasio'">
