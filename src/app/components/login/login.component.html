@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar [ngClass]="{ 'logged': user.isLogged }">
     <ion-title showWhen="android" *ngIf="!user.isLogged">
-      Bienvenido
+      {{ 'bienvenido' | translate }}
     </ion-title>
     <div class="about-button" (click)="showContact()">
       <img class="about-icon" src="./assets/img/kiinitro fitness 2.png"/>
-      <span class="about-label">About us</span>
+      <span class="about-label">{{ 'about_us' | translate }}</span>
     </div>
   </ion-navbar>
 </ion-header>
@@ -17,7 +17,7 @@
   </div>
   <form class="log-form" [formGroup]="loginForm" (submit)="loginUser()" *ngIf="!user.isLogged" novalidate>
     <ion-item>
-      <ion-label stacked>Email</ion-label>
+      <ion-label stacked>{{ 'mail' | translate }}</ion-label>
       <ion-input formControlName="email" type="email" placeholder="Your email address"
                  [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
     </ion-item>
@@ -27,7 +27,7 @@
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Password</ion-label>
+      <ion-label stacked>{{ 'password' | translate }}</ion-label>
       <ion-input formControlName="password" type="password" placeholder="Your password"
                  [class.invalid]="!loginForm.controls.password.valid && loginForm.controls.password.dirty"></ion-input>
     </ion-item>
@@ -36,11 +36,11 @@
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
     <div *ngIf="!user.isLogged" class="create-account" ion-button block clear (click)="goToSignup()">
-      Crear cuenta
+      {{ 'sign in' | translate }}
     </div>
     <div class="button-container">
       <button ion-button block type="submit" [disabled]="!loginForm.valid">
-        Iniciar sesión
+        {{ 'iniciar' | translate }}
       </button>
     </div>
   </form>
