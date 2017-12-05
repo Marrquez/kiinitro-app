@@ -125,8 +125,8 @@ export class SessionService {
         {id:46,name:'jumping_jacks_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Cardio/Jumping+Jacks.JPG'},
         {id:47,name:'elevacion_de_rodillas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Cardio/Elevacion+de+rodillas.JPG'},
         {id:48,name:'rotacion_de_brazos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Cardio/rotacion+de+brazos.JPG'},
-        {id:49,name:'rotacion_de_piernas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
-        {id:50,name:'saltos_alternos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:49,name:'rotacion_de_piernas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Cardio/RotacionPiernas.png'},
+        {id:50,name:'saltos_alternos_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Cardio/SaltosAlternos.png'},
         {id:51,name:'trote_en_sitio_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Cardio/JogInPlace.JPG'},
         {id:1,name:'tren_inferior_caminadora_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/treadmill.jpg'},
         {id:2,name:'tren_inferior_eliptica_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Gym/eliptica.jpg'},
@@ -139,14 +139,14 @@ export class SessionService {
       excercises: [
         {id:25,name:'burpee_sin_flexion_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Burpee.JPG'},
         {id:26,name:'saltos_laterales_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/saltos+laterales.JPG'},
-        {id:27,name:'cuatro_en_uno_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:27,name:'cuatro_en_uno_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/CuatroenUno.png'},
         {id:28,name:'escaladores_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/escaladores.JPG'},
-        {id:29,name:'guerrero_a_una_pierna_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:29,name:'guerrero_a_una_pierna_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/GuerreroUnaPierna.png'},
         {id:30,name:'paso_de_oso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Paso+de+oso.JPG'},
         {id:31,name:'saltos_con_pausa_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Saltos+con+pausa.JPG'},
         {id:32,name:'paso_isometrico_lateral_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Sentadilla+isometrica+lateral.JPG'},
         {id:33,name:'burpee_con_flexion_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/burpee+flexion.JPG'},
-        {id:34,name:'orugas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:34,name:'orugas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Full+Body/Orugas.png'},
       ]
     },
     {
@@ -254,7 +254,7 @@ export class SessionService {
         {id:11,name:'elevaciones_laterales_con_peso_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/Elevaciones+laterales.JPG'},
         {id:12,name:'extensiones_de_codo_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/ExtensionCodo.JPG'},
         {id:13,name:'dominadas_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/dominadas.jpg'},
-        {id:14,name:'escalado_de_pared_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:''},
+        {id:14,name:'escalado_de_pared_nombre',machines:[{"S":"body_height"}],place: 'casa_sitio', img:'https://s3.us-east-2.amazonaws.com/otraprueba/Images/Men/Cardio/Home/Upper+Body/EscaladoPared.png'},
       ]
     },
     {
