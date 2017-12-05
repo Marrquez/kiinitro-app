@@ -46,7 +46,7 @@ export class SessionComponent implements OnInit {
       this.notifyError();
     } else if(this.session.data.place === ''){
       this.notifyError();
-    } else if((this.session.data.place === 'Gimnasio' && (!this.session.data.time || !this.session.data.target || !this.session.data.place || this.session.data.muscles.length === 0)) || (this.session.data.place === 'Casa' && this.session.data.bodyParts.length === 0)) {
+    } else if((this.session.data.place === 'Gimnasio' && (!this.session.data.time || !this.session.data.target || !this.session.data.place || this.session.data.muscles.length === 0)) || (this.session.data.place === 'Casa' && this.session.data.bodyPart === '')) {
       this.notifyError();
     }else {
       this.navCtrl.push(SessionsComponent);

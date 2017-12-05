@@ -66,7 +66,7 @@ export class SessionsComponent implements OnInit {
       });
     } else if(this.session.data.place === 'Casa') {
       var trainingType = '["Musculación"]';
-      var trainingZone = this.session.bodyParts[0].name;
+      var trainingZone = this.session.data.bodyPart;
 
       this.session.getHomeEjercices(this.session.data.place, trainingType, trainingZone).then(response => {
         self.session.list = [];

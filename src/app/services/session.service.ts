@@ -15,7 +15,7 @@ export class SessionService {
     targets:[{name:'Aumentar masa',id:0},{name:'Tonificar',id:1},{name:'Bajar de peso',id:2}],
     places:[{name:'Casa',id:0},{name:'Gimnasio',id:1}],
     muscles:[],
-    bodyParts: [{ name: 'Tren superior', id: 1 }, { name: 'Tren inferior', id: 2 }, { name: 'Cuerpo completo', id: 3 }, { name: 'Abdomen', id: 4 },]
+    bodyParts: [{ name: 'Tren superior', id: 1 }, { name: 'Tren inferior', id: 2 }, { name: 'Cuerpo completo', id: 3 }, { name: 'Abdominales', id: 4 },]
   };
   public bodyParts = [
     { name: 'Tren superior', id: 6 },
@@ -35,7 +35,7 @@ export class SessionService {
     { name: 'Abdomen', id: 0 }
   ];
   public catalogItem = {place:'Gym', id:'', nombre: '', desc:'', int:'', img:'', pasos: []};
-  public data = {gender:'',time:'',target:'',place:'',muscles:[],warm:false, bodyParts:[]};
+  public data = {gender:'',time:'',target:'',place:'',muscles:[],warm:false, bodyParts:[], bodyPart:''};
   public stretchData = {allMuscles: [
     { name: 'Abdomen', id: 0, valueName: 'Abdomen' },
     { name: 'Bíceps', id: 1, valueName: 'Biceps' },

@@ -43,7 +43,7 @@
   </ion-item>
   <ion-item *ngIf="session.data.place == 'Casa'">
     <ion-label>{{ 'parte a entrenar' | translate }}</ion-label>
-    <ion-select [(ngModel)]="session.data.bodyParts">
+    <ion-select [(ngModel)]="session.data.bodyPart">
       <ion-option *ngFor="let muscle of session.dataItems.bodyParts" [value]="muscle.name">{{ muscle.name }}</ion-option>
     </ion-select>
   </ion-item>
