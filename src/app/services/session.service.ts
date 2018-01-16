@@ -6,7 +6,8 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class SessionService {
   //private baseUrl = 'http://localhost:8080';
-  private baseUrl = 'http://ec2-18-218-139-95.us-east-2.compute.amazonaws.com:4500';
+  //private baseUrl = 'http://ec2-18-218-139-95.us-east-2.compute.amazonaws.com:4500';
+  private baseUrl = 'http://www.kiinitro.com/sp.php?method=';
   public filterCriteria = 'All';
   public homeExc = [];
   public dataItems = {
@@ -292,7 +293,7 @@ export class SessionService {
   constructor(private http: Http) { };
 
   public getEjercicio(id: string, place:string) {
-    let url = this.baseUrl + '/get-ejercicioById';
+    let url = this.baseUrl + 'get-ejercicioById';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('id', id);
@@ -305,7 +306,7 @@ export class SessionService {
   };
 
   public getEjercicesByMuscle(muscles: string) {
-    let url = this.baseUrl + '/get-ejercicesByMuscle';
+    let url = this.baseUrl + 'get-ejercicesByMuscle';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('muscles', muscles);
@@ -317,7 +318,7 @@ export class SessionService {
   };
 
   public getHomeEjercices(place: string, trainingType: string, trainingZone: string) {
-    let url = this.baseUrl + '/get-warmUpByPlaceTypeZone';
+    let url = this.baseUrl + 'get-warmUpByPlaceTypeZone';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('place', place);
@@ -331,7 +332,7 @@ export class SessionService {
   };
 
   public getWarmByPlace(place: string, type: string) {
-    let url = this.baseUrl + '/get-warmUpByPlaceType';
+    let url = this.baseUrl + 'get-warmUpByPlaceType';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('place', place);

@@ -35,15 +35,15 @@ export class CatalogItemComponent {
 
     this.session.getEjercicio(self.session.catalogItem.id, place).then(response => {
       if(self.session.catalogItem.place === 'Gym'){
-        self.session.catalogItem.nombre = response.data.nombre;
-        self.session.catalogItem.desc = response.data.descripcion;
-        self.session.catalogItem.img = response.data.gif;
-        self.session.catalogItem.pasos = response.data.pasos;
+        self.session.catalogItem.nombre = response.nombre;
+        self.session.catalogItem.desc = response.descripcion;
+        self.session.catalogItem.img = response.gif;
+        self.session.catalogItem.pasos = JSON.parse(response.pasos);
       }else{
-        self.session.catalogItem.nombre = response.data.vchName;
-        self.session.catalogItem.desc = response.data.vchDescription;
-        self.session.catalogItem.img = response.data.imgGif;
-        self.session.catalogItem.int = response.data.vchIntensity;
+        self.session.catalogItem.nombre = response.vchName;
+        self.session.catalogItem.desc = response.vchDescription;
+        self.session.catalogItem.img = response.imgGif;
+        self.session.catalogItem.int = response.vchIntensity;
         self.session.catalogItem.pasos = [];
       }
     });

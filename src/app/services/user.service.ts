@@ -43,7 +43,7 @@ export class UserService {
   };
 
   public getUserInfoById(uid: string){
-    let url = this.baseUrl + '/get-userInfo';
+    let url = this.baseUrl + 'get-userInfo';
     let params: URLSearchParams = new URLSearchParams();
 
     params.set('idUser', uid);
@@ -55,7 +55,7 @@ export class UserService {
   };
 
   public createUser(uid: string, username: string, points: number){
-    let url = this.baseUrl + '/ins-userInfo';
+    let url = this.baseUrl + 'ins-userInfo';
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
     let params = {
@@ -71,7 +71,7 @@ export class UserService {
   };
 
   public updatePoints(points: number){
-    let url = this.baseUrl + '/upd-userPoints';
+    let url = this.baseUrl + 'upd-userPoints';
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
 
@@ -92,7 +92,7 @@ export class UserService {
   };
 
   public updateUserProfile(){
-    let url = this.baseUrl + '/upd-userSize';
+    let url = this.baseUrl + 'upd-userSize';
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
 
