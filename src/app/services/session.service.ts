@@ -66,8 +66,8 @@ export class SessionService {
   public trapecio = [];
   public abdomen = [];
   public list = [];
-  public exercise = {gif: '', imagen: ''};
-  public current = {id: '', tips: [], gif: ''};
+  public exercise = {gif: '', imagen: '',pasos:[],repeticiones:{},series:{}};
+  public current = {id: '', tips: [], gif: '',equipamiento:[],descanso:{},repeticiones:{},series:{}};
   public currentIndex = -1;
   public currentCicle = 0;
   public warmExercises = [];

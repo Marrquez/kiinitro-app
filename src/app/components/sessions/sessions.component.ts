@@ -42,8 +42,8 @@ export class SessionsComponent implements OnInit {
     this.session.list = [];
 
     if(this.session.data.warm){
-      this.session.getWarmByPlace(this.session.data.place, '["Cardiovascular"]').then(response => {
-        self.session.warmExercises = response.data;
+      this.session.getWarmByPlace(this.session.data.place, 'Cardiovascular').then(response => {
+        self.session.warmExercises = response;
         this.getExcersices();
       });
     }else{
@@ -55,10 +55,10 @@ export class SessionsComponent implements OnInit {
     var self = this;
     if(this.session.data.place === 'Gimnasio') {
       this.setGroup();
-      let muscles = JSON.stringify(this.session.data.muscles);
+      let muscles = JSON.stringify(this.session.data.muscles).slice(1, -1).replace(/"/g, '');
 
       this.session.getEjercicesByMuscle(muscles).then(response => {
-        self.session.fullData = response.data;
+        self.session.fullData = response;
         self.updateArrays();
         self.selectExercises();
         self.addRest();
@@ -262,7 +262,10 @@ export class SessionsComponent implements OnInit {
       self.splash.show();
 
       self.session.getEjercicio(id, place).then(response => {
-        self.session.exercise = response.data;
+        self.session.exercise = response;
+        self.session.exercise.pasos = JSON.parse(response.pasos);
+        self.session.exercise.repeticiones = JSON.parse(response.repeticiones);
+        self.session.exercise.series = JSON.parse(response.series);
         self.splash.hide();
         modal.present();
       });

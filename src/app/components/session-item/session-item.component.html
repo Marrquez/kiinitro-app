@@ -28,7 +28,7 @@
     <ion-card-content>
       <h2>Pasos</h2>
       <ol>
-        <li *ngFor="let paso of session.exercise.pasos">{{ paso }}</li>
+        <li *ngFor="let paso of session.exercise.pasos">{{ paso.S }}</li>
       </ol>
     </ion-card-content>
 
@@ -38,10 +38,10 @@
           <ion-icon name="more"></ion-icon>
           <div>
             <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ session.exercise.series[5] }}
+              {{ session.exercise.series[5].N }}
             </ng-container>
             <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ session.exercise.series[11] }}
+              {{ session.exercise.series[11].N }}
             </ng-container>
             series
           </div>
@@ -52,10 +52,10 @@
           <ion-icon name="refresh"></ion-icon>
           <div>
             <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-              {{ session.exercise.repeticiones[5] }}
+              {{ session.exercise.repeticiones[5].N }}
             </ng-container>
             <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-              {{ session.exercise.repeticiones[11] }}
+              {{ session.exercise.repeticiones[11].N }}
             </ng-container>
             rep.
           </div>
