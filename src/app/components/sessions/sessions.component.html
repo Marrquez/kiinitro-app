@@ -20,10 +20,10 @@
               <ion-icon name="more"></ion-icon>
               <div>
                 <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-                  {{ e.series[5] }}
+                  {{ e.series[5].N }}
                 </ng-container>
                 <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-                  {{ e.series[11] }}
+                  {{ e.series[11].N }}
                 </ng-container>
                 series
               </div>
@@ -34,10 +34,10 @@
               <ion-icon name="refresh"></ion-icon>
               <div *ngIf="session.data.place === 'Gimnasio'">
                 <ng-container *ngIf="session.data.time == '0 - 5 meses'">
-                  {{ e.repeticiones[5] }}
+                  {{ e.repeticiones[5].N }}
                 </ng-container>
                 <ng-container *ngIf="session.data.time == '6 - 11 meses' || session.data.time == '12 o más'">
-                  {{ e.repeticiones[11] }}
+                  {{ e.repeticiones[11].N }}
                 </ng-container>
                 rep.
               </div>

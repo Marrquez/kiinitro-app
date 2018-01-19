@@ -94,7 +94,7 @@ export class SessionsComponent implements OnInit {
         reps = 12;
       }
 
-      this.session.list[i].rest = this.session.list[i].descanso[reps];
+      this.session.list[i].rest = this.session.list[i].descanso[reps].N;
     }
   };
 
@@ -111,6 +111,12 @@ export class SessionsComponent implements OnInit {
       }
 
       for(var j = 0; j < arr.length; j++){
+        var ele = list[arr[j]];
+
+        ele.equipamiento = JSON.parse(list[arr[j]].equipamiento);
+        ele.descanso = JSON.parse(list[arr[j]].descanso);
+        ele.repeticiones = JSON.parse(list[arr[j]].repeticiones);
+        ele.series = JSON.parse(list[arr[j]].series);
         this.session.list.push(list[arr[j]]);
       }
     }else {
