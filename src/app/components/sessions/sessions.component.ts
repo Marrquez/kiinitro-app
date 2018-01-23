@@ -83,11 +83,11 @@ export class SessionsComponent implements OnInit {
 
     for(var i = 0; i < this.session.list.length; i++){
       if(this.session.data.time === '0 - 5 meses'){
-        reps = this.session.list[i].repeticiones[5];
+        reps = this.session.list[i].repeticiones[5].N;
       }
 
       if(this.session.data.time === '6 - 11 meses'){
-        reps = this.session.list[i].repeticiones[11];
+        reps = this.session.list[i].repeticiones[11].N;
       }
 
       if(this.session.data.time === '12 o más'){
@@ -113,11 +113,15 @@ export class SessionsComponent implements OnInit {
       for(var j = 0; j < arr.length; j++){
         var ele = list[arr[j]];
 
-        ele.equipamiento = JSON.parse(list[arr[j]].equipamiento);
-        ele.descanso = JSON.parse(list[arr[j]].descanso);
-        ele.repeticiones = JSON.parse(list[arr[j]].repeticiones);
-        ele.series = JSON.parse(list[arr[j]].series);
-        this.session.list.push(list[arr[j]]);
+        if(this.session.data.place === 'Gimnasio') {
+          ele.equipamiento = JSON.parse(list[arr[j]].equipamiento);
+          ele.descanso = JSON.parse(list[arr[j]].descanso);
+          ele.repeticiones = JSON.parse(list[arr[j]].repeticiones);
+          ele.series = JSON.parse(list[arr[j]].series);
+          ele.tips = JSON.parse(list[arr[j]].tips);
+        }
+
+        this.session.list.push(ele);
       }
     }else {
       console.log("Hay un error");

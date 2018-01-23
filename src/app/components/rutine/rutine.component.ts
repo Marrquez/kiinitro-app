@@ -45,11 +45,11 @@ export class RutineComponent implements OnInit {
     this.session.currentIndex++;
     if(this.session.data.place === 'Gimnasio'){
       this.session.current = this.session.list[this.session.currentIndex];
-      this.session.current.descanso = JSON.parse(this.session.list[this.session.currentIndex].descanso);
-      this.session.current.equipamiento = JSON.parse(this.session.list[this.session.currentIndex].equipamiento);
-      this.session.current.repeticiones = JSON.parse(this.session.list[this.session.currentIndex].repeticiones);
-      this.session.current.series = JSON.parse(this.session.list[this.session.currentIndex].series);
-      this.session.current.tips = JSON.parse(this.session.list[this.session.currentIndex].tips);
+      this.session.current.descanso = this.session.list[this.session.currentIndex].descanso;
+      this.session.current.equipamiento = this.session.list[this.session.currentIndex].equipamiento;
+      this.session.current.repeticiones = this.session.list[this.session.currentIndex].repeticiones;
+      this.session.current.series = this.session.list[this.session.currentIndex].series;
+      this.session.current.tips = this.session.list[this.session.currentIndex].tips;
     }else{
       if(this.session.currentCicle < 3){
         this.session.current = this.session.list[this.session.currentIndex];
